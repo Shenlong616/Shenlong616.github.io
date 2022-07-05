@@ -45,7 +45,11 @@
 ::-webkit-scrollbar-thumb {
   border: 0 !important;
   border-radius: 0 !important;
-  background: linear-gradient(180deg, var(--primary) 0%, transparent 100%);
+  background: linear-gradient(
+    180deg,
+    var(--primary) 0%,
+    transparent 100%
+  ) !important;
 }
 @media screen and (min-width: 768px) {
   ::-webkit-scrollbar {
