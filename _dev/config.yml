@@ -104,8 +104,8 @@ params:
   analytics:
     google:
       SiteVerificationTag: "AzXCkO0tq4MO96bDYSrwJRKKCYqk92c1N2Yere6jdxc"
-  #   bing:
-  #     SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "24E5C745EF8D6815F97FBCACA22956C9"
   #   yandex:
   #     SiteVerificationTag: "XYZabc"
 
