@@ -2,8 +2,9 @@
 title: "Multiple sets of kwargs in Python 3.5+"
 date: 2022-07-05
 description: "Python 3.5+ allows passing multiple sets of keyword arguments (kwargs) to a function within a single call"
-tags: ["python", "kwargs"]
-categories: ["Python Trick"]
+tags: ["python", "python tricks", "kwargs"]
+categories: ["Python"]
+author: "Unknown"
 ---
 
 #### using the `**` syntax
