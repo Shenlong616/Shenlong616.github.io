@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>argument on Shenlong616</title>
+    <link>https://shenlong616.github.io/tags/argument/</link>
+    <description>Recent content in argument on Shenlong616</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 05 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/argument/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Function argument unpacking in Python</title>
+      <link>https://shenlong616.github.io/posts/function-argument-unpacking-in-python/</link>
+      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/function-argument-unpacking-in-python/</guid>
+      <description>def myfunc(x, y, z): print(x, y, z) tuple_vec = (1, 0, 1) dict_vec = {&amp;#34;x&amp;#34;: 1, &amp;#34;y&amp;#34;: 0, &amp;#34;z&amp;#34;: 1} myfunc(*tuple_vec) # 1 0 1 myfunc(**dict_vec) # 1 0 1 </description>
+    </item>
+    
+  </channel>
+</rss>

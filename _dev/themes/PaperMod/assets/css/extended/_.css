@@ -1,0 +1,110 @@
+.breadcrumbs {
+  border-bottom: 1px solid var(--tertiary);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+.toc details summary {
+  margin-inline-start: 0;
+  text-align: center;
+}
+.toc .inner {
+  margin: 0 5px;
+}
+.post-description {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.logo:after {
+  content: "v1.0";
+  /* font-weight: bold; */
+  font-size: 0.789em;
+  opacity: 0.678;
+}
+.post-footer {
+  margin-top: 0;
+}
+.post-tags a {
+  padding-inline-start: 9px;
+  padding-inline-end: 9px;
+  margin-inline-end: 3px;
+  color: var(--primary);
+  font-size: 15px;
+  line-height: inherit;
+  background: var(--theme);
+}
+.post-tags a:before {
+  content: "#";
+}
+.post-footer {
+  /* border-top: 1px solid var(--tertiary); */
+  padding-top: 20px;
+}
+.first-entry.home-info {
+  margin: var(--gap) 0 calc(var(--gap));
+}
+::-webkit-scrollbar-thumb {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+@media screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 13px !important;
+  }
+}
+.copy-code {
+  background: none;
+  border-radius: unset;
+}
+.toc {
+  background: radial-gradient(
+    circle,
+    transparent 0%,
+    var(--code-bg) 100%
+  ) !important;
+}
+.paginav .next {
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  background: linear-gradient(270deg, var(--theme) 0%, transparent 100%);
+}
+.paginav .prev {
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  background: linear-gradient(90deg, var(--theme) 0%, transparent 100%);
+}
+.toc,
+.paginav .next,
+.paginav .prev,
+.post-tags a,
+.post-entry,
+.terms-tags a {
+  transition: 0.3s ease-in;
+}
+.toc:hover {
+  transition: 0.3s ease-out;
+  background: radial-gradient(
+    circle,
+    transparent 0%,
+    var(--border) 100%
+  ) !important;
+}
+.paginav .next:hover {
+  transition: 0.3s ease-out;
+  background: linear-gradient(270deg, var(--border) 0%, transparent 100%);
+}
+.paginav .prev:hover {
+  transition: 0.3s ease-out;
+  background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+}
+.post-tags a:hover {
+  transition: 0.3s ease-out;
+  background: radial-gradient(circle, transparent 0%, var(--border) 100%);
+}
+.post-entry:hover {
+  transition: 0.3s ease-out;
+  background: radial-gradient(circle, transparent 0%, var(--entry) 100%);
+}
+.terms-tags a:hover {
+  transition: 0.3s ease-out;
+  background: radial-gradient(circle, transparent 0%, var(--tertiary) 100%);
+}
