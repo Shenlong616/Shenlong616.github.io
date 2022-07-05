@@ -2,7 +2,7 @@
 title: "Function argument unpacking in Python"
 date: 2022-07-05
 # description: ""
-tags: ["python", "python tricks", "function", "argument"]
+tags: ["python", "python tips", "function", "argument"]
 categories: ["Python"]
 author: "Unknown"
 ---

@@ -2,7 +2,7 @@
 title: "JavaScript tips & tricks by TuanNguyen2504"
 date: 2021-07-14
 description: "JavaScript Tips & Tricks"
-tags: ["javascript", "javascript tips", "javascript trick"]
+tags: ["javascript", "javascript tips", "javascript tricks"]
 categories: ["JavaScript"]
 author: "TuanNguyen2504"
 cover:
@@ -10,8 +10,6 @@ cover:
   alt: "JavaScript tips & tricks by TuanNguyen2504"
   caption: "JavaScript tips & tricks by TuanNguyen2504"
 ---
-
-<h1 align="center"> JavaScript tips & tricks </h1>
 
 <!-- logo -->
 <div align="center">

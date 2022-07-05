@@ -42,7 +42,7 @@
 .first-entry.home-info {
   margin: var(--gap) 0 calc(var(--gap));
 }
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   border: 0 !important;
   border-radius: 0 !important;
   background: linear-gradient(
@@ -51,11 +51,9 @@
     transparent 100%
   ) !important;
 }
-@media screen and (min-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 13px !important;
-  }
-}
+::-webkit-scrollbar {
+  width: 13px !important;
+} */
 .copy-code {
   background: none;
   border-radius: unset;
@@ -65,6 +63,9 @@ img {
 }
 .post-entry {
   padding: calc(var(--gap) - 8px);
+}
+.post-meta {
+  margin-top: 5px;
 }
 .toc {
   background: radial-gradient(
