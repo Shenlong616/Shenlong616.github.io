@@ -101,9 +101,9 @@ params:
   #     icon: icon.png
   #     iconHeight: 35
 
-  # analytics:
-  #   google:
-  #     SiteVerificationTag: "XYZabc"
+  analytics:
+    google:
+      SiteVerificationTag: "G-5WFHD4N680"
   #   bing:
   #     SiteVerificationTag: "XYZabc"
   #   yandex:
