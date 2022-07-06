@@ -5,6 +5,7 @@ date: 2022-07-05
 tags: ["python", "python tips", "function", "argument"]
 categories: ["Python"]
 author: "Unknown"
+draft: true
 ---
 
 ```Python

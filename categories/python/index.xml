@@ -5,34 +5,7 @@
     <link>https://shenlong616.github.io/categories/python/</link>
     <description>Recent content in Python on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Function argument unpacking in Python</title>
-      <link>https://shenlong616.github.io/posts/function-argument-unpacking-in-python/</link>
-      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://shenlong616.github.io/posts/function-argument-unpacking-in-python/</guid>
-      <description>def myfunc(x, y, z): print(x, y, z) tuple_vec = (1, 0, 1) dict_vec = {&amp;#34;x&amp;#34;: 1, &amp;#34;y&amp;#34;: 0, &amp;#34;z&amp;#34;: 1} myfunc(*tuple_vec) # 1 0 1 myfunc(**dict_vec) # 1 0 1 </description>
-    </item>
-    
-    <item>
-      <title>How to merge two dictionaries in Python</title>
-      <link>https://shenlong616.github.io/posts/how-to-merge-two-dictionaries-in-python/</link>
-      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://shenlong616.github.io/posts/how-to-merge-two-dictionaries-in-python/</guid>
-      <description>Python 2.x x = {&amp;#34;a&amp;#34;: 1, &amp;#34;b&amp;#34;: 2} y = {&amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 4} z = dict(x, **y) print(z) # {&amp;#39;a&amp;#39;: 1, &amp;#39;b&amp;#39;: 3, &amp;#39;c&amp;#39;: 4} Python 3.5+ x = {&amp;#34;a&amp;#34;: 1, &amp;#34;b&amp;#34;: 2} y = {&amp;#34;b&amp;#34;: 3, &amp;#34;c&amp;#34;: 4} z = {**x, **y} print(z) # {&amp;#39;a&amp;#39;: 1, &amp;#39;b&amp;#39;: 3, &amp;#39;c&amp;#39;: 4} </description>
-    </item>
-    
-    <item>
-      <title>Multiple sets of kwargs in Python 3.5&#43;</title>
-      <link>https://shenlong616.github.io/posts/multiple-sets-of-kwargs-in-python-3-5/</link>
-      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://shenlong616.github.io/posts/multiple-sets-of-kwargs-in-python-3-5/</guid>
-      <description>Python 3.5&#43; allows passing multiple sets of keyword arguments (kwargs) to a function within a single call</description>
-    </item>
-    
+    <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python 3 tricks by alexghergh</title>
       <link>https://shenlong616.github.io/posts/github/python-3-tricks-by-alexghergh/</link>

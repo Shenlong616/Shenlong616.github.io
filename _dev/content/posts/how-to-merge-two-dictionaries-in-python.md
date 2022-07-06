@@ -6,6 +6,7 @@ tags: ["python", "python2", "python3", "python tricks", "merge", "dictionary"]
 categories: ["Python"]
 author: "Unknown"
 showToc: false
+draft: true
 ---
 
 #### Python 2.x

@@ -5,13 +5,13 @@
     <link>https://shenlong616.github.io/categories/</link>
     <description>Recent content in Categories on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python</title>
-      <link>https://shenlong616.github.io/categories/python/</link>
-      <pubDate>Tue, 05 Jul 2022 00:00:00 +0000</pubDate>
+      <title>Linux</title>
+      <link>https://shenlong616.github.io/categories/linux/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/categories/python/</guid>
+      <guid>https://shenlong616.github.io/categories/linux/</guid>
       <description></description>
     </item>
     
@@ -21,6 +21,15 @@
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://shenlong616.github.io/categories/python/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/categories/python/</guid>
       <description></description>
     </item>
     

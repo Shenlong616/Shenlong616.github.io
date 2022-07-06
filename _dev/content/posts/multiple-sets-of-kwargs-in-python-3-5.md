@@ -5,6 +5,7 @@ description: "Python 3.5+ allows passing multiple sets of keyword arguments (kwa
 tags: ["python", "python3", "python tricks", "kwargs"]
 categories: ["Python"]
 author: "Unknown"
+draft: true
 ---
 
 #### using the `**` syntax
