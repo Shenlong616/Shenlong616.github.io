@@ -95,21 +95,12 @@ img {
 a#top-link {
   background: linear-gradient(180deg, var(--entry) 0%, transparent 100%);
 }
-.toc,
 .paginav .next,
 .paginav .prev,
 .post-tags a,
 .post-entry,
 .terms-tags a {
-  transition: 0.3s ease-in;
-}
-.toc:hover {
-  transition: 0.3s ease-out;
-  background: radial-gradient(
-    circle,
-    transparent 0%,
-    var(--border) 100%
-  ) !important;
+  transition: 0.6s ease-in;
 }
 .paginav .next:hover {
   transition: 0.3s ease-out;

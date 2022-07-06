@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>javascript on Shenlong616</title>
-    <link>https://shenlong616.github.io/tags/javascript/</link>
-    <description>Recent content in javascript on Shenlong616</description>
+    <title>GitHub on Shenlong616</title>
+    <link>https://shenlong616.github.io/posts/github/</link>
+    <description>Recent content in GitHub on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 14 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/posts/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript tips &amp; tricks by TuanNguyen2504</title>
       <link>https://shenlong616.github.io/posts/github/javascript-tips-tricks-by-tuannguyen2504/</link>
