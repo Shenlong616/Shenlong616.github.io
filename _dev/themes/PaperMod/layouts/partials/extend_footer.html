@@ -147,17 +147,15 @@
   }
 </style>
 <script>
-  const init_NProgress = () => {
+  const initNProgress = () => {
     NProgress.set(0.3);
     NProgress.done();
   };
+  initNProgress();
 
-  window.onload = function () {
-    init_NProgress();
-    for (index of document.getElementsByTagName("input")) {
-      index.addEventListener("input", () => {
-        init_NProgress();
-      });
-    }
-  };
+  for (index of document.getElementsByTagName("input")) {
+    index.addEventListener("input", () => {
+      initNProgress();
+    });
+  }
 </script>
