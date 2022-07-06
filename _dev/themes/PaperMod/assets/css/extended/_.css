@@ -18,11 +18,12 @@
   margin-top: 15px;
   margin-bottom: 0;
 }
-.logo:after {
-  content: "v1.1";
-  /* font-weight: bold; */
-  font-size: 0.789em;
-  opacity: 0.678;
+.logo a:after {
+  content: "<- toggleSwitchAnimation";
+  margin-left: 3px;
+  font-weight: normal;
+  font-size: 0.5em;
+  color: var(--secondary);
 }
 .post-tags a {
   padding-inline-start: 9px;
@@ -128,8 +129,7 @@ img {
   transition: 0.3s ease-out;
   background: radial-gradient(circle, transparent 0%, var(--tertiary) 100%);
 }
-.post-entry:active,
-.top-link:active,
-.terms-tags a:active {
+button:active,
+a:active {
   transform: scale(0.96) !important;
 }
