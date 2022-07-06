@@ -20,9 +20,6 @@
   font-size: 0.789em;
   opacity: 0.678;
 }
-.post-footer {
-  margin-top: 0;
-}
 .post-tags a {
   padding-inline-start: 9px;
   padding-inline-end: 9px;
@@ -34,10 +31,6 @@
 }
 .post-tags a:before {
   content: "#";
-}
-.post-footer {
-  /* border-top: 1px solid var(--tertiary); */
-  padding-top: 20px;
 }
 .first-entry.home-info {
   margin: var(--gap) 0 calc(var(--gap));
