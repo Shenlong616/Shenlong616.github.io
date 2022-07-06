@@ -82,7 +82,7 @@ params:
 
   homeInfoParams:
     Title: "Xin Chào 👋"
-    Content: "tôi tên Phát và n.y tôi có hình xăm ở đích, tôi rất thích!"
+    Content: "tôi tên Phát và logic tôi như cc, nhưng tôi thích code!"
 
   socialIcons:
     - name: GitHub
