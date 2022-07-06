@@ -53,9 +53,11 @@
 }
 img {
   border-radius: var(--radius) !important;
+  /* box-shadow: 0 10px 15px var(--theme) !important; */
+  border: 1px solid var(--border) !important;
 }
 .post-entry {
-  padding: calc(var(--gap) - 8px);
+  padding: calc(var(--gap) - 5px);
 }
 .post-meta {
   margin-top: 5px;
