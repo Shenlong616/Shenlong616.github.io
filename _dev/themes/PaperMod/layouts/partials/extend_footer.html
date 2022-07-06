@@ -1,6 +1,163 @@
+<style>
+  /* pokey.css v1.0.1 | MIT License | github.com/svinkle/pokey.css */
+  [tabindex="0"],
+  a[href],
+  area[href],
+  button,
+  input[type="checkbox"],
+  input[type="color"],
+  input[type="file"],
+  input[type="image"],
+  input[type="radio"],
+  input[type="range"],
+  input[type="submit"],
+  label[for],
+  select,
+  summary {
+    cursor: pointer !important;
+  }
+
+  button[disabled],
+  input[disabled],
+  select[disabled],
+  textarea[disabled] {
+    cursor: not-allowed !important;
+  }
+</style>
+<style>
+  .breadcrumbs {
+    border-bottom: 1px solid var(--tertiary);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  .toc details summary {
+    margin-inline-start: 0;
+    text-align: center;
+  }
+  .toc .inner {
+    margin: 0 5px;
+  }
+  .post-description {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  .logo:after {
+    content: "v1.5";
+    /* font-weight: bold; */
+    font-size: 0.789em;
+    opacity: 0.678;
+  }
+  .post-tags a {
+    padding-inline-start: 9px;
+    padding-inline-end: 9px;
+    margin-inline-end: 3px;
+    color: var(--primary);
+    font-size: 15px;
+    line-height: inherit;
+    background: var(--theme);
+  }
+  .post-tags a:before {
+    content: "#";
+  }
+  .first-entry.home-info {
+    margin: var(--gap) 0 calc(var(--gap));
+  }
+  /* ::-webkit-scrollbar-thumb {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: linear-gradient(
+    180deg,
+    var(--primary) 0%,
+    transparent 100%
+  ) !important;
+}
+::-webkit-scrollbar {
+  width: 13px !important;
+} */
+  .copy-code {
+    background: none;
+    border-radius: unset;
+  }
+  img {
+    border-radius: var(--radius) !important;
+    /* box-shadow: 0 10px 15px var(--theme) !important;
+  border: 1px solid var(--border) !important; */
+  }
+  .post-entry {
+    padding: calc(var(--gap) - 5px);
+  }
+  .post-meta {
+    margin-top: 5px;
+  }
+  .toc {
+    background: radial-gradient(
+      circle,
+      transparent 0%,
+      var(--code-bg) 100%
+    ) !important;
+  }
+  .paginav .next {
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+    background: linear-gradient(270deg, var(--theme) 0%, transparent 100%);
+  }
+  .paginav .prev {
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+    background: linear-gradient(90deg, var(--theme) 0%, transparent 100%);
+  }
+  .pagination .next {
+    color: var(--content);
+    background: linear-gradient(270deg, var(--entry) 0%, transparent 100%);
+  }
+  .pagination .prev {
+    color: var(--content);
+    background: linear-gradient(90deg, var(--entry) 0%, transparent 100%);
+  }
+  #top-link {
+    background: linear-gradient(180deg, var(--entry) 0%, transparent 100%);
+    transition: visibility 0.1s, opacity 0.3s ease-out;
+  }
+  .paginav .next,
+  .paginav .prev,
+  .post-tags a,
+  .post-entry,
+  .terms-tags a {
+    transition: 0.6s ease-in;
+  }
+  .paginav .next:hover {
+    transition: 0.3s ease-out;
+    background: linear-gradient(270deg, var(--border) 0%, transparent 100%);
+  }
+  .paginav .prev:hover {
+    transition: 0.3s ease-out;
+    background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+  }
+  .post-tags a:hover {
+    transition: 0.3s ease-out;
+    background: radial-gradient(circle, transparent 0%, var(--border) 100%);
+  }
+  .post-entry:hover {
+    transition: 0.3s ease-out;
+    background: radial-gradient(circle, transparent 0%, var(--entry) 100%);
+  }
+  .terms-tags a:hover {
+    transition: 0.3s ease-out;
+    background: radial-gradient(circle, transparent 0%, var(--tertiary) 100%);
+  }
+</style>
 <script>
-  window.onload = function () {
-    NProgress.start();
+  const init_NProgress = () => {
+    NProgress.set(0.3);
     NProgress.done();
+  };
+
+  window.onload = function () {
+    init_NProgress();
+    for (index of document.getElementsByTagName("input")) {
+      index.addEventListener("input", () => {
+        init_NProgress();
+      });
+    }
   };
 </script>
