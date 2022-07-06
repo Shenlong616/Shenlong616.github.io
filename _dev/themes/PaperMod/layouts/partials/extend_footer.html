@@ -154,24 +154,36 @@
     });
   }
 
-  function randomArray(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
+  switch (localStorage.getItem("originScrollReveal")) {
+    case "left":
+      localStorage.setItem("originScrollReveal", "right");
+      break;
+    case "right":
+      localStorage.setItem("originScrollReveal", "left");
+      break;
+    default:
+      localStorage.setItem("originScrollReveal", "left");
   }
 
-  ScrollReveal().reveal(
-    ".post-entry,.terms-tags a,.archive-year-header,.archive-month-header,.archive-entry",
-    {
-      duration: 500,
-      easing: "ease-out",
-      reset: true,
-      distance: "7%",
-      origin: randomArray(["left", "right"]),
-      beforeReveal: () => {
-        NProgress.set(0.1);
-      },
-      afterReveal: () => {
-        NProgress.done();
-      },
-    }
-  );
+  if (ScrollReveal().noop) {
+    console.log("ScrollReveal is non-operational!");
+  } else {
+    ScrollReveal().reveal(
+      ".post-entry,.terms-tags a,.archive-year-header,.archive-month-header,.archive-entry",
+      {
+        mobile: false,
+        duration: 500,
+        easing: "ease-out",
+        reset: true,
+        distance: "7%",
+        origin: localStorage.getItem("originScrollReveal"),
+        beforeReveal: () => {
+          NProgress.set(0.1);
+        },
+        afterReveal: () => {
+          NProgress.done();
+        },
+      }
+    );
+  }
 </script>
