@@ -151,11 +151,19 @@
     NProgress.set(0.3);
     NProgress.done();
   };
-  initNProgress();
 
   for (index of document.getElementsByTagName("input")) {
     index.addEventListener("input", () => {
       initNProgress();
     });
   }
+
+  ScrollReveal().reveal(".post-entry,.terms-tags a", {
+    duration: 500,
+    easing: "ease-out",
+    reset: true,
+    afterReveal: () => {
+      initNProgress();
+    },
+  });
 </script>
