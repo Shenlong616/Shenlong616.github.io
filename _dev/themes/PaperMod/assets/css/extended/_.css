@@ -15,7 +15,7 @@
   margin-bottom: 0;
 }
 .logo:after {
-  content: "v1.2";
+  content: "v1.5";
   /* font-weight: bold; */
   font-size: 0.789em;
   opacity: 0.678;
@@ -85,8 +85,9 @@ img {
   color: var(--content);
   background: linear-gradient(90deg, var(--entry) 0%, transparent 100%);
 }
-a#top-link {
+#top-link {
   background: linear-gradient(180deg, var(--entry) 0%, transparent 100%);
+  transition: visibility 0.1s, opacity 0.3s ease-out;
 }
 .paginav .next,
 .paginav .prev,

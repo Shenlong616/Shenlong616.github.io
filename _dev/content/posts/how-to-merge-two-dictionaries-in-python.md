@@ -2,7 +2,7 @@
 title: "How to merge two dictionaries in Python"
 date: 2022-07-05
 # description: ""
-tags: ["python", "python tricks", "merge", "dictionary"]
+tags: ["python", "python2", "python3", "python tricks", "merge", "dictionary"]
 categories: ["Python"]
 author: "Unknown"
 showToc: false

@@ -9,6 +9,7 @@ cover:
   image: "posts/images/javascript-tips-tricks-by-tuannguyen2504.jpg"
   alt: "JavaScript tips & tricks by TuanNguyen2504"
   caption: "JavaScript tips & tricks by TuanNguyen2504"
+  # hidden: false
 ---
 
 <!-- logo -->
