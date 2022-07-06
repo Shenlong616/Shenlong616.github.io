@@ -147,24 +147,31 @@
   }
 </style>
 <script>
-  const initNProgress = () => {
-    NProgress.set(0.3);
-    NProgress.done();
-  };
-
   for (index of document.getElementsByTagName("input")) {
     index.addEventListener("input", () => {
-      initNProgress();
+      NProgress.set(0.1);
+      NProgress.done();
     });
   }
 
-  // .archive-year
-  ScrollReveal().reveal(".post-entry,.terms-tags a,.archive-year", {
-    duration: 500,
-    easing: "ease-out",
-    reset: true,
-    afterReveal: () => {
-      initNProgress();
-    },
-  });
+  function randomArray(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  ScrollReveal().reveal(
+    ".post-entry,.terms-tags a,.archive-year-header,.archive-month-header,.archive-entry",
+    {
+      duration: 500,
+      easing: "ease-out",
+      reset: true,
+      distance: "7%",
+      origin: randomArray(["left", "right"]),
+      beforeReveal: () => {
+        NProgress.set(0.1);
+      },
+      afterReveal: () => {
+        NProgress.done();
+      },
+    }
+  );
 </script>
