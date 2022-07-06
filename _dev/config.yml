@@ -50,7 +50,7 @@ params:
   # comments: false
   # disableSpecial1stPost: true
   # images: ["papermod-cover.png"]
-  defaultTheme: dark # auto, light, dark
+  defaultTheme: auto # auto, light, dark
   description: "Shenlong's blog!"
   disableThemeToggle: false
   displayFullLangName: true
@@ -63,7 +63,7 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowShareButtons: false
   ShowToc: true
-  TocOpen: false
+  TocOpen: true
 
   profileMode:
     enabled: false
@@ -82,7 +82,10 @@ params:
 
   homeInfoParams:
     Title: "Hi there 👋"
-    Content: "void 0"
+    Content: >
+      Powered by
+       [Hugo](https://gohugo.io/)
+       & [PaperMod](https://github.com/adityatelange/hugo-PaperMod/)
 
   socialIcons:
     - name: GitHub

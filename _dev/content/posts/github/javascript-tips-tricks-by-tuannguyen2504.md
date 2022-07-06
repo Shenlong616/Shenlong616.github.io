@@ -1,5 +1,5 @@
 ---
-title: "JavaScript tips & tricks by TuanNguyen2504"
+title: "JavaScript tips & tricks"
 date: 2021-07-14
 description: "JavaScript Tips & Tricks"
 tags: ["javascript", "javascript tips", "javascript tricks"]

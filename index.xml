@@ -5,19 +5,31 @@
     <link>https://shenlong616.github.io/</link>
     <description>Recent content on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>anti-DDoS-iptables</title>
+      <link>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</guid>
+      <description>IPtables DDoS Protection: The Best Rules to Mitigate DDoS Attacks
+iptables DDoS Protection
+There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial. This guide will teach you how to:
+Select the best iptables table and chain to stop DDoS attacksTweak your kernel settings to mitigate the effects of DDoS attacksUse iptables to block most TCP-based DDoS attacksUse iptables SYNPROXY to block SYN floodsPlease note that this article is written for professionals who deal with Linux servers on a daily basis.</description>
+    </item>
+    
     <item>
       <title>K4YT3X&#39;s Hardened sysctl Configuration</title>
-      <link>https://shenlong616.github.io/posts/github/k4yt3xs-hardened-sysctl-configuration/</link>
+      <link>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</link>
       <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/k4yt3xs-hardened-sysctl-configuration/</guid>
+      <guid>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</guid>
       <description>This repository hosts my hardened version of sysctl.conf. This configuration file aims to provide better security for Linux systems and improves system performance whenever possible. For example, below are some of the features this configuration file provides.
 Prevents kernel pointers from being read Disables Ptrace for all programs Disallows core dumping by SUID/GUID programs Disables IPv4/IPv6 routing Enables BBR TCP congestion control Enables SYN cookies to mitigate SYN flooding attacks Enables IP reverse path filtering for source validation &amp;hellip; Please review the configuration file carefully before applying it.</description>
     </item>
     
     <item>
-      <title>JavaScript tips &amp; tricks by TuanNguyen2504</title>
+      <title>JavaScript tips &amp; tricks</title>
       <link>https://shenlong616.github.io/posts/github/javascript-tips-tricks-by-tuannguyen2504/</link>
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       
@@ -26,17 +38,17 @@ Prevents kernel pointers from being read Disables Ptrace for all programs Disall
     </item>
     
     <item>
-      <title>Python 3 tricks by alexghergh</title>
+      <title>Python 3 tricks</title>
       <link>https://shenlong616.github.io/posts/github/python-3-tricks-by-alexghergh/</link>
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/github/python-3-tricks-by-alexghergh/</guid>
-      <description>Python 3 tricks Disclaimer: This list is meant as a comprehension of cool tips and tricks I found on the internet. If you would like to contribute, or notice any mistakes or typos, please contact me or upload a pull request. If you think any material here can be considered personal property let me know and I will take it down.
+      <description>Disclaimer: This list is meant as a comprehension of cool tips and tricks I found on the internet. If you would like to contribute, or notice any mistakes or typos, please contact me or upload a pull request. If you think any material here can be considered personal property let me know and I will take it down.
 1. Looping over a range of numbers Using range() is better than using a list (ex.</description>
     </item>
     
     <item>
-      <title>JAVASCRIPT TIPS &amp; TRICKS by catalinpit</title>
+      <title>JAVASCRIPT TIPS &amp; TRICKS</title>
       <link>https://shenlong616.github.io/posts/github/javascript-tips-tricks-by-catalinpit/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       

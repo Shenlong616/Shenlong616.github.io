@@ -1,5 +1,5 @@
 ---
-title: "JAVASCRIPT TIPS & TRICKS by catalinpit"
+title: "JAVASCRIPT TIPS & TRICKS"
 date: 2020-04-03
 description: "A collection of JavaScript tips and tricks 🔥🚀⚡"
 tags: ["javascript", "javscript tips", "javascript tricks"]
@@ -15,7 +15,7 @@ I add things as I discover them.
 
 _Check [Codinghub.tips](https://codinghub.tips/), too, for JavaScript tips. It's not my project but I like it._ 🔥
 
-# OPTIONAL CHAINING
+# Optional chaining
 
 "Shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining))
 
@@ -44,7 +44,7 @@ if (person?.socialMedia?.twitter) {
 console.log(person?.socialMedia?.twitter);
 ```
 
-# NULLISH COALESCING OPERATOR
+# Nullish coalescing operator
 
 "The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator))
 
@@ -73,7 +73,7 @@ let name = "Catalin Pit";
 console.log(name ?? "No name assigned"); // Outputs 'Catalin Pit'
 ```
 
-# MERGE OBJECTS TOGETHER - SPREAD OPERATOR
+# Merge objects together - spread operator
 
 "Shallow-cloning (excluding prototype) or merging of objects is now possible using a shorter syntax than Object.assign()." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
 
@@ -107,7 +107,7 @@ const summary = {
 };
 ```
 
-# TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY
+# Two ways to convert a string to a character array
 
 These are two quick ways to convert your string to an array of characters.
 
@@ -121,7 +121,7 @@ const firstNameArr2 = [...firstName];
 console.log(firstNameArr2);
 ```
 
-# DEFAULT PARAMETERS
+# Default parameters
 
 "Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters))
 
@@ -135,7 +135,7 @@ add(10); // Returns 12
 add(5, 5); // Returns 10
 ```
 
-# FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES
+# Filter unique values / remove duplicate values
 
 "Set objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the Set may only occur once; it is unique in the Set's collection." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set))
 
@@ -164,7 +164,7 @@ const uniqueExamScores = [...new Set(examScores)];
 console.log(uniqueExamScores); // Outputs [50, 75, 100, 99, 95, 67, 43];
 ```
 
-# FILTER OUT FALSY VALUES
+# Filter out falsy values
 
 Remove falsy values such as `null, undefined, 0, boolean` and so on, from an array.
 
@@ -186,7 +186,7 @@ const filteredArray = myArray.filter(Boolean);
 console.log(filteredArray); // Returns ["Catalin", 1, "Macbook", true, "Car", "Peace", 191]
 ```
 
-# REQUIRED PARAMETERS
+# Required parameters
 
 Default parameters allows us to require an argument to be passed to the function.
 
@@ -203,7 +203,7 @@ greet(); // Returns "Uncaught TypeError: You did not pass the required argument!
 greet("Catalin Pit"); // Returns "Hello Catalin Pit!"
 ```
 
-# PASS AN EMPTY PARAMETER
+# Pass an empty parameter
 
 With the help of the spread syntax, we can now pass an empty parameter to a function.
 
@@ -237,7 +237,7 @@ greet(...["Catalin Pit", , "@cpit"]);
 greet(...["Catalin Pit", "@catapit"]);
 ```
 
-# ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION
+# Accept any number of arguments in a function
 
 We are making use of the spread operator again to accept any number of arguments in a function.
 
@@ -260,7 +260,7 @@ accumulator(1, 9, 2, 8); // Outputs 20
 accumulator(8, 1, 9, 2, 1000); // Outputs 1020
 ```
 
-# CHECK IF EVERY ITEM FROM AN ARRAY PASSES A TEST CONDITION
+# Check if every item from an array passes a test condition
 
 "The `every()` method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every))
 
@@ -278,7 +278,7 @@ closeOffice2.every(doYouWorkFromHome); // Returns true - We close the office
 closeOffice3.every(doYouWorkFromHome); // Returns false - We don't close the office
 ```
 
-# CHECK IF SOME ITEMS FROM AN ARRAY PASS A TEST CONDITION
+# Check if some items from an array pass a test condition
 
 "The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some))
 

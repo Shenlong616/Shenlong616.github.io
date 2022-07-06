@@ -5,13 +5,25 @@
     <link>https://shenlong616.github.io/categories/linux/</link>
     <description>Recent content in Linux on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>anti-DDoS-iptables</title>
+      <link>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</guid>
+      <description>IPtables DDoS Protection: The Best Rules to Mitigate DDoS Attacks
+iptables DDoS Protection
+There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial. This guide will teach you how to:
+Select the best iptables table and chain to stop DDoS attacksTweak your kernel settings to mitigate the effects of DDoS attacksUse iptables to block most TCP-based DDoS attacksUse iptables SYNPROXY to block SYN floodsPlease note that this article is written for professionals who deal with Linux servers on a daily basis.</description>
+    </item>
+    
     <item>
       <title>K4YT3X&#39;s Hardened sysctl Configuration</title>
-      <link>https://shenlong616.github.io/posts/github/k4yt3xs-hardened-sysctl-configuration/</link>
+      <link>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</link>
       <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/k4yt3xs-hardened-sysctl-configuration/</guid>
+      <guid>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</guid>
       <description>This repository hosts my hardened version of sysctl.conf. This configuration file aims to provide better security for Linux systems and improves system performance whenever possible. For example, below are some of the features this configuration file provides.
 Prevents kernel pointers from being read Disables Ptrace for all programs Disallows core dumping by SUID/GUID programs Disables IPv4/IPv6 routing Enables BBR TCP congestion control Enables SYN cookies to mitigate SYN flooding attacks Enables IP reverse path filtering for source validation &amp;hellip; Please review the configuration file carefully before applying it.</description>
     </item>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>iptables on Shenlong616</title>
+    <link>https://shenlong616.github.io/tags/iptables/</link>
+    <description>Recent content in iptables on Shenlong616</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>anti-DDoS-iptables</title>
+      <link>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</guid>
+      <description>IPtables DDoS Protection: The Best Rules to Mitigate DDoS Attacks
+iptables DDoS Protection
+There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial. This guide will teach you how to:
+Select the best iptables table and chain to stop DDoS attacksTweak your kernel settings to mitigate the effects of DDoS attacksUse iptables to block most TCP-based DDoS attacksUse iptables SYNPROXY to block SYN floodsPlease note that this article is written for professionals who deal with Linux servers on a daily basis.</description>
+    </item>
+    
+  </channel>
+</rss>
