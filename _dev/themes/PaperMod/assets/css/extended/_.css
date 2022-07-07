@@ -139,3 +139,18 @@ button:active,
 a:active {
   transform: scale(0.96) !important;
 }
+/* dell hieu kieu lol gi? */
+code {
+  cursor: text;
+}
+/* restyle color ??? */
+/* :root {
+  --theme: #f5f5f5;
+}
+.toc {
+  background: radial-gradient(
+    circle,
+    transparent 0%,
+    var(--tertiary) 100%
+  ) !important;
+} */
