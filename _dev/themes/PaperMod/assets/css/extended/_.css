@@ -107,6 +107,10 @@ img {
   border-bottom: 0;
   text-decoration: 2px line-through var(--primary);
 }
+code {
+  /* loi chi xuat hien tren github, dell hieu */
+  cursor: text;
+}
 .paginav .next,
 .paginav .prev,
 .post-tags a,
