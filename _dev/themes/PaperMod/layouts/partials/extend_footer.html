@@ -36,7 +36,8 @@
       if (localStorage.getItem("ScrollReveal") === "true") {
         toggleTextAnimationOnScroll("disableAnimationOnScroll");
         ScrollReveal().reveal(
-          "h1,h2,h3,h4,h5,h6,p,li,div,code,footer,article,details,blockquote,img",
+          // h1,h2,h3,h4,h5,h6,p,li,div,code,footer,article,details,blockquote,img
+          ".logo,#menu li,.home-info,article.post-entry,.archive-year-header,.archive-month-header,.archive-entry-title,.archive-meta,.terms-tags li",
           {
             // mobile: false,
             duration: 300,
@@ -44,7 +45,9 @@
             reset: true,
             distance: "6.16%",
             origin: "left",
-            beforeReveal: () => {},
+            beforeReveal: () => {
+              console.log("Revealing");
+            },
             afterReveal: () => {},
           }
         );
