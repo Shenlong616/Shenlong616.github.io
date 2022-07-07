@@ -1,5 +1,5 @@
 ---
-title: "JAVASCRIPT TIPS & TRICKS"
+title: "JAVASCRIPT TIPS & TRICKS by catalinmpit"
 date: 2020-04-03
 description: "A collection of JavaScript tips and tricks 🔥🚀⚡"
 tags: ["javascript", "javscript tips", "javascript tricks"]

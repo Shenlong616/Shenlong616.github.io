@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>anti-DDoS-iptables</title>
+      <title>anti DDoS iptables by scriptzteam</title>
       <link>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</link>
       <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
       
@@ -19,7 +19,7 @@ Select the best iptables table and chain to stop DDoS attacksTweak your kernel 
     </item>
     
     <item>
-      <title>K4YT3X&#39;s Hardened sysctl Configuration</title>
+      <title>Hardened sysctl Configuration by k4yt3x</title>
       <link>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</link>
       <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
       
@@ -29,30 +29,30 @@ Prevents kernel pointers from being read Disables Ptrace for all programs Disall
     </item>
     
     <item>
-      <title>JavaScript tips &amp; tricks</title>
-      <link>https://shenlong616.github.io/posts/github/javascript-tips-tricks-by-tuannguyen2504/</link>
+      <title>JavaScript tips &amp; tricks by tuannguyen2504</title>
+      <link>https://shenlong616.github.io/posts/github/javascript-tips-and-tricks-by-tuannguyen2504/</link>
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/javascript-tips-tricks-by-tuannguyen2504/</guid>
-      <description>JavaScript Tips &amp;amp; Tricks</description>
+      <guid>https://shenlong616.github.io/posts/github/javascript-tips-and-tricks-by-tuannguyen2504/</guid>
+      <description>This is a collection of JavaScript tips and tricks. you can refer to it and apply it to make your code more concise. But don’t overdo it, it can make your code difficult to read and maintain. Hope everyone contributes, thanks.</description>
     </item>
     
     <item>
-      <title>Python 3 tricks</title>
+      <title>Python 3 tricks by alexghergh</title>
       <link>https://shenlong616.github.io/posts/github/python-3-tricks-by-alexghergh/</link>
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/github/python-3-tricks-by-alexghergh/</guid>
       <description>Disclaimer: This list is meant as a comprehension of cool tips and tricks I found on the internet. If you would like to contribute, or notice any mistakes or typos, please contact me or upload a pull request. If you think any material here can be considered personal property let me know and I will take it down.
-1. Looping over a range of numbers Using range() is better than using a list (ex.</description>
+Looping over a range of numbers Using range() is better than using a list (ex.</description>
     </item>
     
     <item>
-      <title>JAVASCRIPT TIPS &amp; TRICKS</title>
-      <link>https://shenlong616.github.io/posts/github/javascript-tips-tricks-by-catalinpit/</link>
+      <title>JAVASCRIPT TIPS &amp; TRICKS by catalinmpit</title>
+      <link>https://shenlong616.github.io/posts/github/javascript-tips-and-tricks-by-catalinmpit/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/javascript-tips-tricks-by-catalinpit/</guid>
+      <guid>https://shenlong616.github.io/posts/github/javascript-tips-and-tricks-by-catalinmpit/</guid>
       <description>A collection of JavaScript tips and tricks 🔥🚀⚡</description>
     </item>
     

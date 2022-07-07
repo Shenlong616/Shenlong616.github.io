@@ -1,5 +1,5 @@
 ---
-title: "K4YT3X's Hardened sysctl Configuration"
+title: "Hardened sysctl Configuration by k4yt3x"
 date: 2021-10-15
 tags:
   ["sysctl", "linux", "centos", "ubuntu", "performance", "security", "kernel"]

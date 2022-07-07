@@ -1,7 +1,7 @@
 ---
-title: "JavaScript tips & tricks"
+title: "JavaScript tips & tricks by tuannguyen2504"
 date: 2021-07-14
-description: "JavaScript Tips & Tricks"
+description: "This is a collection of JavaScript tips and tricks. you can refer to it and apply it to make your code more concise. But don’t overdo it, it can make your code difficult to read and maintain. Hope everyone contributes, thanks."
 tags: ["javascript", "javascript tips", "javascript tricks"]
 categories: ["JavaScript"]
 author: "TuanNguyen2504"
@@ -16,10 +16,6 @@ cover:
 <div align="center">
   <img  src="../../images/javascript-tips-tricks-by-tuannguyen2504.jpg" />
 </div>
-
-# Description 😋
-
-> This is a collection of JavaScript tips and tricks. you can refer to it and apply it to make your code more concise. **But don't overdo it**, it can make your code difficult to read and maintain. Hope everyone contributes, thanks.
 
 <!-- Tips for array -->
 

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>anti-DDoS-iptables</title>
+      <title>anti DDoS iptables by scriptzteam</title>
       <link>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</link>
       <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
       
@@ -19,7 +19,7 @@ Select the best iptables table and chain to stop DDoS attacksTweak your kernel 
     </item>
     
     <item>
-      <title>K4YT3X&#39;s Hardened sysctl Configuration</title>
+      <title>Hardened sysctl Configuration by k4yt3x</title>
       <link>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</link>
       <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
       

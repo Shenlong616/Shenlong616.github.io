@@ -1,5 +1,5 @@
 ---
-title: "anti-DDoS-iptables"
+title: "anti DDoS iptables by scriptzteam"
 date: 2021-11-09
 tags: ["ddos", "iptables", "linux", "firewall"]
 categories: ["Linux"]
@@ -284,25 +284,25 @@ The Complete IPtables Anti-DDoS Rules
 
 If you don't want to copy & paste each single rule we discussed in this article, you can use the below ruleset for basic DDoS protection of your Linux server.
 
-### 1: Drop invalid packets
+### Drop invalid packets
 
 ```
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
 ```
 
-### 2: Drop TCP packets that are new and are not SYN
+### Drop TCP packets that are new and are not SYN
 
 ```
 /sbin/iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP
 ```
 
-### 3: Drop SYN packets with suspicious MSS value
+### Drop SYN packets with suspicious MSS value
 
 ```
 /sbin/iptables -t mangle -A PREROUTING -p tcp -m conntrack --ctstate NEW -m tcpmss ! --mss 536:65535 -j DROP
 ```
 
-### 4: Block packets with bogus TCP flags
+### Block packets with bogus TCP flags
 
 ```
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DROP
@@ -321,7 +321,7 @@ If you don't want to copy & paste each single rule we discussed in this article,
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP
 ```
 
-### 5: Block spoofed packets
+### Block spoofed packets
 
 ```
 /sbin/iptables -t mangle -A PREROUTING -s 224.0.0.0/3 -j DROP
@@ -335,39 +335,39 @@ If you don't want to copy & paste each single rule we discussed in this article,
 /sbin/iptables -t mangle -A PREROUTING -s 127.0.0.0/8 ! -i lo -j DROP
 ```
 
-### 6: Drop ICMP (you usually don't need this protocol)
+### Drop ICMP (you usually don't need this protocol)
 
 ```
 /sbin/iptables -t mangle -A PREROUTING -p icmp -j DROP
 ```
 
-### 7: Drop fragments in all chains
+### Drop fragments in all chains
 
 ```
 /sbin/iptables -t mangle -A PREROUTING -f -j DROP
 ```
 
-### 8: Limit connections per source IP
+### Limit connections per source IP
 
 ```
 /sbin/iptables -A INPUT -p tcp -m connlimit --connlimit-above 111 -j REJECT --reject-with tcp-reset
 ```
 
-### 9: Limit RST packets
+### Limit RST packets
 
 ```
 /sbin/iptables -A INPUT -p tcp --tcp-flags RST RST -m limit --limit 2/s --limit-burst 2 -j ACCEPT
 /sbin/iptables -A INPUT -p tcp --tcp-flags RST RST -j DROP
 ```
 
-### 10: Limit new TCP connections per second per source IP
+### Limit new TCP connections per second per source IP
 
 ```
 /sbin/iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m limit --limit 60/s --limit-burst 20 -j ACCEPT
 /sbin/iptables -A INPUT -p tcp -m conntrack --ctstate NEW -j DROP
 ```
 
-### 11: Use SYNPROXY on all ports (disables connection limiting rule)
+### Use SYNPROXY on all ports (disables connection limiting rule)
 
 ```
 #/sbin/iptables -t raw -D PREROUTING -p tcp -m tcp --syn -j CT --notrack

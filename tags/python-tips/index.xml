@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/python-tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python 3 tricks</title>
+      <title>Python 3 tricks by alexghergh</title>
       <link>https://shenlong616.github.io/posts/github/python-3-tricks-by-alexghergh/</link>
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/github/python-3-tricks-by-alexghergh/</guid>
       <description>Disclaimer: This list is meant as a comprehension of cool tips and tricks I found on the internet. If you would like to contribute, or notice any mistakes or typos, please contact me or upload a pull request. If you think any material here can be considered personal property let me know and I will take it down.
-1. Looping over a range of numbers Using range() is better than using a list (ex.</description>
+Looping over a range of numbers Using range() is better than using a list (ex.</description>
     </item>
     
   </channel>

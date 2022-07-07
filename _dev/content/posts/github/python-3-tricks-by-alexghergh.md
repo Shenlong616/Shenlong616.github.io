@@ -1,5 +1,5 @@
 ---
-title: "Python 3 tricks"
+title: "Python 3 tricks by alexghergh"
 date: 2020-07-14
 description: ""
 tags: ["python", "python3", "python tricks", "python tips"]
@@ -9,7 +9,7 @@ author: "alexghergh"
 
 **_Disclaimer:_** This list is meant as a comprehension of cool tips and tricks I found on the internet. If you would like to contribute, or notice any mistakes or typos, please contact me or upload a pull request. If you think any material here can be considered personal property let me know and I will take it down.
 
-### 1. Looping over a range of numbers
+### Looping over a range of numbers
 
 Using `range()` is better than using a list (ex. `[1, 2, 3]`), because the list takes up memory space, whereas the `range()` function generates values on demand, thus taking a fixed amount of memory whatever the size of the elements is:
 
@@ -27,7 +27,7 @@ for i in range(100000):
 
 **Note:** This function used to create a list in python2, and `xrange()` used to do what `range()` currently does, but it got changed, so `range()` in python3 is `xrange()` in python2.
 
-### 2. Looping backwards
+### Looping backwards
 
 Use the function `reversed()`:
 
@@ -40,7 +40,7 @@ for lang in reversed(langs):
 # prints rust, kotlin, c++, java, python, c
 ```
 
-### 3. Looping over a collection and indices
+### Looping over a collection and indices
 
 Use the function `enumerate()`:
 
@@ -59,7 +59,7 @@ for i,lang in enumerate(langs):
 # 5 --> rust
 ```
 
-### 4. Looping over two collections
+### Looping over two collections
 
 Use the function `zip()`. It returns tuples of the elements until one of the iterables is exahusted:
 
@@ -80,7 +80,7 @@ for number, lang in zip(numbers, langs):
 
 **Note 2:** It's important to note that it generates tuples on demand, so it reuses memory space (it used to create a third list in python2, and `izip()` used to do what `zip()` does now in python3).
 
-### 5. Looping in sorted order
+### Looping in sorted order
 
 Use the function `sorted()` or the method `sort()` of iterables.
 
@@ -119,7 +119,7 @@ print(*langs)
 # notice that kotlin and python might be interchanged because they have the same size, same java and rust
 ```
 
-### 6. Partial functions
+### Partial functions
 
 A partial function is a function who has some parameters "frozen", in the sense that they are preset. The other parameters must be given when the partial function is called:
 
@@ -136,7 +136,7 @@ my_func(4)  #   equivalent to func(2, 3, 4)
             #   prints 20
 ```
 
-### 7. Fastest way to format multiple strings
+### Fastest way to format multiple strings
 
 Going from fastest to slowest, they are:
 
@@ -151,7 +151,7 @@ Template('$s $t').substitute(s=s, t=t)  # slowest
 
 **Note:** f-strings were added in Python 3.6.
 
-### 8. Iterating until a sentinel value
+### Iterating until a sentinel value
 
 This method has 2 forms:
 
@@ -189,7 +189,7 @@ for line in iter(partial(f.read, 80), ''):
     text.append(line)
 ```
 
-### 9. For else in Python
+### For else in Python
 
 Search a certain value in an iterable and do something if it is not there:
 
@@ -206,7 +206,7 @@ else:
 
 **Note:** Careful if you ever come back to this kind of code. Don't indent the `else` statement by accident!!!
 
-### 10. Looping over dictionary keys
+### Looping over dictionary keys
 
 ```python
 d = {
@@ -240,7 +240,7 @@ d = {
 s = {k: v for k, v in d.items() if k != 'foo'}
 ```
 
-### 11. Looping over dictionary keys and values
+### Looping over dictionary keys and values
 
 ```python
 d = {
@@ -257,7 +257,7 @@ The `items()` method returns and iterator, so it uses the same amount of memory 
 
 **Note:** In python2, the `items()` method used to return a list of tuples, and the `iteritems()` used to do what `items()` does now in python3.
 
-### 12. Construct a dictionary from 2 iterables
+### Construct a dictionary from 2 iterables
 
 Use the `zip()` method to pack 2 iterables into a zip object, then use the `dict()` method to make that into a dictionary.
 
@@ -272,7 +272,7 @@ s = dict(enumerate(colors))
 print(s)    # prints {1: 'blue', 2: 'green', 3: 'red'}
 ```
 
-### 13. Populating a dictionary with default data (Counting with dictionary)
+### Populating a dictionary with default data (Counting with dictionary)
 
 Use the `defaultdict()` method imported from `collections`. When a key is not in the dictionary, it creates a new key that has the default value.
 
@@ -316,7 +316,7 @@ print(hello(1)) # prints Hi, Alice
 print(hello(4)) # prints Hi, random person
 ```
 
-### 14. Creating a list with n elements
+### Creating a list with n elements
 
 Say you want to create a list with 100 elements of 0. You can just do:
 
@@ -326,7 +326,7 @@ lst = [0] * 100
 print(lst)
 ```
 
-### 15. Ternary operator in Python
+### Ternary operator in Python
 
 This:
 
@@ -355,7 +355,7 @@ x = (1 if y == 1 else 0)
 print(x)
 ```
 
-### 16. Grouping data with dictionaries
+### Grouping data with dictionaries
 
 Say you want to group the items in a list based on some comparison function, for example `len()`:
 
@@ -374,7 +374,7 @@ print(dict(d))    # prints {5: ['julia', 'maria'], 4: ['mark', 'alex'], 6: ['tho
 
 All you have to do to group based on some other function is change the `key` to something else.
 
-### 17. Unpacking sequences
+### Unpacking sequences
 
 ```python
 p = 'alex', 'blue', 20, 'c'         # same as p = ('alex', 'blue', 20, 'c')
@@ -396,7 +396,7 @@ x, y = y, x
 print(x, y) # prints 2 1
 ```
 
-### 18. Concatenating strings
+### Concatenating strings
 
 Use the `join()` method to concatenate strings from an iterable.
 
@@ -409,7 +409,7 @@ text = ', '.join(langs)
 print(text) # prints c, python, java, c++, kotlin, rust
 ```
 
-### 19. Atomicity of builtin data types
+### Atomicity of builtin data types
 
 Most (!not all) of the builtin data types methods are implemented using C function calls, so that makes it atomic.
 
@@ -438,7 +438,7 @@ while d:
 
 **Note:** If unsure, don't hesitate to use mutexes!
 
-### 20. Linking and overriding dictionaries with defaults
+### Linking and overriding dictionaries with defaults
 
 When you have a dictionary that has some default values and you want to override it with another dictionary, use `ChainMap()`. `ChainMap()` has the advantage that it doesn't copy anything, it just "links" the dictionaries, using the initial memory (this also means that any change in the initial dictionary will be reflected in the `ChainMap()` as well).
 
@@ -480,7 +480,7 @@ d.update(d2)
 
 **Note 2:** For a better example when this is useful, see [this](https://docs.python.org/3/library/collections.html#collections.ChainMap).
 
-### 21. Ordered dictionary
+### Ordered dictionary
 
 A dictionary is not guaranteed to preserve the order of insertion. It actually optimizes keys for faster lookup. However there is one way to have a dictionary preserve insertion order, using `OrderedDict()` from `collections`.
 
@@ -512,7 +512,7 @@ print(c == d)   # returns False since OrderedDicts are order-sensitive, and regu
 
 Also, `OrderedDict`s have methods to change order of elements, while regular `dict`s don't.
 
-### 22. Using deque instead of a list when updating
+### Using deque instead of a list when updating
 
 Deques (double ended queues) are really fast in python3. They are implemented using doubly-linked lists, so inserting and removing at the end or at the beginning is O(1) complexity. Lists are implemented as normal arrays, so they have to sometimes `realloc()` to accomodate for the number of elements (only sometimes because by default it `realloc()`s more memory at the time than necessary'), so that makes them have O(n) complexity when inserting or removing at the beginning because they have to copy the rest of the elements.
 
@@ -536,7 +536,7 @@ langs.popleft(0)
 langs.appendleft(0, 'scala')
 ```
 
-### 23. Temporary contexts
+### Temporary contexts
 
 Usually there is the case that code like this is written in other languages:
 
@@ -646,7 +646,7 @@ with open('help.txt', 'w') as f:
 
 More on context managers [here](https://docs.python.org/3/library/contextlib.html).
 
-### 24. Using the cache for optimized function calls
+### Using the cache for optimized function calls
 
 For example, looking up a webpage numerous times is expensive, and usually the result is the same. So use the `lru_cache()` decorator:
 
@@ -660,7 +660,7 @@ def web_lookup(url):
 
 More can be found [here](https://docs.python.org/3/library/functools.html#functools.lru_cache).
 
-### 25. Test a sequence or generator for truthness
+### Test a sequence or generator for truthness
 
 Using the `any()` function, you can check if at least one value in the iterable is `True`. It applies the `bool()` function to every element.
 
@@ -692,7 +692,7 @@ print(any([range(1000000)]))   # prints True after the whole list of 1000000 ele
 
 There is another function, `all()`, that does what it says: it tests for all the elements in the sequence to be `True`, and works much in the same way as `any()`.
 
-### 26. Use namedtuples instead of tuples
+### Use namedtuples instead of tuples
 
 Aside from the fact that `namedtuple()`s are more verbose, they also offer better usage, as they can be treated as regular tuples, classes or even dictionaries.
 
@@ -744,7 +744,7 @@ print(Person(31, 'blue', 'whatever'))   # prints Person(age=31, color='blue', _2
 
 **Note 2:** Since Python 3.8, `_asdict()` method returns a regular dictionary, as regular `dict`s now have guaranteed ordering based on insertion (since Python 3.7).
 
-### 27. Profiling code with cProfile
+### Profiling code with cProfile
 
 Since Python 3.8, cProfile can be used as a context manager, making it extremely easy to profile code.
 
@@ -757,7 +757,7 @@ with cProfile.Profile() as profiler:
 profiler.print_stats()
 ```
 
-### 28. Pretty print stuff
+### Pretty print stuff
 
 One way to format the output is to use the `pprint` module.
 
@@ -807,7 +807,7 @@ pprint(d, indent=2, width=20, compact=True, sort_dicts=False)
 
 More info [here](https://docs.python.org/3/library/pprint.html#module-pprint).
 
-### 29. The "is" operator vs "==" operator
+### The "is" operator vs "==" operator
 
 The `is` operator checks if 2 objects point to the same memory address. The equality operator `==` checks if 2 objects are equal.
 
@@ -823,7 +823,7 @@ print(other_copy == langs)  # prints True
 print(other_copy is langs)  # prints False
 ```
 
-### 30. List slices
+### List slices
 
 You can use slices to replace elements, delete elements or make a copy of a list.
 
@@ -864,7 +864,7 @@ print(langs)    # prints ['c', ['some other lang', 'java'], 'c++', 'kotlin', 'ru
 
 **Note:** If you need a deep copy consider using the function `deepcopy()` from the module `copy`.
 
-### 31. Deep and shallow copies
+### Deep and shallow copies
 
 There are 2 types of copies in Python. One is the shallow copy, that works very similar to how assigning to pointers works in C (they only reference the object they point to, changing one also changes the other), and the other is the deep copy, which makes a perfect copy of the object.
 
@@ -894,7 +894,7 @@ print(list3)    # prints [9, 2, [3, 8], 5]
 
 More about deep and shallow copies [here](https://www.geeksforgeeks.org/copy-python-deep-copy-shallow-copy/).
 
-### 32. Python's built-in http server
+### Python's built-in http server
 
 Python has a built-in http server; it can be super useful if you want to preview a website without going the hurdle of starting an apache or nginx server.
 
@@ -904,7 +904,7 @@ This serves the website in the current directory at address `localhost:8000`:
 python3 -m http.server
 ```
 
-### 33. Type annotations
+### Type annotations
 
 Python 3.5 supports type annotations, which can ensure better readability. **Note however that they are only there for the programmer to acknowledge, Python does not care and won't change anything based on them**.
 
@@ -928,7 +928,7 @@ More info about type annotations can be found in [PEP 484](https://www.python.or
 
 **Note 3:** Since Python 3.6, [PEP 526](https://www.python.org/dev/peps/pep-0526/), more support for type annotations was added. Again, **Python will always be a dynamically-typed language**, but tools can be used to ensure static typing.
 
-### 34. Counter for iterables
+### Counter for iterables
 
 This is an easy method to find the most common elements in an iterable:
 
@@ -945,7 +945,7 @@ print(c.most_common(3))
 
 More info can be found [in the Python docs for the Counter class](https://docs.python.org/3/library/collections.html#collections.Counter).
 
-### 35. Permutations of an iterable
+### Permutations of an iterable
 
 Get permutations of an iterable:
 
@@ -960,7 +960,7 @@ print(lst)
 
 The function takes an iterable and another optional argument specifying the length of one permutation.
 
-### 36. Getting the representation of an object as a string
+### Getting the representation of an object as a string
 
 Python has 2 methods to transform an object into a string (similar to other languages `toString()` methods); those are `str()` and `repr()`.
 
@@ -977,7 +977,7 @@ The function `str()` is made for clarity, while the function `repr()` is made to
 
 The python console uses `repr()`.
 
-### 37. Python disassembler
+### Python disassembler
 
 Python has a built-in disassembler. It is very rudimentary, but it can help debug some code.
 
@@ -1000,7 +1000,7 @@ dis.dis(func)
 
 More info [in the docs](https://docs.python.org/3/library/dis.html).
 
-### 38. Lambda functions
+### Lambda functions
 
 Lambda functions, as in other functional programming languages, are anonymous functions that don't have a name. They are useful for small code that doesn't require more than a line or two, and they are generally passed as arguments to other functions.
 
@@ -1040,7 +1040,7 @@ x = (lambda a, b: a - b)(5, 4)
 print(x)   # prints 1
 ```
 
-### 39. Ip addresses in Python
+### Ip addresses in Python
 
 Python has an interesting module to work with Ip addresses:
 
@@ -1058,7 +1058,7 @@ print(address + 3)
 
 More info [here](https://docs.python.org/3/library/ipaddress.html).
 
-### 40. Subclasses and subinstances
+### Subclasses and subinstances
 
 In Python, you can check if a class is a subclass of some other class:
 
@@ -1081,7 +1081,7 @@ obj = SubClass()
 print(isinstance(obj, BaseClass))   # prints True
 ```
 
-### 41. Asterisk (\*) and slash (\\) in function definition (positional- and keyword-only function parameters)
+### Asterisk (\*) and slash (\\) in function definition (positional- and keyword-only function parameters)
 
 In Python 3, you can add an asterisk and a slash to a function definition with special meaning. Asterisk marks keyword-only parameters (that means parameters that can be given to the function just by keyword, not by position), while slash marks positional-only parameters (meaning parameters cannot be given by keyword, but by position only).
 
@@ -1106,7 +1106,7 @@ Info and rationale about these 2 types of parameters can be found in [PEP 3102 -
 
 **Note:** Until Python 3.8, positional-only arguments could only be used in library functions. Starting from Python 3.8, they can be used in programmer constructions too.
 
-### 42. Python interactive shell
+### Python interactive shell
 
 Say you wrote some Python code like this:
 
@@ -1117,7 +1117,7 @@ def min(a, b):
 
 You can launch it in an interactive shell with `python -i main.py`, which is similar to calling only `python` in the command line, with the key difference that the python shell contains your function in the global scope as well. Go ahead, try it!
 
-### 43. Python debugger
+### Python debugger
 
 Python has a debugger, similar to gdb. One way to use it is to simply add `import pdb; pdb.set_trace()` in your program wherever u want the debugger to stop program execution.
 
@@ -1138,7 +1138,7 @@ For more information on how to operate the python debugger, visit [this](https:/
 
 **Note:** Since Python 3.7, instead of `import pdb; pdb.set_trace()`, you can simply add a `breakpoint()` function call whenever you want the program to stop execution.
 
-### 44. The walrus operator (:=)
+### The walrus operator (:=)
 
 Python 3.8 introduced assignment expressions through the use of a new operator, called the walrus operator (if you look sideways, the operator looks like a walrus).
 
@@ -1165,7 +1165,7 @@ Nonetheless, Python 3.8 adopted assignment expressions through the use of the wa
 
 For more info on the walrus operator and assignment expressions, see [PEP 572](https://www.python.org/dev/peps/pep-0572/).
 
-### 45. Formatted strings (f-strings)
+### Formatted strings (f-strings)
 
 Formatted string literals (or f-strings) are a construct added in Python 3.6 and have since become very popular due to the speed (see tip 7) and simplicity.
 
@@ -1212,7 +1212,7 @@ More info about f-strings [in the docs](https://docs.python.org/3/reference/lexi
 
 **Note:** Formatted strings have a 'formatting' option similar to how `printf()` works in other languages. Python's implementation of formatted print is [a little more advanced though](https://docs.python.org/3/library/string.html#format-specification-mini-language).
 
-### 46. Decorators and the functools.wraps helper function
+### Decorators and the functools.wraps helper function
 
 Say you have a function:
 
@@ -1279,7 +1279,7 @@ print(sum.__doc__)      # prints "This function adds 2 numbers and returns the r
 print(sum.__name__)     # prints "sum"
 ```
 
-### 47. Static function variables
+### Static function variables
 
 Python does not have a built-in method to have a static variable in a function like C or other languages do through the use of the `static` keyword.
 

@@ -8,21 +8,21 @@
   text-align: center;
 }
 .toc .inner {
-  margin: 0 5px;
+  margin: 0 30px;
   padding: 0;
 }
 .toc ul {
-  list-style: none;
+  list-style: decimal;
 }
 .post-description {
   margin-top: 15px;
   margin-bottom: 0;
 }
 .logo a:after {
-  content: "<- toggleSwitchAnimation";
+  content: "<-- toggleAnimationOnScroll";
   margin-left: 3px;
   font-weight: normal;
-  font-size: 0.5em;
+  font-size: 0.456789em;
   color: var(--secondary);
 }
 .post-tags a {
@@ -99,8 +99,13 @@ img {
 .top-link {
   background: linear-gradient(180deg, var(--tertiary) 0%, transparent 100%);
   transition: visibility 0.1s, opacity 0.3s ease-out;
-  border-radius: 5px 5px 0 0;
-  height: 49px;
+  /* border-radius: 5px 5px 0 0;
+  height: 49px; */
+}
+#menu .active {
+  font-weight: bold;
+  border-bottom: 0;
+  text-decoration: 2px line-through var(--primary);
 }
 .paginav .next,
 .paginav .prev,
