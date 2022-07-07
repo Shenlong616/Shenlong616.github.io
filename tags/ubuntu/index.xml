@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ubuntu on Shenlong616</title>
+    <link>https://shenlong616.github.io/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on Shenlong616</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hardened sysctl Configuration by k4yt3x</title>
+      <link>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</guid>
+      <description>This repository hosts my hardened version of sysctl.conf. This configuration file aims to provide better security for Linux systems and improves system performance whenever possible. For example, below are some of the features this configuration file provides.
+Prevents kernel pointers from being read Disables Ptrace for all programs Disallows core dumping by SUID/GUID programs Disables IPv4/IPv6 routing Enables BBR TCP congestion control Enables SYN cookies to mitigate SYN flooding attacks Enables IP reverse path filtering for source validation &amp;hellip; Please review the configuration file carefully before applying it.</description>
+      <content:encoded><![CDATA[<p>This repository hosts my hardened version of <code>sysctl.conf</code>. This configuration file aims to provide better security for Linux systems and improves system performance whenever possible. For example, below are some of the features this configuration file provides.</p>
+<ul>
+<li>Prevents kernel pointers from being read</li>
+<li>Disables Ptrace for all programs</li>
+<li>Disallows core dumping by SUID/GUID programs</li>
+<li>Disables IPv4/IPv6 routing</li>
+<li>Enables BBR TCP congestion control</li>
+<li>Enables SYN cookies to mitigate SYN flooding attacks</li>
+<li>Enables IP reverse path filtering for source validation</li>
+<li>&hellip;</li>
+</ul>
+<p><strong>Please review the configuration file carefully before applying it.</strong> You are responsible for actions done to your system. If you need some guidance understanding what each of the settings is for, <a href="https://sysctl-explorer.net/">sysctl-explorer</a> might come in handy. You may also consult <a href="https://www.kernel.org/doc/Documentation/sysctl/">Linux&rsquo;s kernel documentation</a>.</p>
+<h2 id="assumptions">Assumptions</h2>
+<p>This configuration file is written with a few assumptions about your OS. You can still use this configuration as a template if your OS does not match these assumptions (e.g., set <code>net.ipv4.ip_forward</code> to <code>1</code> on a router). Making these assumptions helps us to develop a configuration file with the most number of optimizations enabled for common systems.</p>
+<ul>
+<li>Security is valued over performance and convenience</li>
+<li>The OS does not act as a router</li>
+<li>The OS is running on a 64-bit system</li>
+<li>The OS is on a network that is relatively stable (e.g., wired vs. LTE)</li>
+<li>No debugging features are required (e.g., no need for GDB/kdump)</li>
+<li>ICMP echo messages are not regarded as harmful</li>
+</ul>
+<h2 id="configuration-deployment">Configuration Deployment</h2>
+<p>Linux kernel configuration files are stored in the directory <code>/etc/sysctl.d</code>. Configurations in all files having a suffix of <code>.conf</code> will read by the <code>procps</code> (a.k.a. <code>systemd-sysctl</code>) service. Additionally, the <code>procps</code> service also loads configurations from the following directories.</p>
+<ul>
+<li><code>/run/sysctl.d</code></li>
+<li><code>/usr/local/lib/sysctl.d</code></li>
+<li><code>/usr/lib/sysctl.d</code></li>
+<li><code>/lib/sysctl.d</code></li>
+</ul>
+<p>Files are sorted and read by their file names in lexicographic order. Variables read later will overwrite variables read earlier. For example, configurations in <code>20-something.conf</code> will be read before <code>99-sysctl.conf</code>. If a variable exists in both files, values read from <code>20-something.conf</code> will be overwritten by values read from <code>99-sysctl.conf</code>.</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties"># in 20-something.conf
+net.ipv4.ip_forward = 0
+
+# in 99-sysctl.conf
+net.ipv4.ip_forward = 1
+
+# net.ipv4.ip_forward will be 1
+</code></pre><h3 id="method-1-deploy-definitively">Method 1: Deploy Definitively</h3>
+<p>By default, on most Linux distributions, the <code>/etc/sysctl.d/99-sysctl.conf</code> file is a link to the <code>/etc/sysctl.conf</code> file. Therefore, you may write the variables into the <code>/etc/sysctl.conf</code>. However, since configuration files with a file name that starts with an alphabetical character sort later in the list than <code>99-sysctl.conf</code>, the changes you make in the <code>/etc/sysctl.conf</code> might not be the final value loaded into the kernel. To make sure that your changes are loaded into the kernel, you would have to make sure that your configuration file&rsquo;s name is lexicographically the last file in <code>/etc/sysctl.d</code>. The filename <code>z-k4yt3x.conf</code> will be used as an example in the code snippet below.</p>
+<p>This deployment method is suitable for systems that do not expect to have their sysctl configurations updated from this repository anymore. Otherwise, the configuration file&rsquo;s content has to be updated every time a new update form this repository is installed.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># download the configuration file from GitHub using curl</span>
+</span></span><span class="line"><span class="cl">curl https://raw.githubusercontent.com/k4yt3x/sysctl/master/sysctl.conf -o ~/sysctl.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># you may also download with wget or other methods if curl is not available</span>
+</span></span><span class="line"><span class="cl">wget https://raw.githubusercontent.com/k4yt3x/sysctl/master/sysctl.conf -O ~/sysctl.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># move the configuration file into the sysctl configuration directory</span>
+</span></span><span class="line"><span class="cl">sudo mv ~/sysctl.conf /etc/sysctl.d/z-k4yt3x.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># make sure the file has correct ownership and permissions</span>
+</span></span><span class="line"><span class="cl">sudo chown root:root /etc/sysctl.d/z-k4yt3x.conf
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">644</span> /etc/sysctl.d/z-k4yt3x.conf
+</span></span></code></pre></div><h3 id="method-2-deploy-as-template">Method 2: Deploy as Template</h3>
+<p>Alternatively, you can use this configuration file as a template. If you name the configuration file something akin to <code>/etc/sysctl.d/98-k4yt3x.conf</code>, you may overwrite values in this configuration file by giving them a new definition the <code>/etc/sysctl.conf</code> file.</p>
+<p>The advantage of doing this is that you would not have to change this template file&rsquo;s content every time it is updated in this repository. You can drop the template file in and make any modifications in <code>/etc/sysctl.conf</code>.</p>
+<p>This method&rsquo;s disadvantage is that values from this template might be overwritten by values in other configurations unknowingly. For example, a <code>uhd-usrp2.conf</code> exists on my system, and overwrites the value of <code>net.core.rmem_max</code> and <code>net.core.wmem_max</code> set in previous configuration files. Packages managers can install new configurations as you install a new package or update your system. Therefore, you will have to be careful that other files do not overwrite your variables.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># download the configuration file from GitHub using curl</span>
+</span></span><span class="line"><span class="cl">curl https://raw.githubusercontent.com/k4yt3x/sysctl/master/sysctl.conf -o ~/sysctl.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># you may also download with wget or other methods if curl is not available</span>
+</span></span><span class="line"><span class="cl">wget https://raw.githubusercontent.com/k4yt3x/sysctl/master/sysctl.conf -O ~/sysctl.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># move the configuration file into the sysctl configuration directory</span>
+</span></span><span class="line"><span class="cl">sudo mv ~/sysctl.conf /etc/sysctl.d/98-k4yt3x.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># make sure the file has correct ownership and permissions</span>
+</span></span><span class="line"><span class="cl">sudo chown root:root /etc/sysctl.d/98-k4yt3x.conf
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">644</span> /etc/sysctl.d/98-k4yt3x.conf
+</span></span></code></pre></div><h3 id="method-3-custom-order-personal-recommendation">Method 3: Custom Order (Personal Recommendation)</h3>
+<p>To ensure that the configuration files are read in an order you prefer, you may also rename the files to your preference. For example, you can install this template to <code>/etc/sysctl.d/y-k4yt3x.conf</code>, then make a symbolic link from <code>/etc/sysctl.d/z-sysctl.conf</code> to <code>/etc/sysctl.conf</code>. This ensures that the two files are more likely to be read the last.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># download the configuration file from GitHub using curl</span>
+</span></span><span class="line"><span class="cl">curl https://raw.githubusercontent.com/k4yt3x/sysctl/master/sysctl.conf -o ~/sysctl.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># you may also download with wget or other methods if curl is not available</span>
+</span></span><span class="line"><span class="cl">wget https://raw.githubusercontent.com/k4yt3x/sysctl/master/sysctl.conf -O ~/sysctl.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># move the configuration file into the sysctl configuration directory</span>
+</span></span><span class="line"><span class="cl">sudo mv ~/sysctl.conf /etc/sysctl.d/y-k4yt3x.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># make sure the file has correct ownership and permissions</span>
+</span></span><span class="line"><span class="cl">sudo chown root:root /etc/sysctl.d/y-k4yt3x.conf
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">644</span> /etc/sysctl.d/y-k4yt3x.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># point z-sysctl.conf to /etc/sysctl.conf</span>
+</span></span><span class="line"><span class="cl">sudo ln -s /etc/sysctl.conf /etc/sysctl.d/z-sysctl.conf
+</span></span></code></pre></div><h2 id="loading-and-verifying-the-changes">Loading and Verifying the Changes</h2>
+<p>For the changes to be effective, you will have to either reboot your machine or reload the configurations using one of the following commands.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># instruct sysctl to load settings from the configuration file into the live kernel</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># this command allows you to see the variables as they are being loaded</span>
+</span></span><span class="line"><span class="cl">sudo sysctl --system
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># alternatively, you can restart the systemd-sysctl service on a system that uses systemd</span>
+</span></span><span class="line"><span class="cl">sudo systemctl restart systemd-sysctl
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># procps is an alias of systemd-sysctl</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># restarting either one of procps and systemd-sysctl would work</span>
+</span></span><span class="line"><span class="cl">sudo systemctl restart procps
+</span></span></code></pre></div><p>Afterwards, you may verify your changes by dumping all kernel variables. Replace <code>your.config</code> in the following command with the name of the variable you would like to check.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo sysctl -a <span class="p">|</span> grep <span class="s2">&#34;your.config&#34;</span>
+</span></span></code></pre></div><p>For example, the following command prints the value of <code>kernel.kptr_restrict</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sudo sysctl -a <span class="p">|</span> grep <span class="s2">&#34;kernel.kptr_restrict&#34;</span>
+</span></span><span class="line"><span class="cl">kernel.kptr_restrict <span class="o">=</span> <span class="m">2</span>
+</span></span></code></pre></div><h2 id="short-url-for-downloading-sysctlconf">Short URL for Downloading <code>sysctl.conf</code></h2>
+<p>For convenience, I have pointed the URL <code>https://k4t.io/sysctl</code> to the <code>sysctl.conf</code> file. You may therefore download the <code>sysctl.conf</code> file with the following command. However, be sure to check the file&rsquo;s integrity after downloading it if you choose to download using this method.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">curl -L k4t.io/sysctl -o sysctl.conf
+</span></span></code></pre></div><h2 id="backup">Backup</h2>
+<ol>
+<li><a href="../../files/sysctl.conf">sysctl.conf</a></li>
+</ol>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
