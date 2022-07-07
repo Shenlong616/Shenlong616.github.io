@@ -1,0 +1,7 @@
+_dev\content
+_dev\static
+_dev\config.yml
+_dev\themes\PaperMod\layouts\partials\extend_footer.html
+_dev\themes\PaperMod\layouts\partials\extend_head.html
+_dev\themes\PaperMod\layouts\partials\footer.html
+_dev\themes\PaperMod\assets\css\extended
