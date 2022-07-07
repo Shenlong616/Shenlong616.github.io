@@ -1,0 +1,23 @@
+/* pokey.css v1.0.1 | MIT License | github.com/svinkle/pokey.css */
+[tabindex="0"],
+a[href],
+area[href],
+button,
+input[type="checkbox"],
+input[type="color"],
+input[type="file"],
+input[type="image"],
+input[type="radio"],
+input[type="range"],
+input[type="submit"],
+label[for],
+select,
+summary {
+  cursor: pointer !important;
+}
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled] {
+  cursor: not-allowed !important;
+}
