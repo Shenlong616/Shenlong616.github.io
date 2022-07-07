@@ -1,10 +1,12 @@
 ---
-title: "JavaScript tips & tricks by tuannguyen2504"
+title: "JavaScript tips & tricks by TuanNguyen2504"
 date: 2021-07-14
 description: "This is a collection of JavaScript tips and tricks. you can refer to it and apply it to make your code more concise. But don’t overdo it, it can make your code difficult to read and maintain. Hope everyone contributes, thanks."
 tags: ["javascript", "javascript tips", "javascript tricks"]
 categories: ["JavaScript"]
 author: "TuanNguyen2504"
+canonicalURL: "https://github.com/TuanNguyen2504/javascript-tips"
+ShowCanonicalLink: true
 cover:
   image: "posts/images/javascript-tips-tricks-by-tuannguyen2504.jpg"
   alt: "JavaScript tips & tricks by TuanNguyen2504"

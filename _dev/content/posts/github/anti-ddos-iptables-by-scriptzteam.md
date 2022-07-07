@@ -4,6 +4,8 @@ date: 2021-11-09
 tags: ["ddos", "iptables", "linux", "firewall"]
 categories: ["Linux"]
 author: "scriptzteam"
+canonicalURL: "https://github.com/scriptzteam/anti-DDoS-iptables"
+ShowCanonicalLink: true
 ---
 
 IPtables DDoS Protection: The Best Rules to Mitigate DDoS Attacks

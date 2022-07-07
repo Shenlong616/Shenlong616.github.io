@@ -5,7 +5,7 @@ buildFuture: false
 enableEmoji: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
-paginate: 9
+paginate: 6
 publishDir: ".."
 pygmentsUseClasses: true
 theme: PaperMod
@@ -51,23 +51,32 @@ outputs:
 params:
   # author: ["Me", "You"] # multiple authors
   # author: Theme PaperMod
+  # CanonicalLinkText: "Originally published at"
   # comments: false
   # disableSpecial1stPost: true
-  # images: ["papermod-cover.png"]
+  # images: ["papermod-cover.png"] # Link or path of image for opengraph, twitter-cards
   defaultTheme: auto # auto, light, dark
   description: "Shenlong's blog!"
   disableThemeToggle: false
   displayFullLangName: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  keywords:
+    [blog, javascript tip, javascript trick, python tip, python trick, dev]
   math: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
+  ShowFullTextinRSS: true
   ShowPostNavLinks: true
   ShowReadingTime: false
   ShowRssButtonInSectionTermList: true
   ShowShareButtons: false
   ShowToc: true
+  ShowWordCount: false
   TocOpen: true
+
+  schema:
+    publisherType: "Person"
+    sameAs: ["https://shenlong616.github.io/"]
 
   profileMode:
     enabled: false
@@ -94,6 +103,9 @@ params:
 
     - name: RSS
       url: "index.xml"
+
+    # - name: customURL
+    #   url: "#"
 
   editPost:
     URL: "https://github.com/Shenlong616/Shenlong616.github.io/tree/main/_dev/content"
@@ -130,7 +142,7 @@ params:
     shouldSort: true
     location: 0
     distance: 1000
-    threshold: 0.4
+    threshold: 0.8
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
 

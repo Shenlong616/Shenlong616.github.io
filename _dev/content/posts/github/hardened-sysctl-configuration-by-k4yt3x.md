@@ -5,6 +5,8 @@ tags:
   ["sysctl", "linux", "centos", "ubuntu", "performance", "security", "kernel"]
 categories: ["Linux"]
 author: "k4yt3x"
+canonicalURL: "https://github.com/k4yt3x/sysctl"
+ShowCanonicalLink: true
 ---
 
 This repository hosts my hardened version of `sysctl.conf`. This configuration file aims to provide better security for Linux systems and improves system performance whenever possible. For example, below are some of the features this configuration file provides.

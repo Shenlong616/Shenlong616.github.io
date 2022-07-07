@@ -5,6 +5,8 @@ description: ""
 tags: ["python", "python3", "python tricks", "python tips"]
 categories: ["Python", ""]
 author: "alexghergh"
+canonicalURL: "https://github.com/alexghergh/python-tricks"
+ShowCanonicalLink: true
 ---
 
 **_Disclaimer:_** This list is meant as a comprehension of cool tips and tricks I found on the internet. If you would like to contribute, or notice any mistakes or typos, please contact me or upload a pull request. If you think any material here can be considered personal property let me know and I will take it down.
