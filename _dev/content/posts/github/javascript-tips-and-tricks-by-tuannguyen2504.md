@@ -8,7 +8,7 @@ author: "TuanNguyen2504"
 canonicalURL: "https://github.com/TuanNguyen2504/javascript-tips"
 ShowCanonicalLink: true
 cover:
-  image: "posts/images/javascript-tips-tricks-by-tuannguyen2504.jpg"
+  image: "posts/images/javascript-tips-and-tricks-by-tuannguyen2504.jpg"
   alt: "JavaScript tips & tricks by TuanNguyen2504"
   caption: "JavaScript tips & tricks by TuanNguyen2504"
   # hidden: false
@@ -16,7 +16,7 @@ cover:
 
 <!-- logo -->
 <div align="center">
-  <img  src="../../images/javascript-tips-tricks-by-tuannguyen2504.jpg" />
+  <img  src="../../images/javascript-tips-and-tricks-by-tuannguyen2504.jpg" />
 </div>
 
 <!-- Tips for array -->

@@ -70,30 +70,8 @@ img {
 .post-meta {
   margin-top: 5px;
 }
-.toc {
-  background: radial-gradient(
-    circle,
-    transparent 0%,
-    var(--code-bg) 100%
-  ) !important;
-}
-.paginav .next {
-  border-top-left-radius: unset;
-  border-bottom-left-radius: unset;
-  background: linear-gradient(270deg, var(--theme) 0%, transparent 100%);
-}
-.paginav .prev {
-  border-top-right-radius: unset;
-  border-bottom-right-radius: unset;
-  background: linear-gradient(90deg, var(--theme) 0%, transparent 100%);
-}
-.pagination .next {
-  color: var(--content);
-  background: linear-gradient(270deg, var(--entry) 0%, transparent 100%);
-}
-.pagination .prev {
-  color: var(--content);
-  background: linear-gradient(90deg, var(--entry) 0%, transparent 100%);
+.breadcrumbs a {
+  font-weight: 500;
 }
 .top-link {
   background: linear-gradient(180deg, var(--tertiary) 0%, transparent 100%);
@@ -101,6 +79,48 @@ img {
   /* border-radius: 5px 5px 0 0;
   height: 49px; */
 }
+.toc {
+  background: radial-gradient(
+    circle,
+    transparent 0%,
+    var(--code-bg) 100%
+  ) !important;
+}
+
+.paginav .next {
+  border-top-left-radius: unset;
+  border-bottom-left-radius: unset;
+  background: linear-gradient(270deg, var(--theme) 0%, transparent 100%);
+}
+.paginav .next:hover {
+  background: linear-gradient(270deg, var(--border) 0%, transparent 100%);
+}
+
+.paginav .prev {
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  background: linear-gradient(90deg, var(--theme) 0%, transparent 100%);
+}
+.paginav .prev:hover {
+  background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+}
+
+.pagination .next {
+  color: var(--content);
+  background: linear-gradient(270deg, var(--entry) 0%, transparent 100%);
+}
+.pagination .next:hover {
+  background: linear-gradient(270deg, var(--tertiary) 0%, transparent 100%);
+}
+
+.pagination .prev {
+  color: var(--content);
+  background: linear-gradient(90deg, var(--entry) 0%, transparent 100%);
+}
+.pagination .prev:hover {
+  background: linear-gradient(90deg, var(--tertiary) 0%, transparent 100%);
+}
+
 #menu .active {
   border-bottom: 0;
   text-decoration: 2px line-through var(--primary);
@@ -108,35 +128,8 @@ img {
 #menu a {
   font-weight: 500;
 }
-.paginav .next,
-.paginav .prev,
-.post-tags a,
-.post-entry,
-.terms-tags a {
-  transition: 0.3s ease-in;
-}
-.paginav .next:hover {
-  transition: 0.3s ease-out;
-  background: linear-gradient(270deg, var(--border) 0%, transparent 100%);
-}
-.paginav .prev:hover {
-  transition: 0.3s ease-out;
-  background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
-}
-.post-tags a:hover {
-  transition: 0.3s ease-out;
-  background: radial-gradient(circle, transparent 0%, var(--border) 100%);
-}
-.post-entry:hover {
-  transition: 0.3s ease-out;
-  background: radial-gradient(circle, transparent 0%, var(--entry) 100%);
-}
-.terms-tags a:hover {
-  transition: 0.3s ease-out;
-  background: radial-gradient(circle, transparent 0%, var(--tertiary) 100%);
-}
-button:active,
-a:active {
+.top-link:active,
+.post-entry:active {
   transform: scale(0.96) !important;
 }
 /* dell hieu kieu lol gi? */
@@ -147,10 +140,4 @@ code {
 /* :root {
   --theme: #f5f5f5;
 }
-.toc {
-  background: radial-gradient(
-    circle,
-    transparent 0%,
-    var(--tertiary) 100%
-  ) !important;
-} */
+*/
