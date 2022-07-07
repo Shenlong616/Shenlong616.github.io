@@ -33,9 +33,9 @@
   line-height: inherit;
   background: var(--theme);
 }
-.post-tags a:before {
+/* .post-tags a:before {
   content: "#";
-}
+} */
 .first-entry.home-info {
   margin: var(--gap) 0 calc(var(--gap));
 }
@@ -102,13 +102,11 @@ img {
   height: 49px; */
 }
 #menu .active {
-  font-weight: bold;
   border-bottom: 0;
   text-decoration: 2px line-through var(--primary);
 }
-code {
-  /* dell hieu loi gi? */
-  cursor: text;
+#menu a {
+  font-weight: 500;
 }
 .paginav .next,
 .paginav .prev,
@@ -141,3 +139,19 @@ button:active,
 a:active {
   transform: scale(0.96) !important;
 }
+/* dell hieu kieu lol gi? */
+code {
+  cursor: text;
+}
+:root {
+  --theme: #f5f5f5;
+}
+.toc {
+  background: radial-gradient(
+    circle,
+    transparent 0%,
+    var(--tertiary) 100%
+  ) !important;
+}
+
+/* dell hieu kieu lol gi? */
