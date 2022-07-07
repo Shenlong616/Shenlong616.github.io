@@ -19,7 +19,6 @@
   margin-bottom: 0;
 }
 .logo a:after {
-  content: "<-- toggleAnimationOnScroll";
   margin-left: 3px;
   font-weight: normal;
   font-size: 0.456789em;
@@ -108,7 +107,7 @@ img {
   text-decoration: 2px line-through var(--primary);
 }
 code {
-  /* loi chi xuat hien tren github, dell hieu */
+  /* dell hieu loi gi? */
   cursor: text;
 }
 .paginav .next,

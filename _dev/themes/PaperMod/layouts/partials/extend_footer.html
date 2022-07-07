@@ -4,6 +4,13 @@
     NProgress.done();
   };
 
+  const toggleTextAnimationOnScroll = (parameter) => {
+    document.styleSheets[0].addRule(
+      ".logo a:after",
+      `content: "<-- ${parameter}";`
+    );
+  };
+
   window.onload = function () {
     initNProgress(0.1);
 
@@ -27,6 +34,7 @@
       console.log("ScrollReveal is non-operational!");
     } else {
       if (localStorage.getItem("ScrollReveal") === "true") {
+        toggleTextAnimationOnScroll("disableAnimationOnScroll");
         ScrollReveal().reveal(
           "h1,h2,h3,h4,h5,h6,p,li,div,code,footer,article,details",
           {
@@ -40,6 +48,8 @@
             afterReveal: () => {},
           }
         );
+      } else {
+        toggleTextAnimationOnScroll("enableAnimationOnScroll");
       }
     }
 
