@@ -11,18 +11,16 @@
   //   );
   // };
 
-  initNProgress(0.1);
-
   document.addEventListener("DOMContentLoaded", () => {
+    initNProgress(0.1);
+
     for (const item of document.getElementsByTagName("input")) {
       item.addEventListener("input", () => {
         initNProgress(0.1);
       });
     }
-  });
 
-  window.onload = function () {
-    for (const item of document.querySelectorAll("a, button")) {
+    for (const item of document.querySelectorAll(".copy-code, .top-link")) {
       item.addEventListener("click", () => {
         initNProgress(0.1);
       });
@@ -47,5 +45,7 @@
         }
       );
     }
-  };
+  });
+
+  // window.onload = function () {};
 </script>
