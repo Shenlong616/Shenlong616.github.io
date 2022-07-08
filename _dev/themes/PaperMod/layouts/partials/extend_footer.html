@@ -29,7 +29,7 @@
     if (ScrollReveal().noop) {
       console.log("ScrollReveal is non-operational!");
     } else {
-      const defaultConfigScrollReveal = {
+      const defaultConfig = {
         desktop: true,
         mobile: false,
         duration: 600,
@@ -44,13 +44,13 @@
       ScrollReveal().reveal(
         ".logo a,button#theme-toggle,#menu li,.breadcrumbs a",
         {
-          ...defaultConfigScrollReveal,
+          ...defaultConfig,
         }
       );
       ScrollReveal().reveal(
         ".home-info .entry-header,.home-info .entry-content,.home-info .entry-footer",
         {
-          ...defaultConfigScrollReveal,
+          ...defaultConfig,
           origin: "bottom",
           distance: "6.78%",
         }
@@ -58,7 +58,7 @@
       ScrollReveal().reveal(
         "article.post-entry,.archive-year-header,.archive-month-header,.archive-entry-title,.archive-meta",
         {
-          ...defaultConfigScrollReveal,
+          ...defaultConfig,
           origin: "bottom",
           distance: "19.98%",
         }
@@ -71,24 +71,57 @@
   };
 
   var multilingualWaysToSayHello = [
-    { Vietnamese: "Chào" },
+    { Vietnamese: "Xin Chào" },
+    { boro: "खुलुम्बाइ" },
+    { Bengali: "নমস্কার" },
+    { Bulgarian: "Здравей" },
     { Chinese: "你好" },
     { Czech: "Ahoj" },
     { English: "Hello" },
     { Esperanto: "Saluton" },
-    { Bulgarian: "Здравей" },
-    { Korean: "안영하세요" },
+    { Estnisch: "Tere" },
     { Danish: "Hej" },
     { Dutch: "Hallo" },
+    { Farsi: "Salam" },
+    { Fidschi: "Bula" },
+    { Finnish: "Terve" },
+    { Flemish: "Hallo" },
+    { French: "Salut" },
+    { Greek: "Γειά" },
+    { Hawaiian: "Aloha" },
+    { Hindi: "नमस्ते" },
     { Italian: "Ciao" },
     { Japanese: "こんにちは" },
+    { Khmer: "Tchum-reaup Suw" },
+    { Korean: "안영하세요" },
+    { Croat: "Zdravo" },
+    { Lettish: "Čau" },
+    { Lithuanian: "Labas" },
+    { Malaiisch: "Hai" },
+    { Mongolian: "Сайн уу" },
+    { Norwegian: "Hei" },
+    { Polish: "Cześć" },
+    { Portuguese: "Olá" },
+    { Rumanian: "Salut" },
     { Russian: "Привет" },
-    { Spanish: " ¡Hola" },
+    { Swedish: "Hej" },
+    { Swiss_German: "Hoi" },
+    { Slovak: "Ahoj" },
+    { Spanish: "Hola" },
     { Tamil_Nadu: "வணக்கம்" },
-    { Thai: " สวัสดีคะ" },
+    { Thai: "สวัสดีคะ" },
+    { Turkish: "Merhaba" },
+    { Hebrew: "שלום" },
   ];
 
-  document.getElementsByName("hello")[0].innerText = `${
-    Object.values(randomArray(multilingualWaysToSayHello))[0]
-  } 👋`;
+  const changeHelloText = () => {
+    document.getElementsByName("hello")[0].innerText = `${
+      Object.values(randomArray(multilingualWaysToSayHello))[0]
+    } 👋`;
+  };
+  changeHelloText();
+
+  document.getElementById("theme-toggle").addEventListener("click", () => {
+    changeHelloText();
+  });
 </script>

@@ -1,7 +1,6 @@
 ---
 title: "Python 3 tricks by alexghergh"
 date: 2020-07-14
-description: ""
 tags: ["python", "python3", "python tricks", "python tips"]
 categories: ["Python", ""]
 author: "alexghergh"
