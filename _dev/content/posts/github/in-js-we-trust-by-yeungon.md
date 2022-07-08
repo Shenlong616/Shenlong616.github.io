@@ -10,6 +10,7 @@ tags:
     "questions",
     "answers",
     "code thiếu nhi",
+    "ES6",
   ]
 categories: ["JavaScript"]
 weight: 2

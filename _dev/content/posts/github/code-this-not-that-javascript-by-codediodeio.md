@@ -2,7 +2,7 @@
 title: "Code this, not that - JavaScript by codediodeio"
 date: 2018-10-11
 description: "JavaScript Pro Tips - Code This, Not That"
-tags: ["javascript", "javascript tips", "javascript tricks"]
+tags: ["javascript", "javascript tips", "javascript tricks", "ES6"]
 categories: ["JavaScript"]
 author: "codediodeio"
 weight: 1
@@ -291,3 +291,7 @@ function horseAge(str, age) {
 const bio2 = horseAge`This horse is ${horse.age}`;
 console.log(bio2);
 ```
+
+### Watch the video on YouTube
+
+{{< youtube Mus_vwhTCq0 >}}

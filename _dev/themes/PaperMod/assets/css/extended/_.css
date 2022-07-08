@@ -129,6 +129,13 @@ img {
 #menu a {
   font-weight: 500;
 }
+a.anchor {
+  color: #00f !important;
+}
+.post-tags a:before,
+.terms-tags a:before {
+  content: "#";
+}
 .top-link:active,
 .post-entry:active,
 .post-tags a:active,

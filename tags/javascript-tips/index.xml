@@ -267,7 +267,13 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bio2</span> <span class="o">=</span> <span class="nx">horseAge</span><span class="sb">`This horse is </span><span class="si">${</span><span class="nx">horse</span><span class="p">.</span><span class="nx">age</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bio2</span><span class="p">);</span>
-</span></span></code></pre></div>]]></content:encoded>
+</span></span></code></pre></div><h3 id="watch-the-video-on-youtube">Watch the video on YouTube</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/Mus_vwhTCq0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+]]></content:encoded>
     </item>
     
     <item>

@@ -12,13 +12,9 @@
       <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</guid>
-      <description>IPtables DDoS Protection: The Best Rules to Mitigate DDoS Attacks
-iptables DDoS Protection
-There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial. This guide will teach you how to:
+      <description>There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial. This guide will teach you how to:
 Select the best iptables table and chain to stop DDoS attacksTweak your kernel settings to mitigate the effects of DDoS attacksUse iptables to block most TCP-based DDoS attacksUse iptables SYNPROXY to block SYN floodsPlease note that this article is written for professionals who deal with Linux servers on a daily basis.</description>
-      <content:encoded><![CDATA[<p>IPtables DDoS Protection: The Best Rules to Mitigate DDoS Attacks</p>
-<p>iptables DDoS Protection</p>
-<p>There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial.
+      <content:encoded><![CDATA[<p>There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial.
 This guide will teach you how to:</p>
 <pre><code>Select the best iptables table and chain to stop DDoS attacks
 Tweak your kernel settings to mitigate the effects of DDoS attacks

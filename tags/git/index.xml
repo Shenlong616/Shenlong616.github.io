@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>git on Shenlong616</title>
+    <link>https://shenlong616.github.io/tags/git/</link>
+    <description>Recent content in git on Shenlong616</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git tips</title>
+      <link>https://shenlong616.github.io/posts/github/git-tips/</link>
+      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/github/git-tips/</guid>
+      <description>Most commonly used git tips and tricks.</description>
+      <content:encoded><![CDATA[<h2 id="tools">Tools</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/git-tip">git-tip</a> - A handy CLI to make optimum use of these tips. (<a href="https://github.com/djoudi5/docker-git-tip">Here in Docker container</a>)</li>
+</ul>
+<p>P.S: All these commands are tested on <code>git version 2.7.4 (Apple Git-66)</code>.</p>
+<!-- @doxie.inject start toc -->
+<!-- Don’t remove or change the comment above – that can break automatic updates. -->
+<!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
+<!-- @doxie.inject end toc -->
+<!-- @doxie.inject start -->
+<!-- Don’t remove or change the comment above – that can break automatic updates. -->
+<h2 id="everyday-git-in-twenty-commands-or-so">Everyday Git in twenty commands or so</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git <span class="nb">help</span> everyday
+</span></span></code></pre></div><h2 id="show-helpful-guides-that-come-with-git">Show helpful guides that come with Git</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git <span class="nb">help</span> -g
+</span></span></code></pre></div><h2 id="search-change-by-content">Search change by content</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log -S<span class="s1">&#39;&lt;a term in the source&gt;&#39;</span>
+</span></span></code></pre></div><h2 id="show-changes-over-time-for-specific-file">Show changes over time for specific file</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log -p &lt;file_name&gt;
+</span></span></code></pre></div><h2 id="remove-sensitive-data-from-history-after-a-push">Remove sensitive data from history, after a push</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git filter-branch --force --index-filter <span class="s1">&#39;git rm --cached --ignore-unmatch &lt;path-to-your-file&gt;&#39;</span> --prune-empty --tag-name-filter cat -- --all <span class="o">&amp;&amp;</span> git push origin --force --all
+</span></span></code></pre></div><h2 id="sync-with-remote-overwrite-local-changes">Sync with remote, overwrite local changes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git fetch origin <span class="o">&amp;&amp;</span> git reset --hard origin/master <span class="o">&amp;&amp;</span> git clean -f -d
+</span></span></code></pre></div><h2 id="list-of-all-files-till-a-commit">List of all files till a commit</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git ls-tree --name-only -r &lt;commit-ish&gt;
+</span></span></code></pre></div><h2 id="git-reset-first-commit">Git reset first commit</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git update-ref -d HEAD
+</span></span></code></pre></div><h2 id="reset-preserve-uncommitted-local-changes">Reset: preserve uncommitted local changes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git reset --keep &lt;commit&gt;
+</span></span></code></pre></div><h2 id="list-all-the-conflicted-files">List all the conflicted files</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff --name-only --diff-filter<span class="o">=</span>U
+</span></span></code></pre></div><h2 id="list-of-all-files-changed-in-a-commit">List of all files changed in a commit</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff-tree --no-commit-id --name-only -r &lt;commit-ish&gt;
+</span></span></code></pre></div><h2 id="unstaged-changes-since-last-commit">Unstaged changes since last commit</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff
+</span></span></code></pre></div><h2 id="changes-staged-for-commit">Changes staged for commit</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff --cached
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff --staged
+</span></span></code></pre></div><h2 id="show-both-staged-and-unstaged-changes">Show both staged and unstaged changes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff HEAD
+</span></span></code></pre></div><h2 id="list-all-branches-that-are-already-merged-into-master">List all branches that are already merged into master</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch --merged master
+</span></span></code></pre></div><h2 id="quickly-switch-to-the-previous-branch">Quickly switch to the previous branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout -
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout @<span class="o">{</span>-1<span class="o">}</span>
+</span></span></code></pre></div><h2 id="remove-branches-that-have-already-been-merged-with-master">Remove branches that have already been merged with master</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch --merged master <span class="p">|</span> grep -v <span class="s1">&#39;^\*&#39;</span> <span class="p">|</span> xargs -n <span class="m">1</span> git branch -d
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch --merged master <span class="p">|</span> grep -v <span class="s1">&#39;^\*\|  master&#39;</span> <span class="p">|</span> xargs -n <span class="m">1</span> git branch -d <span class="c1"># will not delete master if master is not checked out</span>
+</span></span></code></pre></div><h2 id="list-all-branches-and-their-upstreams-as-well-as-last-commit-on-branch">List all branches and their upstreams, as well as last commit on branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -vv
+</span></span></code></pre></div><h2 id="track-upstream-branch">Track upstream branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -u origin/mybranch
+</span></span></code></pre></div><h2 id="delete-local-branch">Delete local branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -d &lt;local_branchname&gt;
+</span></span></code></pre></div><h2 id="delete-remote-branch">Delete remote branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push origin --delete &lt;remote_branchname&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push origin :&lt;remote_branchname&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -dr &lt;remote/branch&gt;
+</span></span></code></pre></div><h2 id="create-local-tag">Create local tag</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git tag &lt;tag-name&gt;
+</span></span></code></pre></div><h2 id="delete-local-tag">Delete local tag</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git tag -d &lt;tag-name&gt;
+</span></span></code></pre></div><h2 id="delete-remote-tag">Delete remote tag</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push origin :refs/tags/&lt;tag-name&gt;
+</span></span></code></pre></div><h2 id="undo-local-changes-with-the-last-content-in-head">Undo local changes with the last content in head</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout -- &lt;file_name&gt;
+</span></span></code></pre></div><h2 id="revert-undo-a-commit-by-creating-a-new-commit">Revert: Undo a commit by creating a new commit</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git revert &lt;commit-ish&gt;
+</span></span></code></pre></div><h2 id="reset-discard-commits-advised-for-private-branch">Reset: Discard commits, advised for private branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git reset &lt;commit-ish&gt;
+</span></span></code></pre></div><h2 id="reword-the-previous-commit-message">Reword the previous commit message</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git commit -v --amend
+</span></span></code></pre></div><h2 id="see-commit-history-for-just-the-current-branch">See commit history for just the current branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git cherry -v master
+</span></span></code></pre></div><h2 id="amend-author">Amend author.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git commit --amend --author<span class="o">=</span><span class="s1">&#39;Author Name &lt;email@address.com&gt;&#39;</span>
+</span></span></code></pre></div><h2 id="reset-author-after-author-has-been-changed-in-the-global-config">Reset author, after author has been changed in the global config.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git commit --amend --reset-author --no-edit
+</span></span></code></pre></div><h2 id="changing-a-remotes-url">Changing a remote&rsquo;s URL</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git remote set-url origin &lt;URL&gt;
+</span></span></code></pre></div><h2 id="get-list-of-all-remote-references">Get list of all remote references</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git remote
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git remote show
+</span></span></code></pre></div><h2 id="get-list-of-all-local-and-remote-branches">Get list of all local and remote branches</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -a
+</span></span></code></pre></div><h2 id="get-only-remote-branches">Get only remote branches</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -r
+</span></span></code></pre></div><h2 id="stage-parts-of-a-changed-file-instead-of-the-entire-file">Stage parts of a changed file, instead of the entire file</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git add -p
+</span></span></code></pre></div><h2 id="get-git-bash-completion">Get git bash completion</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">curl -L http://git.io/vfhol &gt; ~/.git-completion.bash <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s1">&#39;[ -f ~/.git-completion.bash ] &amp;&amp; . ~/.git-completion.bash&#39;</span> &gt;&gt; ~/.bashrc
+</span></span></code></pre></div><h2 id="what-changed-since-two-weeks">What changed since two weeks?</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --no-merges --raw --since<span class="o">=</span><span class="s1">&#39;2 weeks ago&#39;</span>
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git whatchanged --since<span class="o">=</span><span class="s1">&#39;2 weeks ago&#39;</span>
+</span></span></code></pre></div><h2 id="see-all-commits-made-since-forking-from-master">See all commits made since forking from master</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --no-merges --stat --reverse master..
+</span></span></code></pre></div><h2 id="pick-commits-across-branches-using-cherry-pick">Pick commits across branches using cherry-pick</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout &lt;branch-name&gt; <span class="o">&amp;&amp;</span> git cherry-pick &lt;commit-ish&gt;
+</span></span></code></pre></div><h2 id="find-out-branches-containing-commit-hash">Find out branches containing commit-hash</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -a --contains &lt;commit-ish&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch --contains &lt;commit-ish&gt;
+</span></span></code></pre></div><h2 id="git-aliases">Git Aliases</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global alias.&lt;handle&gt; &lt;command&gt;
+</span></span><span class="line"><span class="cl">git config --global alias.st status
+</span></span></code></pre></div><h2 id="saving-current-state-of-tracked-files-without-commiting">Saving current state of tracked files without commiting</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash push
+</span></span></code></pre></div><h2 id="saving-current-state-of-unstaged-changes-to-tracked-files">Saving current state of unstaged changes to tracked files</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash -k
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash --keep-index
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash push --keep-index
+</span></span></code></pre></div><h2 id="saving-current-state-including-untracked-files">Saving current state including untracked files</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash -u
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash push -u
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash push --include-untracked
+</span></span></code></pre></div><h2 id="saving-current-state-with-message">Saving current state with message</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash push -m &lt;message&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash push --message &lt;message&gt;
+</span></span></code></pre></div><h2 id="saving-current-state-of-all-files-ignored-untracked-and-tracked">Saving current state of all files (ignored, untracked, and tracked)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash -a
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash --all
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash push --all
+</span></span></code></pre></div><h2 id="show-list-of-all-saved-stashes">Show list of all saved stashes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash list
+</span></span></code></pre></div><h2 id="show-the-contents-of-any-stash-in-patch-form">Show the contents of any stash in patch form</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash show -p &lt;stash@<span class="o">{</span>n<span class="o">}</span>&gt;
+</span></span></code></pre></div><h2 id="apply-any-stash-without-deleting-from-the-stashed-list">Apply any stash without deleting from the stashed list</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash apply &lt;stash@<span class="o">{</span>n<span class="o">}</span>&gt;
+</span></span></code></pre></div><h2 id="apply-last-stashed-state-and-delete-it-from-stashed-list">Apply last stashed state and delete it from stashed list</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash pop
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash apply stash@<span class="o">{</span>0<span class="o">}</span> <span class="o">&amp;&amp;</span> git stash drop stash@<span class="o">{</span>0<span class="o">}</span>
+</span></span></code></pre></div><h2 id="delete-all-stored-stashes">Delete all stored stashes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash clear
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git stash drop &lt;stash@<span class="o">{</span>n<span class="o">}</span>&gt;
+</span></span></code></pre></div><h2 id="grab-a-single-file-from-a-stash">Grab a single file from a stash</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout &lt;stash@<span class="o">{</span>n<span class="o">}</span>&gt; -- &lt;file_path&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout stash@<span class="o">{</span>0<span class="o">}</span> -- &lt;file_path&gt;
+</span></span></code></pre></div><h2 id="show-all-tracked-files">Show all tracked files</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git ls-files -t
+</span></span></code></pre></div><h2 id="show-all-untracked-files">Show all untracked files</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git ls-files --others
+</span></span></code></pre></div><h2 id="show-all-ignored-files">Show all ignored files</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git ls-files --others -i --exclude-standard
+</span></span></code></pre></div><h2 id="create-new-working-tree-from-a-repository-git-25">Create new working tree from a repository (git 2.5)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git worktree add -b &lt;branch-name&gt; &lt;path&gt; &lt;start-point&gt;
+</span></span></code></pre></div><h2 id="create-new-working-tree-from-head-state">Create new working tree from HEAD state</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git worktree add --detach &lt;path&gt; HEAD
+</span></span></code></pre></div><h2 id="untrack-files-without-deleting">Untrack files without deleting</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rm --cached &lt;file_path&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rm --cached -r &lt;directory_path&gt;
+</span></span></code></pre></div><h2 id="before-deleting-untracked-filesdirectory-do-a-dry-run-to-get-the-list-of-these-filesdirectories">Before deleting untracked files/directory, do a dry run to get the list of these files/directories</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clean -n
+</span></span></code></pre></div><h2 id="forcefully-remove-untracked-files">Forcefully remove untracked files</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clean -f
+</span></span></code></pre></div><h2 id="forcefully-remove-untracked-directory">Forcefully remove untracked directory</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clean -f -d
+</span></span></code></pre></div><h2 id="update-all-the-submodules">Update all the submodules</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git submodule foreach git pull
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git submodule update --init --recursive
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git submodule update --remote
+</span></span></code></pre></div><h2 id="show-all-commits-in-the-current-branch-yet-to-be-merged-to-master">Show all commits in the current branch yet to be merged to master</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git cherry -v master
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git cherry -v master &lt;branch-to-be-merged&gt;
+</span></span></code></pre></div><h2 id="rename-a-branch">Rename a branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -m &lt;new-branch-name&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -m <span class="o">[</span>&lt;old-branch-name&gt;<span class="o">]</span> &lt;new-branch-name&gt;
+</span></span></code></pre></div><h2 id="rebases-feature-to-master-and-merges-it-in-to-master">Rebases &lsquo;feature&rsquo; to &lsquo;master&rsquo; and merges it in to master</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rebase master feature <span class="o">&amp;&amp;</span> git checkout master <span class="o">&amp;&amp;</span> git merge -
+</span></span></code></pre></div><h2 id="archive-the-master-branch">Archive the <code>master</code> branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git archive master --format<span class="o">=</span>zip --output<span class="o">=</span>master.zip
+</span></span></code></pre></div><h2 id="modify-previous-commit-without-modifying-the-commit-message">Modify previous commit without modifying the commit message</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git add --all <span class="o">&amp;&amp;</span> git commit --amend --no-edit
+</span></span></code></pre></div><h2 id="prunes-references-to-remove-branches-that-have-been-deleted-in-the-remote">Prunes references to remove branches that have been deleted in the remote.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git fetch -p
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git remote prune origin
+</span></span></code></pre></div><h2 id="delete-local-branches-that-has-been-squash-and-merged-in-the-remote">Delete local branches that has been squash and merged in the remote.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -vv <span class="p">|</span> grep <span class="s1">&#39;: gone]&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print &lt;!-- @doxie.inject start --&gt;}&#39;</span> <span class="p">|</span> xargs git branch -D
+</span></span></code></pre></div><h2 id="retrieve-the-commit-hash-of-the-initial-revision">Retrieve the commit hash of the initial revision.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> git rev-list --reverse HEAD <span class="p">|</span> head -1
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rev-list --max-parents<span class="o">=</span><span class="m">0</span> HEAD
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --pretty<span class="o">=</span>oneline <span class="p">|</span> tail -1 <span class="p">|</span> cut -c 1-40
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --pretty<span class="o">=</span>oneline --reverse <span class="p">|</span> head -1 <span class="p">|</span> cut -c 1-40
+</span></span></code></pre></div><h2 id="visualize-the-version-tree">Visualize the version tree.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --pretty<span class="o">=</span>oneline --graph --decorate --all
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gitk --all
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --graph --pretty<span class="o">=</span>format:<span class="s1">&#39;%C(auto) %h | %s | %an | %ar%d&#39;</span>
+</span></span></code></pre></div><h2 id="visualize-the-tree-including-commits-that-are-only-referenced-from-reflogs">Visualize the tree including commits that are only referenced from reflogs</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --graph --decorate --oneline <span class="k">$(</span>git rev-list --walk-reflogs --all<span class="k">)</span>
+</span></span></code></pre></div><h2 id="deploying-git-tracked-subfolder-to-gh-pages">Deploying git tracked subfolder to gh-pages</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git subtree push --prefix subfolder_name origin gh-pages
+</span></span></code></pre></div><h2 id="adding-a-project-to-repo-using-subtree">Adding a project to repo using subtree</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git subtree add --prefix<span class="o">=</span>&lt;directory_name&gt;/&lt;project_name&gt; --squash git@github.com:&lt;username&gt;/&lt;project_name&gt;.git master
+</span></span></code></pre></div><h2 id="get-latest-changes-in-your-repo-for-a-linked-project-using-subtree">Get latest changes in your repo for a linked project using subtree</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git subtree pull --prefix<span class="o">=</span>&lt;directory_name&gt;/&lt;project_name&gt; --squash git@github.com:&lt;username&gt;/&lt;project_name&gt;.git master
+</span></span></code></pre></div><h2 id="export-a-branch-with-history-to-a-file">Export a branch with history to a file.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git bundle create &lt;file&gt; &lt;branch-name&gt;
+</span></span></code></pre></div><h2 id="import-from-a-bundle">Import from a bundle</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone repo.bundle &lt;repo-dir&gt; -b &lt;branch-name&gt;
+</span></span></code></pre></div><h2 id="get-the-name-of-current-branch">Get the name of current branch.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rev-parse --abbrev-ref HEAD
+</span></span></code></pre></div><h2 id="ignore-one-file-on-commit-eg-changelog">Ignore one file on commit (e.g. Changelog).</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git update-index --assume-unchanged Changelog<span class="p">;</span> git commit -a<span class="p">;</span> git update-index --no-assume-unchanged Changelog
+</span></span></code></pre></div><h2 id="stash-changes-before-rebasing">Stash changes before rebasing</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rebase --autostash
+</span></span></code></pre></div><h2 id="fetch-pull-request-by-id-to-a-local-branch">Fetch pull request by ID to a local branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git fetch origin pull/&lt;id&gt;/head:&lt;branch-name&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git pull origin pull/&lt;id&gt;/head:&lt;branch-name&gt;
+</span></span></code></pre></div><h2 id="show-the-most-recent-tag-on-the-current-branch">Show the most recent tag on the current branch.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git describe --tags --abbrev<span class="o">=</span><span class="m">0</span>
+</span></span></code></pre></div><h2 id="show-inline-word-diff">Show inline word diff.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff --word-diff
+</span></span></code></pre></div><h2 id="show-changes-using-common-diff-tools">Show changes using common diff tools.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git difftool <span class="o">[</span>-t &lt;tool&gt;<span class="o">]</span> &lt;commit1&gt; &lt;commit2&gt; &lt;path&gt;
+</span></span></code></pre></div><h2 id="dont-consider-changes-for-tracked-file">Don’t consider changes for tracked file.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git update-index --assume-unchanged &lt;file_name&gt;
+</span></span></code></pre></div><h2 id="undo-assume-unchanged">Undo assume-unchanged.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git update-index --no-assume-unchanged &lt;file_name&gt;
+</span></span></code></pre></div><h2 id="clean-the-files-from-gitignore">Clean the files from <code>.gitignore</code>.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clean -X -f
+</span></span></code></pre></div><h2 id="restore-deleted-file">Restore deleted file.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout &lt;deleting_commit&gt; -- &lt;file_path&gt;
+</span></span></code></pre></div><h2 id="restore-file-to-a-specific-commit-hash">Restore file to a specific commit-hash</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout &lt;commit-ish&gt; -- &lt;file_path&gt;
+</span></span></code></pre></div><h2 id="always-rebase-instead-of-merge-on-pull">Always rebase instead of merge on pull.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global pull.rebase <span class="nb">true</span>
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1">#git &lt; 1.7.9</span>
+</span></span><span class="line"><span class="cl">git config --global branch.autosetuprebase always
+</span></span></code></pre></div><h2 id="list-all-the-alias-and-configs">List all the alias and configs.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --list
+</span></span></code></pre></div><h2 id="make-git-case-sensitive">Make git case sensitive.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global core.ignorecase <span class="nb">false</span>
+</span></span></code></pre></div><h2 id="add-custom-editors">Add custom editors.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global core.editor <span class="s1">&#39;$EDITOR&#39;</span>
+</span></span></code></pre></div><h2 id="auto-correct-typos">Auto correct typos.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global help.autocorrect <span class="m">1</span>
+</span></span></code></pre></div><h2 id="check-if-the-change-was-a-part-of-a-release">Check if the change was a part of a release.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git name-rev --name-only &lt;SHA-1&gt;
+</span></span></code></pre></div><h2 id="dry-run-any-command-that-supports-dry-run-flag-should-do">Dry run. (any command that supports dry-run flag should do.)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clean -fd --dry-run
+</span></span></code></pre></div><h2 id="marks-your-commit-as-a-fix-of-a-previous-commit">Marks your commit as a fix of a previous commit.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git commit --fixup &lt;SHA-1&gt;
+</span></span></code></pre></div><h2 id="squash-fixup-commits-normal-commits">Squash fixup commits normal commits.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rebase -i --autosquash
+</span></span></code></pre></div><h2 id="skip-staging-area-during-commit">Skip staging area during commit.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git commit --only &lt;file_path&gt;
+</span></span></code></pre></div><h2 id="interactive-staging">Interactive staging.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git add -i
+</span></span></code></pre></div><h2 id="list-ignored-files">List ignored files.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git check-ignore *
+</span></span></code></pre></div><h2 id="status-of-ignored-files">Status of ignored files.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git status --ignored
+</span></span></code></pre></div><h2 id="commits-in-branch1-that-are-not-in-branch2">Commits in Branch1 that are not in Branch2</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log Branch1 ^Branch2
+</span></span></code></pre></div><h2 id="list-n-last-commits">List n last commits</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log -&lt;n&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log -n &lt;n&gt;
+</span></span></code></pre></div><h2 id="reuse-recorded-resolution-record-and-reuse-previous-conflicts-resolutions">Reuse recorded resolution, record and reuse previous conflicts resolutions.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global rerere.enabled <span class="m">1</span>
+</span></span></code></pre></div><h2 id="open-all-conflicted-files-in-an-editor">Open all conflicted files in an editor.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff --name-only <span class="p">|</span> uniq <span class="p">|</span> xargs <span class="nv">$EDITOR</span>
+</span></span></code></pre></div><h2 id="count-unpacked-number-of-objects-and-their-disk-consumption">Count unpacked number of objects and their disk consumption.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git count-objects --human-readable
+</span></span></code></pre></div><h2 id="prune-all-unreachable-objects-from-the-object-database">Prune all unreachable objects from the object database.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git gc --prune<span class="o">=</span>now --aggressive
+</span></span></code></pre></div><h2 id="instantly-browse-your-working-repository-in-gitweb">Instantly browse your working repository in gitweb.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git instaweb <span class="o">[</span>--local<span class="o">]</span> <span class="o">[</span>--httpd<span class="o">=</span>&lt;httpd&gt;<span class="o">]</span> <span class="o">[</span>--port<span class="o">=</span>&lt;port&gt;<span class="o">]</span> <span class="o">[</span>--browser<span class="o">=</span>&lt;browser&gt;<span class="o">]</span>
+</span></span></code></pre></div><h2 id="view-the-gpg-signatures-in-the-commit-log">View the GPG signatures in the commit log</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --show-signature
+</span></span></code></pre></div><h2 id="remove-entry-in-the-global-config">Remove entry in the global config.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global --unset &lt;entry-name&gt;
+</span></span></code></pre></div><h2 id="checkout-a-new-branch-without-any-history">Checkout a new branch without any history</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout --orphan &lt;branch_name&gt;
+</span></span></code></pre></div><h2 id="extract-file-from-another-branch">Extract file from another branch.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git show &lt;branch_name&gt;:&lt;file_name&gt;
+</span></span></code></pre></div><h2 id="list-only-the-root-and-merge-commits">List only the root and merge commits.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --first-parent
+</span></span></code></pre></div><h2 id="change-previous-two-commits-with-an-interactive-rebase">Change previous two commits with an interactive rebase.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rebase --interactive HEAD~2
+</span></span></code></pre></div><h2 id="list-all-branch-is-wip">List all branch is WIP</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout master <span class="o">&amp;&amp;</span> git branch --no-merged
+</span></span></code></pre></div><h2 id="find-guilty-with-binary-search">Find guilty with binary search</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git bisect start                    <span class="c1"># Search start</span>
+</span></span><span class="line"><span class="cl">git bisect bad                      <span class="c1"># Set point to bad commit</span>
+</span></span><span class="line"><span class="cl">git bisect good v2.6.13-rc2         <span class="c1"># Set point to good commit|tag</span>
+</span></span><span class="line"><span class="cl">git bisect bad                      <span class="c1"># Say current state is bad</span>
+</span></span><span class="line"><span class="cl">git bisect good                     <span class="c1"># Say current state is good</span>
+</span></span><span class="line"><span class="cl">git bisect reset                    <span class="c1"># Finish search</span>
+</span></span></code></pre></div><h2 id="bypass-pre-commit-and-commit-msg-githooks">Bypass pre-commit and commit-msg githooks</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git commit --no-verify
+</span></span></code></pre></div><h2 id="list-commits-and-changes-to-a-specific-file-even-through-renaming">List commits and changes to a specific file (even through renaming)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --follow -p -- &lt;file_path&gt;
+</span></span></code></pre></div><h2 id="clone-a-single-branch">Clone a single branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone -b &lt;branch-name&gt; --single-branch https://github.com/user/repo.git
+</span></span></code></pre></div><h2 id="create-and-switch-new-branch">Create and switch new branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout -b &lt;branch-name&gt;
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch &lt;branch-name&gt; <span class="o">&amp;&amp;</span> git checkout &lt;branch-name&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git switch -c &lt;branch-name&gt;
+</span></span></code></pre></div><h2 id="ignore-file-mode-changes-on-commits">Ignore file mode changes on commits</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config core.fileMode <span class="nb">false</span>
+</span></span></code></pre></div><h2 id="turn-off-git-colored-terminal-output">Turn off git colored terminal output</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global color.ui <span class="nb">false</span>
+</span></span></code></pre></div><h2 id="specific-color-settings">Specific color settings</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global &lt;specific <span class="nb">command</span> e.g branch, diff&gt; &lt;true, <span class="nb">false</span> or always&gt;
+</span></span></code></pre></div><h2 id="show-all-local-branches-ordered-by-recent-commits">Show all local branches ordered by recent commits</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git <span class="k">for</span>-each-ref --sort<span class="o">=</span>-committerdate --format<span class="o">=</span><span class="s1">&#39;%(refname:short)&#39;</span> refs/heads/
+</span></span></code></pre></div><h2 id="find-lines-matching-the-pattern-regex-or-string-in-tracked-files">Find lines matching the pattern (regex or string) in tracked files</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git grep --heading --line-number <span class="s1">&#39;foo bar&#39;</span>
+</span></span></code></pre></div><h2 id="clone-a-shallow-copy-of-a-repository">Clone a shallow copy of a repository</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git clone https://github.com/user/repo.git --depth <span class="m">1</span>
+</span></span></code></pre></div><h2 id="search-commit-log-across-all-branches-for-given-text">Search Commit log across all branches for given text</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --all --grep<span class="o">=</span><span class="s1">&#39;&lt;given-text&gt;&#39;</span>
+</span></span></code></pre></div><h2 id="get-first-commit-in-a-branch-from-master">Get first commit in a branch (from master)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --oneline master..&lt;branch-name&gt; <span class="p">|</span> tail -1
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --reverse master..&lt;branch-name&gt; <span class="p">|</span> head -6
+</span></span></code></pre></div><h2 id="unstaging-staged-file">Unstaging Staged file</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git reset HEAD &lt;file-name&gt;
+</span></span></code></pre></div><h2 id="force-push-to-remote-repository">Force push to Remote Repository</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push -f &lt;remote-name&gt; &lt;branch-name&gt;
+</span></span></code></pre></div><h2 id="adding-remote-name">Adding Remote name</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git remote add &lt;remote-nickname&gt; &lt;remote-url&gt;
+</span></span></code></pre></div><h2 id="list-all-currently-configured-remotes">List all currently configured remotes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git remote -v
+</span></span></code></pre></div><h2 id="show-the-author-time-and-last-revision-made-to-each-line-of-a-given-file">Show the author, time and last revision made to each line of a given file</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git blame &lt;file-name&gt;
+</span></span></code></pre></div><h2 id="group-commits-by-authors-and-title">Group commits by authors and title</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git shortlog
+</span></span></code></pre></div><h2 id="forced-push-but-still-ensure-you-dont-overwrite-others-work">Forced push but still ensure you don&rsquo;t overwrite other&rsquo;s work</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push --force-with-lease &lt;remote-name&gt; &lt;branch-name&gt;
+</span></span></code></pre></div><h2 id="show-how-many-lines-does-an-author-contribute">Show how many lines does an author contribute</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --author<span class="o">=</span><span class="s1">&#39;_Your_Name_Here_&#39;</span> --pretty<span class="o">=</span>tformat: --numstat <span class="p">|</span> gawk <span class="s1">&#39;{ add += &lt;!-- @doxie.inject start --&gt;; subs += &lt;!-- @doxie.inject end --&gt;; loc += &lt;!-- @doxie.inject start --&gt; - &lt;!-- @doxie.inject end --&gt; } END { printf &#34;added lines: %s removed lines: %s total lines: %s
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#34;, add, subs, loc }&#39;</span> -
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --author<span class="o">=</span><span class="s1">&#39;_Your_Name_Here_&#39;</span> --pretty<span class="o">=</span>tformat: --numstat <span class="p">|</span> awk <span class="s1">&#39;{ add += &lt;!-- @doxie.inject start --&gt;; subs += &lt;!-- @doxie.inject end --&gt;; loc += &lt;!-- @doxie.inject start --&gt; - &lt;!-- @doxie.inject end --&gt; } END { printf &#34;added lines: %s, removed lines: %s, total lines: %s
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#34;, add, subs, loc }&#39;</span> - <span class="c1"># on Mac OSX</span>
+</span></span></code></pre></div><h2 id="revert-reverting-an-entire-merge">Revert: Reverting an entire merge</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git revert -m <span class="m">1</span> &lt;commit-ish&gt;
+</span></span></code></pre></div><h2 id="number-of-commits-in-a-branch">Number of commits in a branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rev-list --count &lt;branch-name&gt;
+</span></span></code></pre></div><h2 id="alias-git-undo">Alias: git undo</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global alias.undo <span class="s1">&#39;!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f&#39;</span>
+</span></span></code></pre></div><h2 id="add-object-notes">Add object notes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git notes add -m <span class="s1">&#39;Note on the previous commit....&#39;</span>
+</span></span></code></pre></div><h2 id="show-all-the-git-notes">Show all the git-notes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --show-notes<span class="o">=</span><span class="s1">&#39;*&#39;</span>
+</span></span></code></pre></div><h2 id="apply-commit-from-another-repository">Apply commit from another repository</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git --git-dir<span class="o">=</span>&lt;source-dir&gt;/.git format-patch -k -1 --stdout &lt;SHA1&gt; <span class="p">|</span> git am -3 -k
+</span></span></code></pre></div><h2 id="specific-fetch-reference">Specific fetch reference</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git fetch origin master:refs/remotes/origin/mymaster
+</span></span></code></pre></div><h2 id="find-common-ancestor-of-two-branches">Find common ancestor of two branches</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git merge-base &lt;branch-name&gt; &lt;other-branch-name&gt;
+</span></span></code></pre></div><h2 id="list-unpushed-git-commits">List unpushed git commits</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --branches --not --remotes
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log @<span class="o">{</span>u<span class="o">}</span>..
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git cherry -v
+</span></span></code></pre></div><h2 id="add-everything-but-whitespace-changes">Add everything, but whitespace changes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff --ignore-all-space <span class="p">|</span> git apply --cached
+</span></span></code></pre></div><h2 id="edit-localglobal-git-config">Edit [local/global] git config</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config <span class="o">[</span>--global<span class="o">]</span> --edit
+</span></span></code></pre></div><h2 id="blame-on-certain-range">blame on certain range</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git blame -L &lt;start&gt;,&lt;end&gt;
+</span></span></code></pre></div><h2 id="show-a-git-logical-variable">Show a Git logical variable.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git var -l <span class="p">|</span> &lt;variable&gt;
+</span></span></code></pre></div><h2 id="preformatted-patch-file">Preformatted patch file.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git format-patch -M upstream..topic
+</span></span></code></pre></div><h2 id="get-the-repo-name">Get the repo name.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rev-parse --show-toplevel
+</span></span></code></pre></div><h2 id="logs-between-date-range">logs between date range</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --since<span class="o">=</span><span class="s1">&#39;FEB 1 2017&#39;</span> --until<span class="o">=</span><span class="s1">&#39;FEB 14 2017&#39;</span>
+</span></span></code></pre></div><h2 id="exclude-author-from-logs">Exclude author from logs</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --perl-regexp --author<span class="o">=</span><span class="err">&#39;</span>^<span class="o">((</span>?!excluded-author-regex<span class="o">)</span>.*<span class="o">)</span>
+</span></span></code></pre></div><h2 id="generates-a-summary-of-pending-changes">Generates a summary of pending changes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git request-pull v1.0 https://git.ko.xz/project master:for-linus
+</span></span></code></pre></div><h2 id="list-references-in-a-remote-repository">List references in a remote repository</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git ls-remote git://git.kernel.org/pub/scm/git/git.git
+</span></span></code></pre></div><h2 id="backup-untracked-files">Backup untracked files.</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git ls-files --others -i --exclude-standard <span class="p">|</span> xargs zip untracked.zip
+</span></span></code></pre></div><h2 id="list-all-git-aliases">List all git aliases</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config -l <span class="p">|</span> grep <span class="nb">alias</span> <span class="p">|</span> sed <span class="s1">&#39;s/^alias\.//g&#39;</span>
+</span></span></code></pre></div><p><strong>Alternatives:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config -l <span class="p">|</span> grep <span class="nb">alias</span> <span class="p">|</span> cut -d <span class="s1">&#39;.&#39;</span> -f <span class="m">2</span>
+</span></span></code></pre></div><h2 id="show-git-status-short">Show git status short</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git status --short --branch
+</span></span></code></pre></div><h2 id="checkout-a-commit-prior-to-a-day-ago">Checkout a commit prior to a day ago</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout master@<span class="o">{</span>yesterday<span class="o">}</span>
+</span></span></code></pre></div><h2 id="push-the-current-branch-to-the-same-name-on-the-remote-repository">Push the current branch to the same name on the remote repository</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push origin HEAD
+</span></span></code></pre></div><h2 id="push-a-new-local-branch-to-remote-repository-and-track">Push a new local branch to remote repository and track</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push -u origin &lt;branch_name&gt;
+</span></span></code></pre></div><h2 id="change-a-branch-base">Change a branch base</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rebase --onto &lt;new_base&gt; &lt;old_base&gt;
+</span></span></code></pre></div><h2 id="use-ssh-instead-of-https-for-remotes">Use SSH instead of HTTPs for remotes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global url.<span class="s1">&#39;git@github.com:&#39;</span>.insteadOf <span class="s1">&#39;https://github.com/&#39;</span>
+</span></span></code></pre></div><h2 id="update-a-submodule-to-the-latest-commit">Update a submodule to the latest commit</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> &lt;path-to-submodule&gt;
+</span></span><span class="line"><span class="cl">git pull origin &lt;branch&gt;
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> &lt;root-of-your-main-project&gt;
+</span></span><span class="line"><span class="cl">git add &lt;path-to-submodule&gt;
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;submodule updated&#34;</span>
+</span></span></code></pre></div><h2 id="prevent-auto-replacing-lf-with-crlf">Prevent auto replacing LF with CRLF</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git config --global core.autocrlf <span class="nb">false</span>
+</span></span></code></pre></div><!-- Don’t remove or change the comment below – that can break automatic updates. More info at <http://npm.im/doxie.inject>. -->
+<!-- @doxie.inject end -->
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

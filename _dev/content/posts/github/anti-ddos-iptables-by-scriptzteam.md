@@ -8,10 +8,6 @@ canonicalURL: "https://github.com/scriptzteam/anti-DDoS-iptables"
 ShowCanonicalLink: true
 ---
 
-IPtables DDoS Protection: The Best Rules to Mitigate DDoS Attacks
-
-iptables DDoS Protection
-
 There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial.
 This guide will teach you how to:
 

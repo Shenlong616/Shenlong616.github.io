@@ -2,7 +2,7 @@
 title: "JAVASCRIPT TIPS & TRICKS by catalinpit"
 date: 2020-04-03
 description: "A collection of JavaScript tips and tricks 🔥🚀⚡"
-tags: ["javascript", "javascript tips", "javascript tricks"]
+tags: ["javascript", "javascript tips", "javascript tricks", "ES6"]
 categories: ["JavaScript"]
 author: "catalinpit"
 canonicalURL: "https://github.com/catalinpit/JS-Tips-And-Tricks"
