@@ -85,6 +85,7 @@ img {
 
 .pagination .next {
   color: var(--content);
+  border-radius: 0 18px 18px 0;
   background: linear-gradient(270deg, var(--entry) 0%, transparent 100%);
 }
 .pagination .next:hover {
@@ -93,6 +94,7 @@ img {
 
 .pagination .prev {
   color: var(--content);
+  border-radius: 18px 0 0 18px;
   background: linear-gradient(90deg, var(--entry) 0%, transparent 100%);
 }
 .pagination .prev:hover {
@@ -108,10 +110,6 @@ img {
 }
 a.anchor {
   color: #00f !important;
-}
-.post-tags a:before,
-.terms-tags a:before {
-  content: "#";
 }
 .top-link:active,
 .post-entry:active,

@@ -29,23 +29,66 @@
     if (ScrollReveal().noop) {
       console.log("ScrollReveal is non-operational!");
     } else {
+      const defaultConfigScrollReveal = {
+        desktop: true,
+        mobile: false,
+        duration: 600,
+        easing: "ease-out",
+        reset: true,
+        distance: "6.16%",
+        origin: "left",
+        beforeReveal: () => {},
+        afterReveal: () => {},
+      };
+      // h1,h2,h3,h4,h5,h6,p,li,div,code,footer,article,details,blockquote,img
       ScrollReveal().reveal(
-        // h1,h2,h3,h4,h5,h6,p,li,div,code,footer,article,details,blockquote,img
         ".logo a,button#theme-toggle,#menu li,.breadcrumbs a",
         {
-          desktop: true,
-          mobile: false,
-          duration: 600,
-          easing: "ease-out",
-          reset: true,
-          distance: "6.16%",
-          origin: "left",
-          beforeReveal: () => {},
-          afterReveal: () => {},
+          ...defaultConfigScrollReveal,
+        }
+      );
+      ScrollReveal().reveal(
+        ".home-info .entry-header,.home-info .entry-content,.home-info .entry-footer",
+        {
+          ...defaultConfigScrollReveal,
+          origin: "bottom",
+          distance: "6.78%",
+        }
+      );
+      ScrollReveal().reveal(
+        "article.post-entry,.archive-year-header,.archive-month-header,.archive-entry-title,.archive-meta",
+        {
+          ...defaultConfigScrollReveal,
+          origin: "bottom",
+          distance: "19.98%",
         }
       );
     }
   });
 
-  // window.onload = function () {};
+  const randomArray = (array) => {
+    return array[Math.floor(Math.random() * array.length)];
+  };
+
+  var multilingualWaysToSayHello = [
+    { Vietnamese: "Chào" },
+    { Chinese: "你好" },
+    { Czech: "Ahoj" },
+    { English: "Hello" },
+    { Esperanto: "Saluton" },
+    { Bulgarian: "Здравей" },
+    { Korean: "안영하세요" },
+    { Danish: "Hej" },
+    { Dutch: "Hallo" },
+    { Italian: "Ciao" },
+    { Japanese: "こんにちは" },
+    { Russian: "Привет" },
+    { Spanish: " ¡Hola" },
+    { Tamil_Nadu: "வணக்கம்" },
+    { Thai: " สวัสดีคะ" },
+  ];
+
+  document.getElementsByName("hello")[0].innerText = `${
+    Object.values(randomArray(multilingualWaysToSayHello))[0]
+  } 👋`;
 </script>

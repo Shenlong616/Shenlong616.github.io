@@ -292,6 +292,7 @@ const bio2 = horseAge`This horse is ${horse.age}`;
 console.log(bio2);
 ```
 
-### Watch the video on YouTube
+### Watch the video on
 
-{{< youtube Mus_vwhTCq0 >}}
+- YouTube
+  {{< youtube Mus_vwhTCq0 >}}
