@@ -384,7 +384,7 @@ net.ipv4.ip_forward = 1
 </span></span></code></pre></div><h2 id="short-url-for-downloading-sysctlconf">Short URL for Downloading <code>sysctl.conf</code></h2>
 <p>For convenience, I have pointed the URL <code>https://k4t.io/sysctl</code> to the <code>sysctl.conf</code> file. You may therefore download the <code>sysctl.conf</code> file with the following command. However, be sure to check the file&rsquo;s integrity after downloading it if you choose to download using this method.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">curl -L k4t.io/sysctl -o sysctl.conf
-</span></span></code></pre></div><h2 id="backup">Backup</h2>
+</span></span></code></pre></div><h2 id="others">Others</h2>
 <ol>
 <li><a href="../../files/sysctl.conf">sysctl.conf</a></li>
 </ol>
@@ -453,7 +453,6 @@ net.ipv4.ip_forward = 1
   <summary>
     2. Extract Unique Values of Array
   </summary>
-<br />
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">arr</span><span class="p">)];</span>
 </span></span><span class="line"><span class="cl">
@@ -463,7 +462,6 @@ net.ipv4.ip_forward = 1
   <summary>
     3. Shuffle Elements from Array
   </summary>
-<br />
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -473,7 +471,6 @@ net.ipv4.ip_forward = 1
   <summary>
     4. Flatten a Multidimensional Array
   </summary>
-<br />
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="mi">7</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">concat</span><span class="p">(...</span><span class="nx">arr</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -505,7 +502,6 @@ net.ipv4.ip_forward = 1
   <summary>
     6. Random an Item in Array
   </summary>
-<br />
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">)];</span>
 </span></span></code></pre></div></details>
@@ -513,7 +509,6 @@ net.ipv4.ip_forward = 1
   <summary>
     7. Remove an Item from Array
   </summary>
-<br />
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Not Recommended
@@ -527,7 +522,6 @@ net.ipv4.ip_forward = 1
   <summary>
     1. Dynamic Property Name
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">dynamic</span> <span class="o">=</span> <span class="s2">&#34;age&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">dynamicValue</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -538,7 +532,6 @@ net.ipv4.ip_forward = 1
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// result: obj = { name: &#39;Dyno&#39;, age: 18 }
 </span></span></span></code></pre></div></details>
-<br />
 <details >
   <summary>
     2. Clone an Object
@@ -586,14 +579,12 @@ net.ipv4.ip_forward = 1
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj2</span><span class="p">);</span> <span class="c1">// { a: 1, b: 2, c: { nested: 3 } } 😉😘
 </span></span></span></code></pre></div></li>
 </ul>
-<br />
 </details>
 <h1 id="destructuring-es6">Destructuring (ES6+)</h1>
 <details>
   <summary>
     1. With Array
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// same: var a = 1, b = 2;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -623,7 +614,6 @@ net.ipv4.ip_forward = 1
   <summary>
     2. With Object
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Dyno&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span> <span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">age</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">person</span><span class="p">;</span>
@@ -654,11 +644,9 @@ net.ipv4.ip_forward = 1
   <summary>
     1. Optional chaining (?.)
   </summary>
-<br/>
 <blockquote>
 <p>&ldquo;The optional chaining operator <code>?.</code> enables you to read the value of a property located deep within a chain of connected objects without having to check that each reference in the chain is valid.&rdquo; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">MDN</a></p>
 </blockquote>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Dyno&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">age</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
@@ -692,7 +680,6 @@ net.ipv4.ip_forward = 1
   <summary>
     2. Nullish coalescing operator (??)
   </summary>
-  <br/>
 <blockquote>
 <p>&ldquo;The nullish coalescing operator <code>??</code> is a logical operator that returns its right-hand side operand when its left-hand side operand is <code>null</code> or <code>undefined</code>, and otherwise returns its left-hand side operand.&rdquo; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">MDN</a></p>
 </blockquote>
@@ -712,7 +699,6 @@ net.ipv4.ip_forward = 1
 </span></span></span></code></pre></div><blockquote>
 <p>The OR operator <code>||</code> is a logical operator that returns its right-hand side operand when its left-hand side operand is <code>falsy</code>, and otherwise returns its left-hand side operand.</p>
 </blockquote>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">null</span> <span class="o">||</span> <span class="s2">&#34;Default&#34;</span><span class="p">;</span> <span class="c1">// a = &#39;Default&#39;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">false</span> <span class="o">||</span> <span class="s2">&#34;Default&#34;</span><span class="p">;</span> <span class="c1">// a = &#39;Default&#39;
 </span></span></span></code></pre></div></details>
@@ -720,7 +706,6 @@ net.ipv4.ip_forward = 1
   <summary>
     4. Logical AND (&&)
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">b</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">c</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
@@ -741,7 +726,6 @@ net.ipv4.ip_forward = 1
   <summary>
     5. Double tilde operator (~~)
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">num</span> <span class="o">=</span> <span class="mf">2.6</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">~~</span><span class="nx">num</span><span class="p">);</span> <span class="c1">// 2 = Math.floor(2)
 </span></span></span></code></pre></div></details>
@@ -749,7 +733,6 @@ net.ipv4.ip_forward = 1
   <summary>
     6. Logical Assignment Operator ES12  (||=, ??=) 
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">a</span> <span class="o">||=</span> <span class="nx">b</span><span class="p">;</span> <span class="c1">// same a = a || b;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">a</span> <span class="o">??=</span> <span class="nx">b</span><span class="p">;</span> <span class="c1">// same a = a ?? b;
 </span></span></span></code></pre></div></details>
@@ -757,7 +740,6 @@ net.ipv4.ip_forward = 1
   <summary>
     7. Numeric separator ES12 (_)
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">1_000_000_000</span><span class="p">;</span> <span class="c1">// same: n = 1000000000;
 </span></span></span></code></pre></div></details>
 <h1 id="comparison">Comparison</h1>
@@ -765,11 +747,9 @@ net.ipv4.ip_forward = 1
   <summary>
     1. Use === instead of ==
   </summary>
-<br/>
 <blockquote>
 <p>The operator <code>== (!=)</code> will automatically cast if 2 variables are not of the same type, then compare. The <code>=== (!==)</code> operator compares the value and the type =&gt; <code>===</code> faster than <code>==</code>.</p>
 </blockquote>
-<br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl">  <span class="mi">1</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span> <span class="c1">// true
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="mi">1</span> <span class="o">===</span> <span class="s1">&#39;1&#39;</span> <span class="c1">// false
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -786,11 +766,9 @@ net.ipv4.ip_forward = 1
   <summary>
     2. The difference between isNaN() and Number.isNaN() 
   </summary>
-<br/>
 <blockquote>
 <p>The <code>isNaN()</code> method (is Not a Number ?) use to check if a variable is <strong>a Number</strong>. The <code>Number.isNaN()</code> (is NaN ?) method use to check if a variable is <strong>NaN</strong></p>
 </blockquote>
-<br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">isNaN</span><span class="p">(</span><span class="s2">&#34;string&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// true, &#39;string&#39; is not Number
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -820,7 +798,6 @@ net.ipv4.ip_forward = 1
   <summary>
     1. Swapping use Destructuring
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -832,7 +809,6 @@ net.ipv4.ip_forward = 1
   <summary>
     2. Create function that returns only 1 object
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fn</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">obj</span><span class="o">:</span> <span class="mi">1</span> <span class="p">});</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="cm">/*
@@ -845,11 +821,9 @@ net.ipv4.ip_forward = 1
   <summary>
     3. Immediately Invoked Function Expression (IIFE)
   </summary>
-  <br/>
 <blockquote>
 <p>The function will execute automatically when you create it.</p>
 </blockquote>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl">  <span class="c1">// Way 1:
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="p">()(</span><span class="kd">function</span><span class="p">(){</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// do something...
@@ -869,14 +843,12 @@ net.ipv4.ip_forward = 1
   <summary>
     4. typeof vs instanceof 
   </summary>
-  <br/>
 <blockquote>
 <p><code>typeof</code>: return a string that represents the primitive type of a variable.</p>
 </blockquote>
 <blockquote>
 <p><code>instanceof</code>: check in all the prototypes chain the constructor it returns true if it’s found and false if not.</p>
 </blockquote>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">arr</span><span class="p">);</span> <span class="c1">// &#34;object&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">);</span> <span class="c1">// true
@@ -895,7 +867,6 @@ net.ipv4.ip_forward = 1
   <summary>
     5. Falsy
   </summary>
-  <br/>
 <blockquote>
 <p>A <code>Falsy value</code> is a value that is considered false when encountered in a Boolean context . <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">MDN</a></p>
 </blockquote>
@@ -905,7 +876,6 @@ net.ipv4.ip_forward = 1
 <blockquote>
 <p>Falsy value bypass the if block. Ex:</p>
 </blockquote>
-<br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Falsy&#34;</span><span class="p">);</span>
@@ -917,7 +887,6 @@ net.ipv4.ip_forward = 1
 </span></span></span></code></pre></div><blockquote>
 <p>Filter out Falsy values</p>
 </blockquote>
-<br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;Dyno&#34;</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">NaN</span><span class="p">,</span> <span class="mi">2000</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">filteredArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -927,7 +896,6 @@ net.ipv4.ip_forward = 1
   <summary>
     6. Template string `${}`
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Dyno&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">hello1</span> <span class="o">=</span> <span class="s2">&#34;Hello &#34;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s2">&#34;, how are you?&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">hello2</span> <span class="o">=</span> <span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">, how are you?`</span><span class="p">;</span> <span class="c1">// template string.
@@ -936,7 +904,6 @@ net.ipv4.ip_forward = 1
   <summary>
     7. Rounding number to n decimal place
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mf">25.0420001</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">num</span><span class="p">);</span> <span class="c1">// &#34;number&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -947,7 +914,6 @@ net.ipv4.ip_forward = 1
   <summary>
     8. Check variable - convert a variable to Boolean (!! operator)
   </summary>
-  <br/>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!!</span><span class="kc">null</span><span class="p">);</span> <span class="c1">// false
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!!</span><span class="kc">undefined</span><span class="p">);</span> <span class="c1">// false
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!!</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// true

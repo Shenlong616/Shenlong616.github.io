@@ -81,8 +81,6 @@ cover:
     2. Extract Unique Values of Array
   </summary>
 
-<br />
-
 ```js
 var arr = [1, 2, 2, 3, 5, 5, 4];
 var newArr = [...new Set(arr)];
@@ -97,8 +95,6 @@ var newArr = [...new Set(arr)];
     3. Shuffle Elements from Array
   </summary>
 
-<br />
-
 ```js
 var arr = [1, 2, 3, 4, 5];
 var newArr = arr.sort(() => Math.random() - 0.5);
@@ -112,8 +108,6 @@ var newArr = arr.sort(() => Math.random() - 0.5);
   <summary>
     4. Flatten a Multidimensional Array
   </summary>
-
-<br />
 
 ```js
 var arr = [1, [2, 3], [4, 5, 6], 7];
@@ -155,8 +149,6 @@ arr3.length = 7;
     6. Random an Item in Array
   </summary>
 
-<br />
-
 ```js
 var arr = [2, 4, 5];
 var item = arr[Math.floor(Math.random() * arr.length)];
@@ -168,8 +160,6 @@ var item = arr[Math.floor(Math.random() * arr.length)];
   <summary>
     7. Remove an Item from Array
   </summary>
-
-<br />
 
 ```js
 var arr = [1, 2, 3];
@@ -190,8 +180,6 @@ arr.splice(1, 1); // arr = [1, 3], length = 2
     1. Dynamic Property Name
   </summary>
 
-  <br/>
-
 ```js
 const dynamic = "age",
   dynamicValue = 18;
@@ -205,8 +193,6 @@ var obj = {
 ```
 
 </details>
-
-<br />
 
 <details >
   <summary>
@@ -258,8 +244,6 @@ var obj = {
   console.log(obj2); // { a: 1, b: 2, c: { nested: 3 } } 😉😘
   ```
 
-<br />
-
 </details>
 
 # Destructuring (ES6+)
@@ -268,8 +252,6 @@ var obj = {
   <summary>
     1. With Array
   </summary>
-
-  <br/>
 
 ```js
 var [a, b] = [1, 2];
@@ -304,8 +286,6 @@ var [a, b, [c, d], e] = [1, 2, [3, 4], 5];
   <summary>
     2. With Object
   </summary>
-
-  <br/>
 
 ```js
 var person = { name: "Dyno", age: 18 };
@@ -343,11 +323,7 @@ var {
     1. Optional chaining (?.)
   </summary>
 
-<br/>
-
 > "The optional chaining operator `?.` enables you to read the value of a property located deep within a chain of connected objects without having to check that each reference in the chain is valid." [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-
-  <br/>
 
 ```js
 const person = {
@@ -390,8 +366,6 @@ obj.func?.(args);
     2. Nullish coalescing operator (??)
   </summary>
 
-  <br/>
-
 > "The nullish coalescing operator `??` is a logical operator that returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, and otherwise returns its left-hand side operand." [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 
 ```js
@@ -417,8 +391,6 @@ if (a > 2 || b > 1) console.log("Dyno");
 
 > The OR operator `||` is a logical operator that returns its right-hand side operand when its left-hand side operand is `falsy`, and otherwise returns its left-hand side operand.
 
-  <br/>
-
 ```js
 var a = null || "Default"; // a = 'Default'
 var a = false || "Default"; // a = 'Default'
@@ -430,8 +402,6 @@ var a = false || "Default"; // a = 'Default'
   <summary>
     4. Logical AND (&&)
   </summary>
-
-  <br/>
 
 ```js
 let a = true,
@@ -458,8 +428,6 @@ c && sayHi(); // false
     5. Double tilde operator (~~)
   </summary>
 
-  <br/>
-
 ```js
 let num = 2.6;
 console.log(~~num); // 2 = Math.floor(2)
@@ -472,8 +440,6 @@ console.log(~~num); // 2 = Math.floor(2)
     6. Logical Assignment Operator ES12  (||=, ??=) 
   </summary>
 
-  <br/>
-
 ```js
 a ||= b; // same a = a || b;
 a ??= b; // same a = a ?? b;
@@ -485,8 +451,6 @@ a ??= b; // same a = a ?? b;
   <summary>
     7. Numeric separator ES12 (_)
   </summary>
-
-  <br/>
 
 ```js
 const n = 1_000_000_000; // same: n = 1000000000;
@@ -501,11 +465,7 @@ const n = 1_000_000_000; // same: n = 1000000000;
     1. Use === instead of ==
   </summary>
 
-<br/>
-
 > The operator `== (!=)` will automatically cast if 2 variables are not of the same type, then compare. The `=== (!==)` operator compares the value and the type => `===` faster than `==`.
-
-<br/>
 
 ```js
   1 == '1' // true
@@ -529,11 +489,7 @@ const n = 1_000_000_000; // same: n = 1000000000;
     2. The difference between isNaN() and Number.isNaN() 
   </summary>
 
-<br/>
-
 > The `isNaN()` method (is Not a Number ?) use to check if a variable is **a Number**. The `Number.isNaN()` (is NaN ?) method use to check if a variable is **NaN**
-
-<br/>
 
 ```js
 isNaN("string");
@@ -571,8 +527,6 @@ Number.isNaN(NaN);
     1. Swapping use Destructuring
   </summary>
 
-  <br/>
-
 ```js
 let a = 1,
   b = 2;
@@ -588,8 +542,6 @@ let a = 1,
   <summary>
     2. Create function that returns only 1 object
   </summary>
-
-  <br/>
 
 ```js
 const fn = () => ({ obj: 1 });
@@ -608,11 +560,7 @@ const fn = () => ({ obj: 1 });
     3. Immediately Invoked Function Expression (IIFE)
   </summary>
 
-  <br/>
-
 > The function will execute automatically when you create it.
-
-  <br/>
 
 ```js
   // Way 1:
@@ -638,13 +586,9 @@ const fn = () => ({ obj: 1 });
     4. typeof vs instanceof 
   </summary>
 
-  <br/>
-
 > `typeof`: return a string that represents the primitive type of a variable.
 
 > `instanceof`: check in all the prototypes chain the constructor it returns true if it’s found and false if not.
-
-  <br/>
 
 ```js
 var arr = [1, 2, 3];
@@ -669,15 +613,11 @@ typeof function name() {}; // "function"
     5. Falsy
   </summary>
 
-  <br/>
-
 > A `Falsy value` is a value that is considered false when encountered in a Boolean context . [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 > Complete list of JavaScript falsy values ` false, 0, -0, 0n, "", '', ``, NaN, null, undefined, document.all`
 
 > Falsy value bypass the if block. Ex:
-
-<br/>
 
 ```js
 if (null) {
@@ -691,8 +631,6 @@ const a = undefined || "Falsy";
 ```
 
 > Filter out Falsy values
-
-<br/>
 
 ```js
 const arr = [1, "Dyno", false, 0, true, NaN, 2000];
@@ -708,8 +646,6 @@ var filteredArr = arr.filter(Boolean);
     6. Template string `${}`
   </summary>
 
-  <br/>
-
 ```js
 const name = "Dyno";
 const hello1 = "Hello " + name + ", how are you?";
@@ -723,8 +659,6 @@ const hello2 = `Hello ${name}, how are you?`; // template string.
     7. Rounding number to n decimal place
 
   </summary>
-
-  <br/>
 
 ```js
 var num = 25.0420001;
@@ -740,8 +674,6 @@ console.log(typeof num); // ❗ "string"
   <summary>
     8. Check variable - convert a variable to Boolean (!! operator)
   </summary>
-
-  <br/>
 
 ```js
 console.log(!!null); // false

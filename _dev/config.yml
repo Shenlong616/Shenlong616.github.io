@@ -5,7 +5,7 @@ buildFuture: false
 enableEmoji: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
-paginate: 6
+paginate: 3
 publishDir: ".."
 pygmentsUseClasses: true
 theme: PaperMod
@@ -95,7 +95,7 @@ params:
 
   homeInfoParams:
     Title: "Xin Chào 👋"
-    Content: "tôi tên Phát và logic tôi như cc, nhưng tôi vẫn code!"
+    Content: "void(0)"
 
   socialIcons:
     - name: GitHub

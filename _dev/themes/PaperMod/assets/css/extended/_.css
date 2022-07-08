@@ -11,9 +11,9 @@
   margin: 0 30px;
   padding: 0;
 }
-.toc ul {
+/* .toc ul {
   list-style: decimal;
-}
+} */
 .post-description {
   margin-top: 15px;
   margin-bottom: 0;
@@ -129,15 +129,17 @@ img {
   font-weight: 500;
 }
 .top-link:active,
-.post-entry:active {
-  transform: scale(0.96) !important;
+.post-entry:active,
+.post-tags a:active,
+.copy-code:active,
+.pagination .next:active,
+.pagination .prev:active {
+  transform: scale(0.98) !important;
+}
+.archive-entry-title {
+  font-weight: 500;
 }
 /* dell hieu kieu lol gi? */
 code {
   cursor: text;
 }
-/* restyle color ??? */
-/* :root {
-  --theme: #f5f5f5;
-}
-*/

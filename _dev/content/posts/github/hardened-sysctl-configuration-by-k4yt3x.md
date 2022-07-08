@@ -158,6 +158,6 @@ For convenience, I have pointed the URL `https://k4t.io/sysctl` to the `sysctl.c
 curl -L k4t.io/sysctl -o sysctl.conf
 ```
 
-## Backup
+## Others
 
 1. [sysctl.conf](../../files/sysctl.conf)
