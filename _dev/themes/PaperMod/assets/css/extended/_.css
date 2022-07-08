@@ -19,9 +19,10 @@
   margin-bottom: 0;
 }
 .logo a:after {
-  margin-left: 3px;
+  content: "v1.0";
+  margin-left: 5px;
   font-weight: normal;
-  font-size: 0.456789em;
+  font-size: 0.5em;
   color: var(--secondary);
 }
 .post-tags a {
