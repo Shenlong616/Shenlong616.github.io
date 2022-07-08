@@ -10,7 +10,7 @@ canonicalURL: "https://github.com/codediodeio/code-this-not-that-js"
 ShowCanonicalLink: true
 ---
 
-### async-await.js
+### Async/await
 
 ```javascript
 const random = () => {
@@ -65,7 +65,7 @@ const sumRandomAsyncNums = async () => {
 sumRandomAsyncNums();
 ```
 
-### console-log.js
+### console.log()
 
 ```javascript
 const foo = { name: "tom", age: 30, nervous: false };
@@ -106,7 +106,7 @@ deleteMe();
 deleteMe();
 ```
 
-### destructuring.js
+### Destructuring assignment
 
 ```javascript
 const turtle = {
@@ -199,7 +199,7 @@ const someValueGreaterThan500 = orders.some((v) => v > 500);
 const someValueGreaterThan10 = orders.some((v) => v > 10);
 ```
 
-### rest-params.js
+### Rest parameters
 
 ```javascript
 "Bad Function Code 💩";
@@ -217,7 +217,7 @@ function totalHitPoints(...hits) {
 totalHitPoints(1, 2, 3, 4, 5, 6, 7);
 ```
 
-### spread-syntax.js
+### Spread syntax (...)
 
 ```javascript
 // Objects
@@ -257,7 +257,7 @@ pokemon = [...pokemon, "Bulbasaur", "Metapod", "Weedle"];
 pokemon = ["Bulbasaur", ...pokemon, "Metapod", "Weedle"];
 ```
 
-### template-literals.js
+### Template literals
 
 ```javascript
 const horse = {
