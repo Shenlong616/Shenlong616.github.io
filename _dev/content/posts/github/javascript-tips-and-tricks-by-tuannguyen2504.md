@@ -15,7 +15,7 @@ cover:
 ---
 
 <!-- logo -->
-<div align="center">
+<div align="center" width="100%" height="100%">
   <img  src="../../images/javascript-tips-and-tricks-by-tuannguyen2504.jpg" />
 </div>
 
