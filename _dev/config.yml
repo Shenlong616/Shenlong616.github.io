@@ -5,7 +5,7 @@ buildFuture: false
 enableEmoji: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
-paginate: 3
+paginate: 5
 publishDir: ".."
 pygmentsUseClasses: true
 theme: PaperMod
@@ -61,7 +61,7 @@ params:
   displayFullLangName: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   keywords:
-    [blog, javascript tip, javascript trick, python tip, python trick, dev]
+    [blog, javascript tips, javascript tricks, python tips, python tricks, dev]
   math: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
