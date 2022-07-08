@@ -7,6 +7,270 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 14 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Code this, not that - JavaScript by codediodeio</title>
+      <link>https://shenlong616.github.io/posts/github/code-this-not-that-javascript-by-codediodeio/</link>
+      <pubDate>Thu, 11 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/github/code-this-not-that-javascript-by-codediodeio/</guid>
+      <description>JavaScript Pro Tips - Code This, Not That</description>
+      <content:encoded><![CDATA[<h3 id="async-awaitjs">async-await.js</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">random</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Bad Promise Code 💩&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sumRandomAsyncNums</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">third</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">random</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">first</span> <span class="o">=</span> <span class="nx">v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">random</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">second</span> <span class="o">=</span> <span class="nx">v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">random</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">third</span> <span class="o">=</span> <span class="nx">v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span> <span class="o">+</span> <span class="nx">third</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Result </span><span class="si">${</span><span class="nx">v</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Good Promise Code ✅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sumRandomAsyncNums</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">first</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">random</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">second</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">random</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">third</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">random</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Result </span><span class="si">${</span><span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span> <span class="o">+</span> <span class="nx">third</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="kr">await</span> <span class="nx">random</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// do something
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">randos</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">random</span><span class="p">(),</span> <span class="nx">random</span><span class="p">(),</span> <span class="nx">random</span><span class="p">()]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">r</span> <span class="k">of</span> <span class="kr">await</span> <span class="nx">randos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">sumRandomAsyncNums</span><span class="p">();</span>
+</span></span></code></pre></div><h3 id="console-logjs">console-log.js</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;tom&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nx">nervous</span><span class="o">:</span> <span class="kc">false</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bar</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;dick&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span> <span class="nx">nervous</span><span class="o">:</span> <span class="kc">false</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">baz</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;harry&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">nervous</span><span class="o">:</span> <span class="kc">true</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Bad Code 💩&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">baz</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Good Code ✅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Computed Property Names
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;%c My Friends&#34;</span><span class="p">,</span> <span class="s2">&#34;color: orange; font-weight: bold;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span> <span class="nx">foo</span><span class="p">,</span> <span class="nx">bar</span><span class="p">,</span> <span class="nx">baz</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Console.table(...)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">table</span><span class="p">([</span><span class="nx">foo</span><span class="p">,</span> <span class="nx">bar</span><span class="p">,</span> <span class="nx">baz</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// // Console.time
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s2">&#34;looper&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">1000000</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s2">&#34;looper&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// // Stack Trace Logs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">deleteMe</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">trace</span><span class="p">(</span><span class="s2">&#34;bye bye database&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">deleteMe</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">deleteMe</span><span class="p">();</span>
+</span></span></code></pre></div><h3 id="destructuringjs">destructuring.js</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">turtle</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Bob 🐢&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">legs</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">shell</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;amphibious&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">meal</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">diet</span><span class="o">:</span> <span class="s2">&#34;berries&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Bad Code 💩&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">feed</span><span class="p">(</span><span class="nx">animal</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="sb">`Feed </span><span class="si">${</span><span class="nx">animal</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">animal</span><span class="p">.</span><span class="nx">meal</span><span class="si">}</span><span class="sb"> kilos of </span><span class="si">${</span><span class="nx">animal</span><span class="p">.</span><span class="nx">diet</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Good Code ✅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">feed</span><span class="p">({</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">meal</span><span class="p">,</span> <span class="nx">diet</span> <span class="p">})</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="sb">`Feed </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">meal</span><span class="si">}</span><span class="sb"> kilos of </span><span class="si">${</span><span class="nx">diet</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// OR
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">feed</span><span class="p">(</span><span class="nx">animal</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">meal</span><span class="p">,</span> <span class="nx">diet</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">animal</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="sb">`Feed </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">meal</span><span class="si">}</span><span class="sb"> kilos of </span><span class="si">${</span><span class="nx">diet</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">feed</span><span class="p">(</span><span class="nx">turtle</span><span class="p">));</span>
+</span></span></code></pre></div><h3 id="loopsjs">loops.js</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">orders</span> <span class="o">=</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">223</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Bad Loop Code 💩&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">withTax</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">highValue</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Reduce
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">total</span> <span class="o">+=</span> <span class="nx">orders</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Map
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">withTax</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">orders</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">*</span> <span class="mf">1.1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Filter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">orders</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">highValue</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">orders</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Good Loop Code ✅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Reduce
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Map
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">withTax</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">v</span> <span class="o">*</span> <span class="mf">1.1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Filter
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">highValue</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">v</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Every
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns false
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">everyValueGreaterThan50</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">every</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">v</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Every
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns true
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">everyValueGreaterThan10</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">every</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">v</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Some
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns false
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">someValueGreaterThan500</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">v</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * Some
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @returns true
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">someValueGreaterThan10</span> <span class="o">=</span> <span class="nx">orders</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">v</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="rest-paramsjs">rest-params.js</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="s2">&#34;Bad Function Code 💩&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">totalHitPoints</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span> <span class="o">+</span> <span class="nx">d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Good Function Code ✅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">totalHitPoints</span><span class="p">(...</span><span class="nx">hits</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">hits</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">totalHitPoints</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+</span></span></code></pre></div><h3 id="spread-syntaxjs">spread-syntax.js</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Objects
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">pikachu</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Pikachu 🐹&#34;</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">stats</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">hp</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span> <span class="nx">attack</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nx">defense</span><span class="o">:</span> <span class="mi">45</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Bad Object Code 💩&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">pikachu</span><span class="p">[</span><span class="s2">&#34;hp&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">stats</span><span class="p">.</span><span class="nx">hp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pikachu</span><span class="p">[</span><span class="s2">&#34;attack&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">stats</span><span class="p">.</span><span class="nx">attack</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pikachu</span><span class="p">[</span><span class="s2">&#34;defense&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">stats</span><span class="p">.</span><span class="nx">defense</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// OR
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">lvl0</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">pikachu</span><span class="p">,</span> <span class="nx">stats</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">lvl1</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">pikachu</span><span class="p">,</span> <span class="p">{</span> <span class="nx">hp</span><span class="o">:</span> <span class="mi">45</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Good Object Code ✅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">lvl0</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">pikachu</span><span class="p">,</span> <span class="p">...</span><span class="nx">stats</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">lvl1</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">pikachu</span><span class="p">,</span> <span class="nx">hp</span><span class="o">:</span> <span class="mi">45</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Arrays
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">pokemon</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Arbok&#34;</span><span class="p">,</span> <span class="s2">&#34;Raichu&#34;</span><span class="p">,</span> <span class="s2">&#34;Sandshrew&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Bad Array Code 💩&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">pokemon</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;Bulbasaur&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pokemon</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;Metapod&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">pokemon</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;Weedle&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Good Array Code ✅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Push
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">pokemon</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">pokemon</span><span class="p">,</span> <span class="s2">&#34;Bulbasaur&#34;</span><span class="p">,</span> <span class="s2">&#34;Metapod&#34;</span><span class="p">,</span> <span class="s2">&#34;Weedle&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Shift
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">pokemon</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Bulbasaur&#34;</span><span class="p">,</span> <span class="p">...</span><span class="nx">pokemon</span><span class="p">,</span> <span class="s2">&#34;Metapod&#34;</span><span class="p">,</span> <span class="s2">&#34;Weedle&#34;</span><span class="p">];</span>
+</span></span></code></pre></div><h3 id="template-literalsjs">template-literals.js</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">horse</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Topher 🐴&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">size</span><span class="o">:</span> <span class="s2">&#34;large&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">skills</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;jousting&#34;</span><span class="p">,</span> <span class="s2">&#34;racing&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">age</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Bad String Code 💩&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">bio</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">horse</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34; is a &#34;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">horse</span><span class="p">.</span><span class="nx">size</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34; horse skilled in &#34;</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">horse</span><span class="p">.</span><span class="nx">skills</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34; &amp; &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s2">&#34;Good String Code ✅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">skills</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">horse</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">bio</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> is a </span><span class="si">${</span><span class="nx">size</span><span class="si">}</span><span class="sb"> horse skilled in </span><span class="si">${</span><span class="nx">skills</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34; &amp; &#34;</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bio</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Advanced Tag Example
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">horseAge</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">ageStr</span> <span class="o">=</span> <span class="nx">age</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">?</span> <span class="s2">&#34;old&#34;</span> <span class="o">:</span> <span class="s2">&#34;young&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="sb">`</span><span class="si">${</span><span class="nx">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}${</span><span class="nx">ageStr</span><span class="si">}</span><span class="sb"> at </span><span class="si">${</span><span class="nx">age</span><span class="si">}</span><span class="sb"> years`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bio2</span> <span class="o">=</span> <span class="nx">horseAge</span><span class="sb">`This horse is </span><span class="si">${</span><span class="nx">horse</span><span class="p">.</span><span class="nx">age</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bio2</span><span class="p">);</span>
+</span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+    <item>
       <title>JavaScript tips &amp; tricks by TuanNguyen2504</title>
       <link>https://shenlong616.github.io/posts/github/javascript-tips-and-tricks-by-tuannguyen2504/</link>
       <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
