@@ -1,5 +1,5 @@
 ---
-title: "Get Random Item From an Array"
+title: "JavaScript: get random item from an Array"
 date: 2022-07-08
 tags: ["javascript", "javascript tips", "javascript tricks", "random", "array"]
 categories: ["JavaScript"]
