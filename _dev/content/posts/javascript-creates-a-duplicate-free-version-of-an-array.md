@@ -13,6 +13,7 @@ showToc: false
 ```javascript
 var array = [1, 2, 2, 3, 3, 3];
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 console.log([...new Set(array)]); // [1, 2, 3]
 ```
 
@@ -42,7 +43,6 @@ const Champions = [
   },
 ];
 
-// map((element, index, array) => {})
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 const uniqueChampionsName = [
   ...new Set(Champions.map((element) => element.name)),
