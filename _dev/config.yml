@@ -71,7 +71,7 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowShareButtons: false
   ShowToc: true
-  ShowWordCount: false
+  ShowWordCount: true
   TocOpen: true
 
   schema:

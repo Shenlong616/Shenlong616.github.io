@@ -1,5 +1,0 @@
----
-title: JavaScript
-# summary:
-# description:
----
