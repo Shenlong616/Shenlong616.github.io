@@ -66,6 +66,7 @@ img {
   height: 49px; */
 }
 .paginav .next {
+  padding: 6px 9px 6px 0;
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
   background: linear-gradient(270deg, var(--theme) 0%, transparent 100%);
@@ -75,6 +76,7 @@ img {
 }
 
 .paginav .prev {
+  padding: 6px 0 6px 9px;
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
   background: linear-gradient(90deg, var(--theme) 0%, transparent 100%);
