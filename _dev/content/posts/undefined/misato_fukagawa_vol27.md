@@ -8,7 +8,7 @@ canonicalURL: "https://tokyo-analog.com/misato_fukagawa_vol27/"
 ShowCanonicalLink: false
 showToc: false
 cover:
-  image: "posts/images/2/misato_fukagawa_vol27_39.jpg"
+  image: "posts/images/2/misato_fukagawa_vol27_30.jpg"
 #   hidden: false
 ---
 
