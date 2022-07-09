@@ -47,21 +47,20 @@
         }
       );
       ScrollReveal().reveal(
-        ".home-info .entry-header,.home-info .entry-content,.home-info .entry-footer",
+        ".home-info .entry-header,.home-info .entry-content,.home-info .entry-footer,footer.footer",
         {
           ...defaultConfig,
           origin: "bottom",
         }
       );
-      ScrollReveal().reveal(
-        //.archive-year-header,.archive-month-header,.archive-entry-title,.archive-meta
-        "article.post-entry",
-        {
-          ...defaultConfig,
-          origin: "bottom",
-          distance: "19.98%",
-        }
-      );
+      ScrollReveal().reveal(".pagination .next", {
+        ...defaultConfig,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".pagination .prev", {
+        ...defaultConfig,
+        origin: "right",
+      });
     }
   });
 
