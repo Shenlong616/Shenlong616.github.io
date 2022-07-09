@@ -53,6 +53,11 @@
           origin: "bottom",
         }
       );
+      ScrollReveal().reveal(".post-entry", {
+        ...defaultConfig,
+        distance: "19.98%",
+        origin: "bottom",
+      });
     }
   });
 
@@ -105,9 +110,11 @@
   ];
 
   const changeHelloText = () => {
-    document.getElementsByName("hello")[0].innerText = `${
-      Object.values(randomArray(multilingualWaysToSayHello))[0]
-    } 👋`;
+    if (document.getElementsByName("hello")[0] !== undefined) {
+      document.getElementsByName("hello")[0].innerText = `${
+        Object.values(randomArray(multilingualWaysToSayHello))[0]
+      } 👋`;
+    }
   };
   changeHelloText();
 
