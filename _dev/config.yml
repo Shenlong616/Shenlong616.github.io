@@ -5,7 +5,7 @@ buildFuture: false
 enableEmoji: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
-paginate: 6
+paginate: 9
 publishDir: ".."
 pygmentsUseClasses: true
 theme: PaperMod
@@ -80,7 +80,7 @@ params:
 
   homeInfoParams:
     Title: <span name="hello"></span>
-    Content: "<span style='font-weight:500;color:var(--primary)'>trông bạn như củ cặk cute thế =)</span>"
+    Content: "<span style='font-weight:500;color:var(--primary)'>trông bạn như củ cặk thế =)</span>"
 
   socialIcons:
     - name: GitHub
@@ -120,8 +120,8 @@ params:
     disableFingerprinting: true
 
   cover:
-    #     hidden: true # hide everywhere but not in structured data
-    #     hiddenInList: true # hide on list pages and home
+    # hidden: true # hide everywhere but not in structured data
+    # hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
 
   fuseOpts:

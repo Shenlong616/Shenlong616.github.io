@@ -2,7 +2,8 @@
 title: "JavaScript for Everyone by Asabeneh"
 date: 2021-01-26
 description: "A step by step guide to learn JavaScript and programming"
-tags: ["javascript", "javascript tips", "javascript tricks"]
+tags:
+  ["javascript", "javascript tips", "javascript tricks", "ES5", "ES6", "ES7"]
 categories: ["JavaScript"]
 author: "Asabeneh"
 canonicalURL: "https://github.com/Asabeneh/JavaScript-for-Everyone"
