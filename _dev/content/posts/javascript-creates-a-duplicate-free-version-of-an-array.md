@@ -52,5 +52,5 @@ const uniqueChampionsAge = [
   ...new Set(Champions.map((element) => element.age)),
 ];
 
-console.log(uniqueChampionsName);
+console.log(uniqueChampionsName); // ['Yasuo', 'Zed', 'Darius', "Kha'Zix"]
 ```

@@ -80,7 +80,7 @@ params:
 
   homeInfoParams:
     Title: <span name="hello"></span>
-    Content: "<span style='font-weight:500;color:var(--primary)'>trông bạn như củ cặk =)</span>"
+    Content: "<span style='font-weight:500;color:var(--primary)'>trông pạn như kon cặk =)</span>"
 
   socialIcons:
     - name: GitHub
