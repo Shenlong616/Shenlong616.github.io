@@ -122,7 +122,7 @@ net.ipv4.ip_forward = 1
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">curl -L k4t.io/sysctl -o sysctl.conf
 </span></span></code></pre></div><h2 id="others">Others</h2>
 <ol>
-<li><a href="../../files/sysctl.conf">sysctl.conf</a></li>
+<li><a href="/../assets/files/sysctl.conf">sysctl.conf</a></li>
 </ol>
 ]]></content:encoded>
     </item>

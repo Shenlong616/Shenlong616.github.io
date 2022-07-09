@@ -160,4 +160,4 @@ curl -L k4t.io/sysctl -o sysctl.conf
 
 ## Others
 
-1. [sysctl.conf](../../files/sysctl.conf)
+1. [sysctl.conf](/../assets/files/sysctl.conf)
