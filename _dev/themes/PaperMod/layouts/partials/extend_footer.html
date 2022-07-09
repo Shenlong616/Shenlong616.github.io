@@ -31,25 +31,44 @@
     } else {
       const defaultConfig = {
         desktop: true,
-        mobile: false,
+        mobile: true,
         duration: 600,
         easing: "ease-out",
         reset: true,
-        distance: "6.16%",
+        distance: "6.66%",
         origin: "left",
+        delay: 0,
         beforeReveal: () => {},
         afterReveal: () => {},
       };
-      ScrollReveal().reveal(".logo a,button#theme-toggle,#menu li", {
+      ScrollReveal().reveal(".logo a, button#theme-toggle", {
         ...defaultConfig,
       });
-      ScrollReveal().reveal(
-        ".home-info .entry-header,.home-info .entry-content,.home-info .entry-footer",
-        {
-          ...defaultConfig,
-          origin: "bottom",
-        }
-      );
+      ScrollReveal().reveal("#menu li", {
+        ...defaultConfig,
+        delay: 50,
+      });
+      ScrollReveal().reveal(".home-info .entry-header", {
+        ...defaultConfig,
+        delay: 150,
+        distance: "7.77%",
+        origin: "bottom",
+        beforeReveal: () => {
+          changeHelloText();
+        },
+      });
+      ScrollReveal().reveal(".home-info .entry-content", {
+        ...defaultConfig,
+        delay: 200,
+        distance: "8.88%",
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".home-info .entry-footer", {
+        ...defaultConfig,
+        delay: 250,
+        distance: "9.99%",
+        origin: "bottom",
+      });
     }
 
     const randomArray = (array) => {
@@ -107,7 +126,6 @@
         } 👋`;
       }
     };
-    changeHelloText();
 
     document.getElementById("theme-toggle").addEventListener("click", () => {
       changeHelloText();

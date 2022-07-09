@@ -108,9 +108,6 @@ img {
 #menu a {
   font-weight: 500;
 }
-a.anchor {
-  color: #00f !important;
-}
 .top-link:active,
 .post-entry:active,
 .post-tags a:active,
