@@ -84,8 +84,8 @@ params:
     sameAs: ["https://shenlong616.github.io/"]
 
   homeInfoParams:
-    Title: <span name="hello"></span>
-    Content: "<span style='font-weight:500;color:var(--primary)'>trông pạn như kon cặk =)</span>"
+    Title: <span name="helloText"></span>
+    Content: <span name="quoteText" style="font-weight:500;color:var(--primary)"></span>
 
   socialIcons:
     - name: GitHub
