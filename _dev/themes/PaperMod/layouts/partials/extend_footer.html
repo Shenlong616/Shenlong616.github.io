@@ -119,7 +119,13 @@
   window.onload = function () {
     console.log("fsdf");
     ScrollReveal().reveal(".post-entry", {
-      ...defaultConfig,
+      desktop: true,
+      mobile: false,
+      duration: 600,
+      easing: "ease-out",
+      reset: true,
+      beforeReveal: () => {},
+      afterReveal: () => {},
       distance: "19.98%",
       origin: "bottom",
     });
