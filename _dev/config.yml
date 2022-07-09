@@ -50,12 +50,12 @@ outputs:
 
 params:
   # author: ["Me", "You"] # multiple authors
-  # author: Theme PaperMod
+  author: "undefinedAuthor"
   # CanonicalLinkText: "Originally published at"
   # comments: false
   # disableSpecial1stPost: true
   # images: ["papermod-cover.png"] # Link or path of image for opengraph, twitter-cards
-  defaultTheme: auto # auto, light, dark
+  defaultTheme: dark # auto, light, dark
   description: "Shenlong's blog!"
   disableThemeToggle: false
   displayFullLangName: true
@@ -79,7 +79,7 @@ params:
     sameAs: ["https://shenlong616.github.io/"]
 
   homeInfoParams:
-    Title: <span name="hello"></span>
+    Title: <span name="hello">undefined</span>
     Content: "<span style='font-weight:500;color:var(--primary)'>trông pạn như kon cặk =)</span>"
 
   socialIcons:

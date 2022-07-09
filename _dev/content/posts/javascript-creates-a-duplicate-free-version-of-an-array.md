@@ -18,7 +18,7 @@ const uniqueArray = [...new Set(array)];
 console.log(uniqueArray); // [1, 2, 3]
 ```
 
-### Case 2: Array of Objects
+### Case 2
 
 ```javascript
 const Champions = [

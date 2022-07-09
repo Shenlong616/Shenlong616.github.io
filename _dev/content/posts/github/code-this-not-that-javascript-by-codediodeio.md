@@ -140,7 +140,7 @@ function feed(animal) {
 console.log(feed(turtle));
 ```
 
-### loops.js
+### Loop
 
 ```javascript
 const orders = [500, 30, 99, 15, 223];
