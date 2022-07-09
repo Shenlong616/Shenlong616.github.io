@@ -11,13 +11,14 @@ showToc: false
 ### Case 1
 
 ```javascript
-var array = [1, 2, 2, 3, 3, 3];
+const array = [1, 2, 2, 3, 3, 3];
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
-console.log([...new Set(array)]); // [1, 2, 3]
+const uniqueArray = [...new Set(array)];
+console.log(uniqueArray); // [1, 2, 3]
 ```
 
-### Case 2
+### Case 2: Array of Objects
 
 ```javascript
 const Champions = [

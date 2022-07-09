@@ -40,12 +40,9 @@
         beforeReveal: () => {},
         afterReveal: () => {},
       };
-      ScrollReveal().reveal(
-        ".logo a,button#theme-toggle,#menu li,.breadcrumbs a",
-        {
-          ...defaultConfig,
-        }
-      );
+      ScrollReveal().reveal(".logo a,button#theme-toggle,#menu li", {
+        ...defaultConfig,
+      });
       ScrollReveal().reveal(
         ".home-info .entry-header,.home-info .entry-content,.home-info .entry-footer",
         {
@@ -116,18 +113,4 @@
       changeHelloText();
     });
   });
-  window.onload = function () {
-    console.log("fsdf");
-    ScrollReveal().reveal(".post-entry", {
-      desktop: true,
-      mobile: false,
-      duration: 600,
-      easing: "ease-out",
-      reset: true,
-      beforeReveal: () => {},
-      afterReveal: () => {},
-      distance: "19.98%",
-      origin: "bottom",
-    });
-  };
 </script>
