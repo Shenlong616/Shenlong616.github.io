@@ -6,7 +6,7 @@ date: 2022-07-04
 # author: ""
 canonicalURL: "https://tokyo-analog.com/misato_fukagawa_vol27/"
 ShowCanonicalLink: false
-showToc: false
+ShowReadingTime: false
 cover:
   image: "assets/images/2/misato_fukagawa_vol27_39.jpg"
 #   hidden: false

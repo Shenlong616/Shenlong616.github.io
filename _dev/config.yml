@@ -72,7 +72,7 @@ params:
   ShowCodeCopyButtons: true
   ShowFullTextinRSS: true
   ShowPostNavLinks: true
-  ShowReadingTime: false
+  ShowReadingTime: true
   ShowRssButtonInSectionTermList: true
   ShowShareButtons: false
   ShowToc: true

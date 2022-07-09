@@ -6,7 +6,7 @@ date: 2022-05-04
 # author: ""
 canonicalURL: "https://tokyo-analog.com/motohiko_hasui_vol26/"
 ShowCanonicalLink: false
-showToc: false
+ShowReadingTime: false
 cover:
   image: "assets/images/3/motohiko_hasui_020.jpg"
 #   hidden: false
