@@ -6,7 +6,6 @@ date: 2022-05-04
 # author: ""
 canonicalURL: "https://tokyo-analog.com/aizawa_yoshikazu_vol26/"
 ShowCanonicalLink: false
-ShowReadingTime: false
 cover:
   image: "assets/images/4/aizawa_yoshikazu_vol26_003.jpg"
 #   hidden: false
