@@ -16,18 +16,29 @@
   document.addEventListener("DOMContentLoaded", () => {
     initNProgress(0.1);
 
-    for (const item of document.getElementsByTagName("input")) {
-      item.addEventListener("input", () => {
-        initNProgress(0.1);
-      });
+    if (document.getElementsByTagName("input").length > 0) {
+      for (const item of document.getElementsByTagName("input")) {
+        item.addEventListener("input", () => {
+          initNProgress(0.1);
+        });
+      }
+    } else {
+      void this;
     }
 
-    for (const item of document.querySelectorAll(
-      ".copy-code, .top-link, #theme-toggle"
-    )) {
-      item.addEventListener("click", () => {
-        initNProgress(0.1);
-      });
+    if (
+      document.querySelectorAll(".copy-code, .top-link, #theme-toggle").length >
+      0
+    ) {
+      for (const item of document.querySelectorAll(
+        ".copy-code, .top-link, #theme-toggle"
+      )) {
+        item.addEventListener("click", () => {
+          initNProgress(0.1);
+        });
+      }
+    } else {
+      void this;
     }
 
     const randomArray = (array) => {
@@ -204,7 +215,9 @@
     ];
 
     const changeHelloText = () => {
-      if (document.getElementsByName("helloText")[0] !== undefined) {
+      if (document.getElementsByName("helloText")[0] === undefined) {
+        void this;
+      } else {
         document.getElementsByName("helloText")[0].innerText = `${
           Object.values(randomArray(multilingualWaysToSayHello))[0]
         } 👋`;
@@ -212,7 +225,9 @@
     };
 
     const changeQuoteText = () => {
-      if (document.getElementsByName("quoteText")[0] !== undefined) {
+      if (document.getElementsByName("quoteText")[0] === undefined) {
+        void this;
+      } else {
         document.getElementsByName("quoteText")[0].innerText = `${randomArray(
           kanyeQuotes
         )}`;
@@ -220,7 +235,7 @@
     };
 
     if (ScrollReveal().noop) {
-      console.log("ScrollReveal is non-operational!");
+      void this;
     } else {
       const defaultConfig = {
         desktop: true,
@@ -228,7 +243,7 @@
         duration: 300,
         easing: "ease-out",
         reset: true,
-        distance: "6.66%",
+        distance: "6.16%",
         origin: "left",
         delay: 0,
         beforeReveal: () => {},
@@ -238,47 +253,44 @@
       if (defaultConfig.mobile === false) {
         changeHelloText();
         changeQuoteText();
+      } else {
+        void this;
       }
 
-      ScrollReveal().reveal(".logo a", {
-        ...defaultConfig,
-      });
-
-      ScrollReveal().reveal("button#theme-toggle", {
-        ...defaultConfig,
-        delay: (defaultConfig.delay += 50),
-      });
-
-      for (const item of document.querySelectorAll("#menu li")) {
-        ScrollReveal().reveal(item, {
-          ...defaultConfig,
-          delay: (defaultConfig.delay += 25),
-        });
+      if (document.querySelectorAll(".logo").length > 0) {
+        for (const item of document.querySelectorAll(".logo")[0].childNodes) {
+          ScrollReveal().reveal(item, {
+            ...defaultConfig,
+            delay: (defaultConfig.delay += 25),
+          });
+        }
+      } else {
+        void this;
       }
 
-      ScrollReveal().reveal(".home-info .entry-header", {
-        ...defaultConfig,
-        delay: (defaultConfig.delay += 50),
-        origin: "bottom",
-        beforeReveal: () => {
-          changeHelloText();
-        },
-      });
+      if (document.querySelectorAll("#menu li").length > 0) {
+        for (const item of document.querySelectorAll("#menu li")) {
+          ScrollReveal().reveal(item, {
+            ...defaultConfig,
+            delay: (defaultConfig.delay += 25),
+          });
+        }
+      } else {
+        void this;
+      }
 
-      ScrollReveal().reveal(".home-info .entry-content", {
-        ...defaultConfig,
-        delay: (defaultConfig.delay += 50),
-        origin: "bottom",
-        beforeReveal: () => {
-          changeQuoteText();
-        },
-      });
-
-      ScrollReveal().reveal(".home-info .entry-footer", {
-        ...defaultConfig,
-        delay: (defaultConfig.delay += 50),
-        origin: "bottom",
-      });
+      if (document.querySelectorAll(".home-info").length > 0) {
+        for (const item of document.querySelectorAll(".home-info")[0]
+          .childNodes) {
+          ScrollReveal().reveal(item, {
+            ...defaultConfig,
+            delay: (defaultConfig.delay += 25),
+            origin: "bottom",
+          });
+        }
+      } else {
+        void this;
+      }
     }
   });
 </script>
