@@ -1,6 +1,4 @@
 <script>
-  // trông pạn như kon cặk =)
-
   const initNProgress = (parameter) => {
     NProgress.set(parameter);
     NProgress.done(true);
@@ -228,9 +226,10 @@
       if (document.getElementsByName("quoteText")[0] === undefined) {
         void this;
       } else {
-        document.getElementsByName("quoteText")[0].innerText = `${randomArray(
-          kanyeQuotes
-        )}`;
+        document.getElementsByName("quoteText")[0].innerText = `${randomArray([
+          ...kanyeQuotes,
+          "trông pạn như kon cặk =)",
+        ])}`;
       }
     };
 
@@ -244,7 +243,7 @@
         easing: "ease-out",
         reset: true,
         distance: "6.16%",
-        origin: "left",
+        origin: "bottom",
         delay: 0,
         beforeReveal: () => {},
         afterReveal: () => {},
@@ -258,6 +257,18 @@
       }
 
       if (document.querySelectorAll(".logo").length > 0) {
+        const spanElement = document.createElement("span");
+        const textNode = document.createTextNode("v1.2b");
+
+        spanElement.appendChild(textNode);
+
+        Object.assign(spanElement.style, {
+          color: "var(--secondary)",
+          fontSize: "0.616em",
+        });
+
+        document.querySelector(".logo").appendChild(spanElement);
+
         for (const item of document.querySelectorAll(".logo")[0].childNodes) {
           ScrollReveal().reveal(item, {
             ...defaultConfig,
@@ -272,6 +283,7 @@
         for (const item of document.querySelectorAll("#menu li")) {
           ScrollReveal().reveal(item, {
             ...defaultConfig,
+            origin: "left",
             delay: (defaultConfig.delay += 25),
           });
         }
@@ -285,12 +297,57 @@
           ScrollReveal().reveal(item, {
             ...defaultConfig,
             delay: (defaultConfig.delay += 25),
-            origin: "bottom",
           });
         }
       } else {
         void this;
       }
+
+      if (document.querySelectorAll(".post-header").length > 0) {
+        for (const item of document.querySelectorAll(".post-header")[0]
+          .childNodes) {
+          ScrollReveal().reveal(item, {
+            ...defaultConfig,
+            delay: (defaultConfig.delay += 25),
+          });
+        }
+      } else {
+        void this;
+      }
+
+      if (document.querySelectorAll(".page-header").length > 0) {
+        for (const item of document.querySelectorAll(".page-header")[0]
+          .childNodes) {
+          ScrollReveal().reveal(item, {
+            ...defaultConfig,
+            delay: (defaultConfig.delay += 25),
+          });
+        }
+      } else {
+        void this;
+      }
+
+      if (document.querySelectorAll(".terms-tags").length > 0) {
+        for (const item of document.querySelectorAll(".terms-tags")[0]
+          .childNodes) {
+          ScrollReveal().reveal(item, {
+            ...defaultConfig,
+            delay: (defaultConfig.delay += 25),
+          });
+        }
+      } else {
+        void this;
+      }
+
+      // console.log(document.querySelectorAll(".archive-year"));
+
+      // for (const item of document.querySelectorAll(".archive-year")) {
+      //   console.log(item);
+      //   // gan vao array
+      //   for (const item2 of item) {
+      //     console.log(item2);
+      //   }
+      // }
     }
   });
 </script>

@@ -18,13 +18,6 @@
   margin-top: 15px;
   margin-bottom: 0;
 }
-.logo a:after {
-  content: "v1.2b";
-  margin-left: 5px;
-  font-weight: normal;
-  font-size: 0.5em;
-  color: var(--secondary);
-}
 .post-tags a {
   padding-inline-start: 9px;
   padding-inline-end: 9px;
