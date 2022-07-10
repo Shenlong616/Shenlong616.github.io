@@ -231,7 +231,7 @@
     } else {
       const defaultConfig = {
         desktop: true,
-        mobile: true,
+        mobile: false,
         delay: 0,
         duration: 300,
         easing: "ease-out",
@@ -243,12 +243,12 @@
         afterReveal: () => {},
       };
 
-      // if (defaultConfig.mobile === false) {
-      //   changeHelloText();
-      //   changeQuoteText();
-      // } else {
-      //   void this;
-      // }
+      if (defaultConfig.mobile === false) {
+        changeHelloText();
+        changeQuoteText();
+      } else {
+        void this;
+      }
 
       const createElement1 = () => {
         const spanElement = document.createElement("span");
@@ -282,30 +282,11 @@
       };
 
       initScrollReveal(".logo", {});
-
       initScrollReveal("ul#menu", {
         origin: "left",
       });
 
-      ScrollReveal().reveal(".home-info .entry-header", {
-        ...defaultConfig,
-        delay: (defaultConfig.delay += 25),
-      });
-
-      ScrollReveal().reveal(".home-info .entry-content", {
-        ...defaultConfig,
-        delay: (defaultConfig.delay += 25),
-        beforeReveal: () => {
-          changeHelloText();
-          changeQuoteText();
-        },
-      });
-
-      ScrollReveal().reveal(".home-info .entry-footer", {
-        ...defaultConfig,
-        delay: (defaultConfig.delay += 25),
-      });
-
+      initScrollReveal(".home-info", { reset: false });
       initScrollReveal(".page-header", { reset: false });
       initScrollReveal(".post-header", { reset: false });
       initScrollReveal(".post-tags", { reset: false });
