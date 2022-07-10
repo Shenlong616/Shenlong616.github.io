@@ -258,7 +258,7 @@
 
       ScrollReveal().reveal(".home-info .entry-header", {
         ...defaultConfig,
-        delay: defaultConfig.delay,
+        delay: (defaultConfig.delay += 50),
         origin: "bottom",
         beforeReveal: () => {
           changeHelloText();
@@ -279,14 +279,6 @@
         delay: (defaultConfig.delay += 50),
         origin: "bottom",
       });
-
-      for (const item of document.querySelectorAll(".post-entry")) {
-        ScrollReveal().reveal(item, {
-          ...defaultConfig,
-          origin: "bottom",
-          distance: "19.98%",
-        });
-      }
     }
   });
 </script>
