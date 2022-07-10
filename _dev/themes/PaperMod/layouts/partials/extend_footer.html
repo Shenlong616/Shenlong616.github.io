@@ -293,33 +293,27 @@
       });
 
       initScrollReveal(".home-info", {});
-      initScrollReveal(".page-header", {});
       initScrollReveal(".post-header", {});
-      initScrollReveal(".terms-tags", {});
 
-      for (
-        let i = 0;
-        i < document.querySelectorAll(".post-entry").length;
-        i++
-      ) {
-        for (const item of document.querySelectorAll(".post-entry")[i]
-          .childNodes) {
-          ScrollReveal().reveal(item, {
-            ...defaultConfig,
-            delay: (defaultConfig.delay += 25),
-            // ...parameter2,
-            distance: "16.16%",
-          });
-        }
-      }
+      // ?
+      // initScrollReveal(".page-header", {});
+      // initScrollReveal(".terms-tags", {});
+      // initScrollReveal(".toc summary");
+      // initScrollReveal(".toc ul", {});
 
-      // console.log(document.querySelectorAll(".archive-year"));
-
-      // for (const item of document.querySelectorAll(".archive-year")) {
-      //   console.log(item);
-      //   // gan vao array
-      //   for (const item2 of item) {
-      //     console.log(item2);
+      // for (
+      //   let i = 0;
+      //   i < document.querySelectorAll(".post-entry").length;
+      //   i++
+      // ) {
+      //   for (const item of document.querySelectorAll(".post-entry")[i]
+      //     .childNodes) {
+      //     ScrollReveal().reveal(item, {
+      //       ...defaultConfig,
+      //       delay: (defaultConfig.delay += 25),
+      //       // ...parameter2,
+      //       distance: "16.16%",
+      //     });
       //   }
       // }
     }
