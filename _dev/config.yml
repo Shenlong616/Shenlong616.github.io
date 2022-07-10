@@ -46,7 +46,7 @@ outputs:
 
 params:
   # author: ["Me", "You"] # multiple authors
-  author: "undefinedAuthor"
+  author: "undefined author"
   # CanonicalLinkText: "Originally published at"
   # comments: false
   # disableSpecial1stPost: true

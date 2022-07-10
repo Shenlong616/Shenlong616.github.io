@@ -256,7 +256,7 @@
         void this;
       }
 
-      if (document.querySelectorAll(".logo").length > 0) {
+      const createElement1 = () => {
         const spanElement = document.createElement("span");
         const textNode = document.createTextNode("v1.2b");
 
@@ -268,75 +268,49 @@
         });
 
         document.querySelector(".logo").appendChild(spanElement);
+      };
 
-        for (const item of document.querySelectorAll(".logo")[0].childNodes) {
-          ScrollReveal().reveal(item, {
-            ...defaultConfig,
-            delay: (defaultConfig.delay += 25),
-          });
+      createElement1();
+
+      const initScrollReveal = (parameter, parameter2) => {
+        if (document.querySelectorAll(parameter).length > 0) {
+          for (const item of document.querySelectorAll(parameter)[0]
+            .childNodes) {
+            ScrollReveal().reveal(item, {
+              ...defaultConfig,
+              delay: (defaultConfig.delay += 25),
+              ...parameter2,
+            });
+          }
+        } else {
+          void this;
         }
-      } else {
-        void this;
-      }
+      };
 
-      if (document.querySelectorAll("#menu li").length > 0) {
-        for (const item of document.querySelectorAll("#menu li")) {
-          ScrollReveal().reveal(item, {
-            ...defaultConfig,
-            origin: "left",
-            delay: (defaultConfig.delay += 25),
-          });
-        }
-      } else {
-        void this;
-      }
+      initScrollReveal(".logo", {});
+      initScrollReveal("ul#menu", {
+        origin: "left",
+      });
 
-      if (document.querySelectorAll(".home-info").length > 0) {
-        for (const item of document.querySelectorAll(".home-info")[0]
+      initScrollReveal(".home-info", {});
+      initScrollReveal(".page-header", {});
+      initScrollReveal(".post-header", {});
+      initScrollReveal(".terms-tags", {});
+
+      for (
+        let i = 0;
+        i < document.querySelectorAll(".post-entry").length;
+        i++
+      ) {
+        for (const item of document.querySelectorAll(".post-entry")[i]
           .childNodes) {
           ScrollReveal().reveal(item, {
             ...defaultConfig,
             delay: (defaultConfig.delay += 25),
+            // ...parameter2,
+            distance: "16.16%",
           });
         }
-      } else {
-        void this;
-      }
-
-      if (document.querySelectorAll(".post-header").length > 0) {
-        for (const item of document.querySelectorAll(".post-header")[0]
-          .childNodes) {
-          ScrollReveal().reveal(item, {
-            ...defaultConfig,
-            delay: (defaultConfig.delay += 25),
-          });
-        }
-      } else {
-        void this;
-      }
-
-      if (document.querySelectorAll(".page-header").length > 0) {
-        for (const item of document.querySelectorAll(".page-header")[0]
-          .childNodes) {
-          ScrollReveal().reveal(item, {
-            ...defaultConfig,
-            delay: (defaultConfig.delay += 25),
-          });
-        }
-      } else {
-        void this;
-      }
-
-      if (document.querySelectorAll(".terms-tags").length > 0) {
-        for (const item of document.querySelectorAll(".terms-tags")[0]
-          .childNodes) {
-          ScrollReveal().reveal(item, {
-            ...defaultConfig,
-            delay: (defaultConfig.delay += 25),
-          });
-        }
-      } else {
-        void this;
       }
 
       // console.log(document.querySelectorAll(".archive-year"));
