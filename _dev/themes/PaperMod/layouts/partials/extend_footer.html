@@ -30,55 +30,6 @@
       });
     }
 
-    if (ScrollReveal().noop) {
-      console.log("ScrollReveal is non-operational!");
-    } else {
-      const defaultConfig = {
-        desktop: true,
-        mobile: true,
-        duration: 300,
-        easing: "ease-out",
-        reset: true,
-        distance: "6.66%",
-        origin: "left",
-        delay: 0,
-        beforeReveal: () => {},
-        afterReveal: () => {},
-      };
-      ScrollReveal().reveal(".logo a, button#theme-toggle", {
-        ...defaultConfig,
-      });
-
-      ScrollReveal().reveal("#menu li", {
-        ...defaultConfig,
-        delay: 50,
-      });
-
-      ScrollReveal().reveal(".home-info .entry-header", {
-        ...defaultConfig,
-        delay: 150,
-        distance: "7.77%",
-        origin: "bottom",
-        beforeReveal: () => {
-          changeText();
-        },
-      });
-
-      ScrollReveal().reveal(".home-info .entry-content", {
-        ...defaultConfig,
-        delay: 200,
-        distance: "8.88%",
-        origin: "bottom",
-      });
-
-      ScrollReveal().reveal(".home-info .entry-footer", {
-        ...defaultConfig,
-        delay: 250,
-        distance: "9.99%",
-        origin: "bottom",
-      });
-    }
-
     const randomArray = (array) => {
       return array[Math.floor(Math.random() * array.length)];
     };
@@ -268,9 +219,74 @@
       }
     };
 
-    const changeText = () => {
-      changeHelloText();
-      changeQuoteText();
-    };
+    if (ScrollReveal().noop) {
+      console.log("ScrollReveal is non-operational!");
+    } else {
+      const defaultConfig = {
+        desktop: true,
+        mobile: false,
+        duration: 300,
+        easing: "ease-out",
+        reset: true,
+        distance: "6.66%",
+        origin: "left",
+        delay: 0,
+        beforeReveal: () => {},
+        afterReveal: () => {},
+      };
+
+      if (defaultConfig.mobile === false) {
+        changeHelloText();
+        changeQuoteText();
+      }
+
+      ScrollReveal().reveal(".logo a", {
+        ...defaultConfig,
+      });
+
+      ScrollReveal().reveal("button#theme-toggle", {
+        ...defaultConfig,
+        delay: (defaultConfig.delay += 50),
+      });
+
+      for (const item of document.querySelectorAll("#menu li")) {
+        ScrollReveal().reveal(item, {
+          ...defaultConfig,
+          delay: (defaultConfig.delay += 25),
+        });
+      }
+
+      ScrollReveal().reveal(".home-info .entry-header", {
+        ...defaultConfig,
+        delay: defaultConfig.delay,
+        origin: "bottom",
+        beforeReveal: () => {
+          changeHelloText();
+        },
+      });
+
+      ScrollReveal().reveal(".home-info .entry-content", {
+        ...defaultConfig,
+        delay: (defaultConfig.delay += 50),
+        origin: "bottom",
+        beforeReveal: () => {
+          changeQuoteText();
+        },
+      });
+
+      ScrollReveal().reveal(".home-info .entry-footer", {
+        ...defaultConfig,
+        delay: (defaultConfig.delay += 50),
+        origin: "bottom",
+      });
+
+      for (const item of document.querySelectorAll(".post-entry")) {
+        ScrollReveal().reveal(item, {
+          ...defaultConfig,
+          origin: "bottom",
+          distance: "19.98%",
+        });
+      }
+    }
   });
 </script>
