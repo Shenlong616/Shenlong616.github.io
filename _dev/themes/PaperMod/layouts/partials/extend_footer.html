@@ -281,12 +281,39 @@
         }
       };
 
-      initScrollReveal(".logo", {});
+      ScrollReveal().reveal(
+        document.querySelectorAll(".logo")[0].childNodes[0],
+        {
+          ...defaultConfig,
+        }
+      );
+
+      ScrollReveal().reveal(
+        document.querySelectorAll(".logo")[0].childNodes[1],
+        {
+          ...defaultConfig,
+          delay: (defaultConfig.delay += 25),
+        }
+      );
+
+      ScrollReveal().reveal(
+        document.querySelectorAll(".logo")[0].childNodes[2],
+        {
+          ...defaultConfig,
+          delay: (defaultConfig.delay += 25),
+        }
+      );
+
       initScrollReveal("ul#menu", {
         origin: "left",
       });
 
-      initScrollReveal(".home-info", { reset: false });
+      initScrollReveal(".home-info", {
+        afterReveal: () => {
+          defaultConfig.delay = 0;
+        },
+      });
+
       initScrollReveal(".page-header", { reset: false });
       initScrollReveal(".post-header", { reset: false });
       initScrollReveal(".post-tags", { reset: false });
