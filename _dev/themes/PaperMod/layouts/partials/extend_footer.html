@@ -4,13 +4,6 @@
     NProgress.done(true);
   };
 
-  // const Test = (parameter) => {
-  //   document.styleSheets[0].addRule(
-  //     ".logo a:after",
-  //     `content: "<-- ${parameter}";`
-  //   );
-  // };
-
   document.addEventListener("DOMContentLoaded", () => {
     initNProgress(0.1);
 
@@ -293,9 +286,9 @@
       });
 
       initScrollReveal(".home-info", {});
+      initScrollReveal(".page-header", {});
       initScrollReveal(".post-header", {});
 
-      // initScrollReveal(".page-header", {});
       // initScrollReveal(".terms-tags", {});
       // initScrollReveal(".toc summary");
       // initScrollReveal(".toc ul", {});
