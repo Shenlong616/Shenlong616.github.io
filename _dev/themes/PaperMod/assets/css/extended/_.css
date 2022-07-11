@@ -111,7 +111,7 @@ img {
   font-weight: 500;
 }
 .main {
-  max-width: calc(var(--main-width) + var(--gap) * 9);
+  max-width: calc(var(--main-width) + var(--gap) * 6.16);
 }
 /* dell hieu kieu lol gi? */
 code {
