@@ -38,11 +38,6 @@ menu:
       url: /search/
       weight: 4
 
-    - identifier: rss
-      name: rss
-      url: /index.xml/
-      weight: 5
-
 outputs:
   home:
     - HTML
