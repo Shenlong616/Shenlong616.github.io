@@ -110,6 +110,9 @@ img {
 .logo a {
   font-weight: 500;
 }
+.main {
+  max-width: calc(var(--main-width) + var(--gap) * 9);
+}
 /* dell hieu kieu lol gi? */
 code {
   cursor: text;
