@@ -38,6 +38,11 @@ menu:
       url: /search/
       weight: 4
 
+    - identifier: rss
+      name: rss
+      url: /index.xml/
+      weight: 5
+
 outputs:
   home:
     - HTML
@@ -75,18 +80,12 @@ params:
     sameAs: ["https://shenlong616.github.io/"]
 
   homeInfoParams:
-    Title: <span name="helloText"></span>
-    Content: <span name="quoteText" style="font-weight:500;color:var(--primary)"></span>
+    Title: <span name="titleText" style="font-weight:500;color:var(--primary)"></span>
+    Content: <span name="contentText" style="font-weight:500;color:var(--secondary)"></span>
 
-  socialIcons:
-    - name: GitHub
-      url: "https://github.com/Shenlong616"
-
-    - name: RSS
-      url: "index.xml"
-
-    # - name: customURL
-    #   url: "#"
+  # socialIcons:
+  #   - name: GitHub
+  #     url: "https://github.com/Shenlong616"
 
   editPost:
     URL: "https://github.com/Shenlong616/Shenlong616.github.io/tree/main/_dev/content"
@@ -94,9 +93,9 @@ params:
     appendFilePath: true # to append file path to Edit link
 
   # label:
-  #     text: "Home"
-  #     icon: icon.png
-  #     iconHeight: 35
+  #   text: "Home"
+  #   icon: icon.png
+  #   iconHeight: 35
 
   analytics:
     google:
