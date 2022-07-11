@@ -235,7 +235,7 @@
         delay: 0,
         duration: 300,
         easing: "ease-out",
-        reset: true,
+        reset: false,
         distance: "6.16%",
         origin: "bottom",
         delay: 0,
@@ -252,7 +252,7 @@
 
       const createElement1 = () => {
         const spanElement = document.createElement("span");
-        const textNode = document.createTextNode("modded v1.2b");
+        const textNode = document.createTextNode("v1.2b");
 
         spanElement.appendChild(textNode);
 
@@ -285,6 +285,7 @@
         document.querySelectorAll(".logo")[0].childNodes[0],
         {
           ...defaultConfig,
+          reset: true,
         }
       );
 
@@ -292,6 +293,7 @@
         document.querySelectorAll(".logo")[0].childNodes[1],
         {
           ...defaultConfig,
+          reset: true,
           delay: (defaultConfig.delay += 25),
         }
       );
@@ -300,23 +302,17 @@
         document.querySelectorAll(".logo")[0].childNodes[2],
         {
           ...defaultConfig,
+          reset: true,
           delay: (defaultConfig.delay += 25),
         }
       );
 
       initScrollReveal("ul#menu", {
+        reset: true,
         origin: "left",
       });
 
-      initScrollReveal(".home-info", {
-        afterReveal: () => {
-          defaultConfig.delay = 0;
-        },
-      });
-
-      initScrollReveal(".page-header", { reset: false });
-      initScrollReveal(".post-header", { reset: false });
-      initScrollReveal(".post-tags", { reset: false });
+      initScrollReveal(".home-info", {});
 
       // for (
       //   let i = 0;
