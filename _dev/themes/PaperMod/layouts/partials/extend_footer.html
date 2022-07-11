@@ -235,7 +235,7 @@
         delay: 0,
         duration: 300,
         easing: "ease-out",
-        reset: false,
+        reset: true,
         distance: "6.16%",
         origin: "bottom",
         delay: 0,
@@ -266,26 +266,10 @@
 
       createElement1();
 
-      const initScrollReveal = (parameter, parameter2) => {
-        if (document.querySelectorAll(parameter).length > 0) {
-          for (const item of document.querySelectorAll(parameter)[0]
-            .childNodes) {
-            ScrollReveal().reveal(item, {
-              ...defaultConfig,
-              delay: (defaultConfig.delay += 25),
-              ...parameter2,
-            });
-          }
-        } else {
-          void this;
-        }
-      };
-
       ScrollReveal().reveal(
         document.querySelectorAll(".logo")[0].childNodes[0],
         {
           ...defaultConfig,
-          reset: true,
         }
       );
 
@@ -293,7 +277,6 @@
         document.querySelectorAll(".logo")[0].childNodes[1],
         {
           ...defaultConfig,
-          reset: true,
           delay: (defaultConfig.delay += 25),
         }
       );
@@ -302,17 +285,17 @@
         document.querySelectorAll(".logo")[0].childNodes[2],
         {
           ...defaultConfig,
-          reset: true,
           delay: (defaultConfig.delay += 25),
         }
       );
 
-      initScrollReveal("ul#menu", {
-        reset: true,
-        origin: "left",
-      });
-
-      initScrollReveal(".home-info", {});
+      for (const item of document.querySelectorAll("ul#menu")[0].childNodes) {
+        ScrollReveal().reveal(item, {
+          ...defaultConfig,
+          delay: (defaultConfig.delay += 25),
+          origin: "left",
+        });
+      }
 
       // for (
       //   let i = 0;
