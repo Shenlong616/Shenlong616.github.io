@@ -3,9 +3,6 @@
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
-.breadcrumbs a {
-  font-weight: 500;
-}
 .toc summary {
   margin-inline-start: 0;
   text-align: center;
@@ -97,9 +94,6 @@ img {
   border-bottom: 0;
   text-decoration: 2px line-through var(--primary);
 }
-#menu a {
-  font-weight: 500;
-}
 .post-tags a:active,
 .copy-code:active,
 .pagination .next:active,
@@ -107,7 +101,8 @@ img {
   transform: scale(0.96);
 }
 .archive-entry-title,
-.logo a {
+#menu a,
+.breadcrumbs a {
   font-weight: 500;
 }
 .main {
@@ -116,4 +111,8 @@ img {
 /* dell hieu kieu lol gi? */
 code {
   cursor: text;
+}
+
+* {
+  font-family: "Noto Sans", sans-serif !important;
 }
