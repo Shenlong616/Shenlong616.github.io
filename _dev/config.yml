@@ -81,7 +81,7 @@ params:
 
   homeInfoParams:
     Title: <span name="titleText" style="font-weight:500;color:var(--primary)"></span>
-    Content: <span name="contentText" style="font-weight:500;color:var(--secondary)"></span>
+    Content: <span name="contentText" style="color:var(--secondary)"></span>
 
   # socialIcons:
   #   - name: GitHub
