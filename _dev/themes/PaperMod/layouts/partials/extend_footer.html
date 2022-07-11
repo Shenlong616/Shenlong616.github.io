@@ -237,7 +237,7 @@
         easing: "ease-out",
         reset: true,
         distance: "6.16%",
-        origin: "left",
+        origin: "bottom",
         delay: 0,
         beforeReveal: () => {},
         afterReveal: () => {},
@@ -293,6 +293,7 @@
         ScrollReveal().reveal(item, {
           ...defaultConfig,
           delay: (defaultConfig.delay += 25),
+          origin: "left",
         });
       }
 
