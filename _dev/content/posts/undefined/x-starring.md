@@ -1,9 +1,9 @@
 ---
-title: "盛島晃紀 + ruieikoshi"
+title: "x Starring"
 date: 2022-05-04
 # tags: ["", ""]
 # categories: [""]
-# author: ""
+author: "盛島 晃紀, ruieikoshi"
 canonicalURL: "https://tokyo-analog.com/morishima_ruieikoshi/"
 ShowCanonicalLink: false
 cover:

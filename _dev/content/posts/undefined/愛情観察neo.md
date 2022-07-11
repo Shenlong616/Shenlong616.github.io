@@ -1,9 +1,9 @@
 ---
-title: "相澤 義和"
+title: "愛情観察neo"
 date: 2022-05-04
 # tags: ["", ""]
 # categories: [""]
-# author: ""
+author: "相澤 義和"
 canonicalURL: "https://tokyo-analog.com/aizawa_yoshikazu_vol26/"
 ShowCanonicalLink: false
 cover:

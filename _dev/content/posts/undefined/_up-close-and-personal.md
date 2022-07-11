@@ -1,9 +1,9 @@
 ---
-title: "Nico Westlicht"
+title: "Up Close and Personal"
 date: 2022-03-04
 # tags: ["", ""]
 # categories: [""]
-# author: ""
+author: "Nico Westlicht"
 canonicalURL: "https://tokyo-analog.com/nico_westlicht/"
 ShowCanonicalLink: false
 cover:

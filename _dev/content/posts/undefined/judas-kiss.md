@@ -1,9 +1,9 @@
 ---
-title: "深川 美怜"
+title: "Judas kiss"
 date: 2022-07-04
 # tags: ["", ""]
 # categories: [""]
-# author: ""
+author: "深川 美怜"
 canonicalURL: "https://tokyo-analog.com/misato_fukagawa_vol27/"
 ShowCanonicalLink: false
 cover:
