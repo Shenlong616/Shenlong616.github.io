@@ -7,6 +7,7 @@ date: 2022-07-12
 cover:
   image: "assets/images/11/2.png"
 #   hidden: false
+draft: true
 ---
 
 ![turkey_vol24](/../assets/images/11/1.jpg)
