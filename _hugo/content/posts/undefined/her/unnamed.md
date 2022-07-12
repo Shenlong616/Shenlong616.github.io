@@ -10,7 +10,6 @@ cover:
 draft: true
 ---
 
-![](/../assets/images/11/1.jpg)
 ![](/../assets/images/11/2.png)
 ![](/../assets/images/11/3.png)
 ![](/../assets/images/11/4.png)
