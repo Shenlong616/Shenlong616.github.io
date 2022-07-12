@@ -15,15 +15,6 @@
   margin-top: 15px;
   margin-bottom: 0;
 }
-.post-tags a {
-  padding-inline-start: 9px;
-  padding-inline-end: 9px;
-  margin-inline-end: 3px;
-  color: var(--primary);
-  font-size: 15px;
-  line-height: inherit;
-  background: var(--theme);
-}
 .first-entry.home-info {
   margin: var(--gap) 0 calc(var(--gap));
 }
@@ -42,6 +33,23 @@ img {
 }
 .post-entry {
   padding: calc(var(--gap) - 5px);
+  border: none;
+  background: linear-gradient(90deg, var(--entry) 0%, transparent 100%);
+}
+.terms-tags a {
+  background: linear-gradient(
+    90deg,
+    var(--tertiary) 0%,
+    transparent 100%
+  ) !important;
+}
+.post-tags a {
+  border: none;
+  background: linear-gradient(
+    90deg,
+    var(--code-bg) 0%,
+    transparent 100%
+  ) !important;
 }
 .post-meta {
   margin-top: 5px;

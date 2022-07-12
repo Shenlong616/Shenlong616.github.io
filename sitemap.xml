@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shenlong616.github.io/posts/github/code-this-not-that-javascript-by-codediodeio/</loc>
+    <loc>https://shenlong616.github.io/posts/github/codediodeio/code-this-not-that-js/</loc>
     <lastmod>2018-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/in-js-we-trust-by-yeungon/</loc>
+    <loc>https://shenlong616.github.io/posts/github/yeungon/in-javascript-we-trust/</loc>
     <lastmod>2022-01-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/array/</loc>
@@ -26,13 +26,16 @@
     <loc>https://shenlong616.github.io/tags/javascript-snippets/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript-creates-a-duplicate-free-version-of-an-array/</loc>
+    <loc>https://shenlong616.github.io/posts/snippets/javascript-creates-a-duplicate-free-version-of-an-array/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript-get-a-random-item-from-an-array/</loc>
+    <loc>https://shenlong616.github.io/posts/snippets/javascript-get-a-random-item-from-an-array/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/snippets/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/random/</loc>
@@ -95,7 +98,7 @@
     <loc>https://shenlong616.github.io/posts/undefined/fight-or-run/</loc>
     <lastmod>2022-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</loc>
+    <loc>https://shenlong616.github.io/posts/github/scriptzteam/anti-ddos-iptables/</loc>
     <lastmod>2021-11-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/ddos/</loc>
@@ -116,7 +119,7 @@
     <loc>https://shenlong616.github.io/tags/centos/</loc>
     <lastmod>2021-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/hardened-sysctl-configuration-by-k4yt3x/</loc>
+    <loc>https://shenlong616.github.io/posts/github/k4yt3x/sysctl/</loc>
     <lastmod>2021-10-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/kernel/</loc>
@@ -143,10 +146,10 @@
     <loc>https://shenlong616.github.io/tags/git-tips/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/git-tips/</loc>
+    <loc>https://shenlong616.github.io/posts/github/git-tips/tips/</loc>
     <lastmod>2021-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/javascript-tips-and-tricks-by-tuannguyen2504/</loc>
+    <loc>https://shenlong616.github.io/posts/github/tuannguyen2504/javascript-tips/</loc>
     <lastmod>2021-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/es5/</loc>
@@ -155,7 +158,7 @@
     <loc>https://shenlong616.github.io/tags/es7/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/javascript-for-everyone-by-asabeneh/</loc>
+    <loc>https://shenlong616.github.io/posts/github/asabeneh/javascript-for-everyone/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/python/</loc>
@@ -164,7 +167,7 @@
     <loc>https://shenlong616.github.io/categories/python/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/python-3-tricks-by-alexghergh/</loc>
+    <loc>https://shenlong616.github.io/posts/github/alexghergh/python3-tricks/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/python-tips/</loc>
@@ -176,7 +179,7 @@
     <loc>https://shenlong616.github.io/tags/python3/</loc>
     <lastmod>2020-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/javascript-tips-and-tricks-by-catalinpit/</loc>
+    <loc>https://shenlong616.github.io/posts/github/catalinpit/js-tips-and-tricks/</loc>
     <lastmod>2020-04-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/archives/</loc>

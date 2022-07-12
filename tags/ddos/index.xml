@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 09 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/ddos/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>anti DDoS iptables by scriptzteam</title>
-      <link>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</link>
+      <title>anti DDoS iptables</title>
+      <link>https://shenlong616.github.io/posts/github/scriptzteam/anti-ddos-iptables/</link>
       <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/anti-ddos-iptables-by-scriptzteam/</guid>
+      <guid>https://shenlong616.github.io/posts/github/scriptzteam/anti-ddos-iptables/</guid>
       <description>There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial. This guide will teach you how to:
 Select the best iptables table and chain to stop DDoS attacksTweak your kernel settings to mitigate the effects of DDoS attacksUse iptables to block most TCP-based DDoS attacksUse iptables SYNPROXY to block SYN floodsPlease note that this article is written for professionals who deal with Linux servers on a daily basis.</description>
       <content:encoded><![CDATA[<p>There are different ways of building your own anti-DDoS rules for iptables. We will be discussing the most effective iptables DDoS protection methods in this comprehensive tutorial.
@@ -204,13 +204,13 @@ iptables -D INPUT -m conntrack --ctstate INVALID -j DROP
 <p>To verify that SYNPROXY is working, you can do watch -n1 cat /proc/net/stat/synproxy. If the values change when you establish a new TCP connection to the port you use SYNPROXY on, it works.
 The Complete IPtables Anti-DDoS Rules</p>
 <p>If you don&rsquo;t want to copy &amp; paste each single rule we discussed in this article, you can use the below ruleset for basic DDoS protection of your Linux server.</p>
-<h3 id="drop-invalid-packets">Drop invalid packets</h3>
+<h3 id="1-drop-invalid-packets">1: Drop invalid packets</h3>
 <pre tabindex="0"><code>/sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
-</code></pre><h3 id="drop-tcp-packets-that-are-new-and-are-not-syn">Drop TCP packets that are new and are not SYN</h3>
+</code></pre><h3 id="2-drop-tcp-packets-that-are-new-and-are-not-syn">2: Drop TCP packets that are new and are not SYN</h3>
 <pre tabindex="0"><code>/sbin/iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP
-</code></pre><h3 id="drop-syn-packets-with-suspicious-mss-value">Drop SYN packets with suspicious MSS value</h3>
+</code></pre><h3 id="3-drop-syn-packets-with-suspicious-mss-value">3: Drop SYN packets with suspicious MSS value</h3>
 <pre tabindex="0"><code>/sbin/iptables -t mangle -A PREROUTING -p tcp -m conntrack --ctstate NEW -m tcpmss ! --mss 536:65535 -j DROP
-</code></pre><h3 id="block-packets-with-bogus-tcp-flags">Block packets with bogus TCP flags</h3>
+</code></pre><h3 id="4-block-packets-with-bogus-tcp-flags">4: Block packets with bogus TCP flags</h3>
 <pre tabindex="0"><code>/sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,SYN FIN,SYN -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags SYN,RST SYN,RST -j DROP
@@ -225,7 +225,7 @@ The Complete IPtables Anti-DDoS Rules</p>
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL FIN,PSH,URG -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL SYN,FIN,PSH,URG -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j DROP
-</code></pre><h3 id="block-spoofed-packets">Block spoofed packets</h3>
+</code></pre><h3 id="5-block-spoofed-packets">5: Block spoofed packets</h3>
 <pre tabindex="0"><code>/sbin/iptables -t mangle -A PREROUTING -s 224.0.0.0/3 -j DROP
 /sbin/iptables -t mangle -A PREROUTING -s 169.254.0.0/16 -j DROP
 /sbin/iptables -t mangle -A PREROUTING -s 172.16.0.0/12 -j DROP
@@ -235,19 +235,19 @@ The Complete IPtables Anti-DDoS Rules</p>
 /sbin/iptables -t mangle -A PREROUTING -s 0.0.0.0/8 -j DROP
 /sbin/iptables -t mangle -A PREROUTING -s 240.0.0.0/5 -j DROP
 /sbin/iptables -t mangle -A PREROUTING -s 127.0.0.0/8 ! -i lo -j DROP
-</code></pre><h3 id="drop-icmp-you-usually-dont-need-this-protocol">Drop ICMP (you usually don&rsquo;t need this protocol)</h3>
+</code></pre><h3 id="6-drop-icmp-you-usually-dont-need-this-protocol">6: Drop ICMP (you usually don&rsquo;t need this protocol)</h3>
 <pre tabindex="0"><code>/sbin/iptables -t mangle -A PREROUTING -p icmp -j DROP
-</code></pre><h3 id="drop-fragments-in-all-chains">Drop fragments in all chains</h3>
+</code></pre><h3 id="7-drop-fragments-in-all-chains">7: Drop fragments in all chains</h3>
 <pre tabindex="0"><code>/sbin/iptables -t mangle -A PREROUTING -f -j DROP
-</code></pre><h3 id="limit-connections-per-source-ip">Limit connections per source IP</h3>
+</code></pre><h3 id="8-limit-connections-per-source-ip">8: Limit connections per source IP</h3>
 <pre tabindex="0"><code>/sbin/iptables -A INPUT -p tcp -m connlimit --connlimit-above 111 -j REJECT --reject-with tcp-reset
-</code></pre><h3 id="limit-rst-packets">Limit RST packets</h3>
+</code></pre><h3 id="9-limit-rst-packets">9: Limit RST packets</h3>
 <pre tabindex="0"><code>/sbin/iptables -A INPUT -p tcp --tcp-flags RST RST -m limit --limit 2/s --limit-burst 2 -j ACCEPT
 /sbin/iptables -A INPUT -p tcp --tcp-flags RST RST -j DROP
-</code></pre><h3 id="limit-new-tcp-connections-per-second-per-source-ip">Limit new TCP connections per second per source IP</h3>
+</code></pre><h3 id="10-limit-new-tcp-connections-per-second-per-source-ip">10: Limit new TCP connections per second per source IP</h3>
 <pre tabindex="0"><code>/sbin/iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m limit --limit 60/s --limit-burst 20 -j ACCEPT
 /sbin/iptables -A INPUT -p tcp -m conntrack --ctstate NEW -j DROP
-</code></pre><h3 id="use-synproxy-on-all-ports-disables-connection-limiting-rule">Use SYNPROXY on all ports (disables connection limiting rule)</h3>
+</code></pre><h3 id="11-use-synproxy-on-all-ports-disables-connection-limiting-rule">11: Use SYNPROXY on all ports (disables connection limiting rule)</h3>
 <pre tabindex="0"><code>#/sbin/iptables -t raw -D PREROUTING -p tcp -m tcp --syn -j CT --notrack
 #/sbin/iptables -D INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460
 #/sbin/iptables -D INPUT -m conntrack --ctstate INVALID -j DROP

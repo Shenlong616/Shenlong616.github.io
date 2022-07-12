@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/es7/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>JavaScript for Everyone by Asabeneh</title>
-      <link>https://shenlong616.github.io/posts/github/javascript-for-everyone-by-asabeneh/</link>
+      <title>JavaScript for Everyone</title>
+      <link>https://shenlong616.github.io/posts/github/asabeneh/javascript-for-everyone/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/javascript-for-everyone-by-asabeneh/</guid>
+      <guid>https://shenlong616.github.io/posts/github/asabeneh/javascript-for-everyone/</guid>
       <description>A step by step guide to learn JavaScript and programming</description>
       <content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
 <p><strong><em>JavaScript for Everyone</em></strong> is a guide for both beginners and advanced JavaScript developers. Welcome to JavaScript. <strong><em>Congratulations</em></strong> for deciding to learn JavaScript, the language of the browser.</p>

@@ -8,10 +8,10 @@
     <lastBuildDate>Fri, 13 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/git-tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git tips</title>
-      <link>https://shenlong616.github.io/posts/github/git-tips/</link>
+      <link>https://shenlong616.github.io/posts/github/git-tips/tips/</link>
       <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/git-tips/</guid>
+      <guid>https://shenlong616.github.io/posts/github/git-tips/tips/</guid>
       <description>Most commonly used git tips and tricks.</description>
       <content:encoded><![CDATA[<h2 id="tools">Tools</h2>
 <ul>

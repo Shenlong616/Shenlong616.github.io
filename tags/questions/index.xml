@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/questions/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>In JS we trust by yeungon</title>
-      <link>https://shenlong616.github.io/posts/github/in-js-we-trust-by-yeungon/</link>
+      <title>In JavaScript we trust</title>
+      <link>https://shenlong616.github.io/posts/github/yeungon/in-javascript-we-trust/</link>
       <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/in-js-we-trust-by-yeungon/</guid>
+      <guid>https://shenlong616.github.io/posts/github/yeungon/in-javascript-we-trust/</guid>
       <description>Embrace JavaScript naturally and confidently with coding challenges crafted not for beginners, but JavaScript lovers no matter what.</description>
       <content:encoded><![CDATA[<p>In JS we trust - The best way to learn is by building/coding and teaching. I create the challenges to help my friends learn JavaScript and in return it helps me embrace the language in much deeper level. Feel free to clone, fork and pull.</p>
 <hr>
