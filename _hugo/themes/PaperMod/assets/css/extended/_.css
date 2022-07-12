@@ -34,28 +34,35 @@ img {
 .post-entry {
   padding: calc(var(--gap) - 5px);
   border: none;
-  background: linear-gradient(90deg, var(--entry) 0%, transparent 100%);
+  background: linear-gradient(to right, var(--entry), transparent);
 }
 .terms-tags a {
   background: linear-gradient(
-    90deg,
-    var(--tertiary) 0%,
-    transparent 100%
+    to right,
+    var(--tertiary),
+    transparent
   ) !important;
+  padding: 3px;
+  padding-inline-start: 6px;
+  padding-inline-end: calc(6px * 6.16);
 }
 .post-tags a {
+  padding-inline-start: 6px;
+  padding-inline-end: calc(6px * 6.16);
   border: none;
+  color: var(--primary);
+  font-weight: 500;
   background: linear-gradient(
-    90deg,
-    var(--code-bg) 0%,
-    transparent 100%
+    to right,
+    var(--tertiary),
+    transparent
   ) !important;
 }
 .post-meta {
   margin-top: 5px;
 }
 .top-link {
-  background: linear-gradient(180deg, var(--tertiary) 0%, transparent 100%);
+  background: linear-gradient(var(--tertiary), transparent);
   transition: visibility 0.1s, opacity 0.3s ease-out;
   /* border-radius: 5px 5px 0 0;
   height: 49px; */
@@ -64,38 +71,36 @@ img {
   padding: 6px 9px 6px 0;
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
-  background: linear-gradient(270deg, var(--theme) 0%, transparent 100%);
+  background: linear-gradient(to left, var(--theme), transparent);
 }
 .paginav .next:hover {
-  background: linear-gradient(270deg, var(--border) 0%, transparent 100%);
+  background: linear-gradient(to left, var(--border), transparent);
 }
 
 .paginav .prev {
   padding: 6px 0 6px 9px;
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
-  background: linear-gradient(90deg, var(--theme) 0%, transparent 100%);
+  background: linear-gradient(to right, var(--theme), transparent);
 }
 .paginav .prev:hover {
-  background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+  background: linear-gradient(to right, var(--border), transparent);
 }
 
 .pagination .next {
   color: var(--content);
-  border-radius: 0 18px 18px 0;
-  background: linear-gradient(270deg, var(--entry) 0%, transparent 100%);
+  background: linear-gradient(to left, var(--entry), transparent);
 }
 .pagination .next:hover {
-  background: linear-gradient(270deg, var(--tertiary) 0%, transparent 100%);
+  background: linear-gradient(to left, var(--tertiary), transparent);
 }
 
 .pagination .prev {
   color: var(--content);
-  border-radius: 18px 0 0 18px;
-  background: linear-gradient(90deg, var(--entry) 0%, transparent 100%);
+  background: linear-gradient(to right, var(--entry), transparent);
 }
 .pagination .prev:hover {
-  background: linear-gradient(90deg, var(--tertiary) 0%, transparent 100%);
+  background: linear-gradient(to right, var(--tertiary), transparent);
 }
 
 #menu .active {

@@ -165,6 +165,22 @@
           origin: "left",
         });
       }
+
+      for (const item of document.querySelectorAll(
+        ".logo a, #menu a, .footer a"
+      )) {
+        item.setAttribute("data-tippy-content", item.href);
+      }
+
+      tippy("[data-tippy-content]", {
+        placement: "bottom",
+        animateFill: true,
+        hideOnClick: false,
+        // touch: ["hold", 500],
+        followCursor: true,
+        theme: "material",
+        // maxWidth: 350,
+      });
     }
   });
 </script>
