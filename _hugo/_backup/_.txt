@@ -1,6 +1,6 @@
-_dev\content
-_dev\static
-_dev\config.yml
-_dev\themes\PaperMod\layouts\partials\extend_footer.html
-_dev\themes\PaperMod\layouts\partials\extend_head.html
-_dev\themes\PaperMod\assets\css\extended
+\content
+\static
+\config.yml
+\themes\PaperMod\layouts\partials\extend_footer.html
+\themes\PaperMod\layouts\partials\extend_head.html
+\themes\PaperMod\assets\css\extended
