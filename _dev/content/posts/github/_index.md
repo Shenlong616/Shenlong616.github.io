@@ -1,5 +1,0 @@
----
-title: GitHub
-# summary:
-# description:
----

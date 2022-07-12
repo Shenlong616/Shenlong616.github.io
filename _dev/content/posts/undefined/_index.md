@@ -1,5 +1,0 @@
----
-title: undefined
-# summary:
-# description:
----
