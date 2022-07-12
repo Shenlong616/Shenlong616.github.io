@@ -36,56 +36,56 @@
       return array[Math.floor(Math.random() * array.length)];
     };
 
-    const multilingualWaysToSayHello = [
-      { Bengali: "নমস্কার!" },
-      { boro: "खुलुम्बाइ!" },
-      { Bulgarian: "Здравей!" },
-      { Chinese: "你好!" },
-      { Croat: "Zdravo!" },
-      { Czech: "Ahoj!" },
-      { Danish: "Hej!" },
-      { Dutch: "Hallo!" },
-      { English: "Hello!" },
-      { Esperanto: "Saluton!" },
-      { Estnisch: "Tere!" },
-      { Farsi: "Salam!" },
-      { Fidschi: "Bula!" },
-      { Finnish: "Terve!" },
-      { Flemish: "Hallo!" },
-      { French: "Salut!" },
-      { Greek: "Γειά!" },
-      { Hawaiian: "Aloha!" },
-      { Hebrew: "!שלום" },
-      { Hindi: "नमस्ते!" },
-      { Italian: "Ciao!" },
-      { Japanese: "こんにちは!" },
-      { Khmer: "Tchum-reaup Suw!" },
-      { Korean: "안영하세요!" },
-      { Lettish: "Čau!" },
-      { Lithuanian: "Labas!" },
-      { Malaiisch: "Hai!" },
-      { Mongolian: "Сайн уу!" },
-      { Norwegian: "Hei!" },
-      { Polish: "Cześć!" },
-      { Portuguese: "Olá!" },
-      { Rumanian: "Salut!" },
-      { Russian: "Привет!" },
-      { Slovak: "Ahoj!" },
-      { Spanish: "Hola!" },
-      { Swedish: "Hej!" },
-      { Swiss_German: "Hoi!" },
-      { Tamil_Nadu: "வணக்கம்!" },
-      { Thai: "สวัสดีคะ!" },
-      { Turkish: "Merhaba!" },
-      { Vietnamese: "Xin Chào!" },
-    ];
-
     const titleText = () => {
       if (document.getElementsByName("titleText")[0] === undefined) {
         void this;
       } else {
         document.getElementsByName("titleText")[0].innerText = `${
-          Object.values(randomArray(multilingualWaysToSayHello))[0]
+          Object.values(
+            randomArray([
+              { Bengali: "নমস্কার!" },
+              { boro: "खुलुम्बाइ!" },
+              { Bulgarian: "Здравей!" },
+              { Chinese: "你好!" },
+              { Croat: "Zdravo!" },
+              { Czech: "Ahoj!" },
+              { Danish: "Hej!" },
+              { Dutch: "Hallo!" },
+              { English: "Hello!" },
+              { Esperanto: "Saluton!" },
+              { Estnisch: "Tere!" },
+              { Farsi: "Salam!" },
+              { Fidschi: "Bula!" },
+              { Finnish: "Terve!" },
+              { Flemish: "Hallo!" },
+              { French: "Salut!" },
+              { Greek: "Γειά!" },
+              { Hawaiian: "Aloha!" },
+              { Hebrew: "!שלום" },
+              { Hindi: "नमस्ते!" },
+              { Italian: "Ciao!" },
+              { Japanese: "こんにちは!" },
+              { Khmer: "Tchum-reaup Suw!" },
+              { Korean: "안영하세요!" },
+              { Lettish: "Čau!" },
+              { Lithuanian: "Labas!" },
+              { Malaiisch: "Hai!" },
+              { Mongolian: "Сайн уу!" },
+              { Norwegian: "Hei!" },
+              { Polish: "Cześć!" },
+              { Portuguese: "Olá!" },
+              { Rumanian: "Salut!" },
+              { Russian: "Привет!" },
+              { Slovak: "Ahoj!" },
+              { Spanish: "Hola!" },
+              { Swedish: "Hej!" },
+              { Swiss_German: "Hoi!" },
+              { Tamil_Nadu: "வணக்கம்!" },
+              { Thai: "สวัสดีคะ!" },
+              { Turkish: "Merhaba!" },
+              { Vietnamese: "Xin Chào!" },
+            ])
+          )[0]
         }`;
       }
     };

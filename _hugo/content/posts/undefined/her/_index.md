@@ -1,5 +1,0 @@
----
-# title: her
-# summary:
-# description:
----
