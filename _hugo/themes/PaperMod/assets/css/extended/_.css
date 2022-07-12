@@ -126,6 +126,12 @@ code {
   cursor: text;
 }
 
+@media only screen and (max-width: 768px) {
+  .terms-tags a {
+    padding-inline-end: calc(6px * 1.16);
+  }
+}
+
 * {
   font-family: "Noto Sans", sans-serif !important;
 }

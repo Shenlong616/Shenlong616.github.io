@@ -1,6 +1,6 @@
 ---
 title: "unnamed"
-date: 2022-07-12
+date: 1998-01-10
 # tags: ["", ""]
 # categories: [""]
 # author: ""
@@ -10,7 +10,7 @@ cover:
 draft: true
 ---
 
-![turkey_vol24](/../assets/images/11/1.jpg)
-![turkey_vol24](/../assets/images/11/2.png)
-![turkey_vol24](/../assets/images/11/3.png)
-![turkey_vol24](/../assets/images/11/4.png)
+![](/../assets/images/11/1.jpg)
+![](/../assets/images/11/2.png)
+![](/../assets/images/11/3.png)
+![](/../assets/images/11/4.png)
