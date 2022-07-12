@@ -9,33 +9,6 @@ canonicalURL: "https://github.com/catalinpit/JS-Tips-And-Tricks"
 ShowCanonicalLink: true
 ---
 
-# JAVASCRIPT TIPS & TRICKS 🔥🚀⚡
-
-A collection of JavaScript tips and tricks.
-
-No particular order or path.
-
-I add things as I discover them.
-
-_Check [Codinghub.tips](https://codinghub.tips/), too, for JavaScript tips. It's not my project but I like it._ 🔥
-
-# TABLE OF CONTENTS
-
-- [JAVASCRIPT TIPS & TRICKS 🔥🚀⚡](#javascript-tips--tricks-%f0%9f%94%a5%f0%9f%9a%80%e2%9a%a1)
-- [TABLE OF CONTENTS](#table-of-contents)
-- [OPTIONAL CHAINING](#optional-chaining)
-- [NULLISH COALESCING OPERATOR](#nullish-coalescing-operator)
-- [MERGE OBJECTS TOGETHER - SPREAD OPERATOR](#merge-objects-together---spread-operator)
-- [TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY](#two-ways-to-convert-a-string-to-a-character-array)
-- [DEFAULT PARAMETERS](#default-parameters)
-- [FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES](#filter-unique-values--remove-duplicate-values)
-- [FILTER OUT FALSY VALUES](#filter-out-falsy-values)
-- [REQUIRED PARAMETERS](#required-parameters)
-- [PASS AN EMPTY PARAMETER](#pass-an-empty-parameter)
-- [ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION](#accept-any-number-of-arguments-in-a-function)
-- [CHECK IF EVERY ITEM FROM AN ARRAY PASSES A TEST CONDITION](#check-if-every-item-from-an-array-passes-a-test-condition)
-- [CHECK IF SOME ITEMS FROM AN ARRAY PASS A TEST CONDITION](#check-if-some-items-from-an-array-pass-a-test-condition)
-
 # OPTIONAL CHAINING
 
 "Shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining))

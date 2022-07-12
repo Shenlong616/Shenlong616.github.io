@@ -8,12 +8,11 @@
     <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/python-tips/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python 3 tricks</title>
-      <link>https://shenlong616.github.io/posts/github/alexghergh/python3-tricks/</link>
+      <link>https://shenlong616.github.io/posts/github/alexghergh/python-tricks/</link>
       <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/github/alexghergh/python3-tricks/</guid>
-      <description>Disclaimer: This list is meant as a comprehension of cool tips and tricks I found on the internet. If you would like to contribute, or notice any mistakes or typos, please contact me or upload a pull request. If you think any material here can be considered personal property let me know and I will take it down.
-Looping over a range of numbers Using range() is better than using a list (ex.</description>
+      <guid>https://shenlong616.github.io/posts/github/alexghergh/python-tricks/</guid>
+      <description>Some cool Python tricks</description>
       <content:encoded><![CDATA[<p><strong><em>Disclaimer:</em></strong> This list is meant as a comprehension of cool tips and tricks I found on the internet. If you would like to contribute, or notice any mistakes or typos, please contact me or upload a pull request. If you think any material here can be considered personal property let me know and I will take it down.</p>
 <h3 id="looping-over-a-range-of-numbers">Looping over a range of numbers</h3>
 <p>Using <code>range()</code> is better than using a list (ex. <code>[1, 2, 3]</code>), because the list takes up memory space, whereas the <code>range()</code> function generates values on demand, thus taking a fixed amount of memory whatever the size of the elements is:</p>
@@ -877,6 +876,672 @@ Looping over a range of numbers Using range() is better than using a list (ex.</
 </span></span><span class="line"><span class="cl">    <span class="c1"># some really interesting code</span>
 </span></span></code></pre></div><p>This is better than having a global variable pollute the global namespace, and is better than having a decorator that does that (because the decorator runs when the python module is loaded even if the function might never be called, so the decorator will still do some work and initialize some value; instead here the code runs only when the function is called, if ever).</p>
 ]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>🐍 PyTricks.py</title>
+      <link>https://shenlong616.github.io/posts/github/wcarhart/pytricks-py/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/github/wcarhart/pytricks-py/</guid>
+      <description>List of Python tricks from Dan Bader&amp;#39;s (realpython.com) newsletter</description>
+      <content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># How to merge two dictionaries (3.5+)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">y</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># {&#39;c&#39;: 4, &#39;a&#39;: 1, &#39;b&#39;: 3}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># How to test flags</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">z</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;passed&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="mi">1</span> <span class="ow">in</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;passed&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># truthiness only:</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="ow">or</span> <span class="n">y</span> <span class="ow">or</span> <span class="n">z</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;passed&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nb">any</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;passed&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># How to sort a dictionary by value</span>
+</span></span><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [(&#39;d&#39;, 1), (&#39;c&#39;, 2), (&#39;b&#39;, 3), (&#39;a&#39;, 4)]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use get() to use default values with dictionaries</span>
+</span></span><span class="line"><span class="cl"><span class="n">name_for_userid</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">382</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">590</span><span class="p">:</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">951</span><span class="p">:</span> <span class="s1">&#39;Dilbert&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="n">userid</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span> <span class="sa">f</span><span class="s2">&#34;Hi </span><span class="si">{</span><span class="n">name_for_userid</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">userid</span><span class="p">,</span> <span class="s1">&#39;there&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">greeting</span><span class="p">(</span><span class="mi">382</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;Hi Alice!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">greeting</span><span class="p">(</span><span class="mi">333333</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;Hi there!&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># How to use namedtuples</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+</span></span><span class="line"><span class="cl"><span class="n">Car</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Car&#39;</span><span class="p">,</span> <span class="s1">&#39;color mileage&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_car</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="mf">3812.4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_car</span><span class="o">.</span><span class="n">color</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;red&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_car</span><span class="o">.</span><span class="n">mileage</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3812.4</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_car</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Car(color=&#39;red&#39; , mileage=3812.4)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># like tuples, namedtuples are immutable</span>
+</span></span><span class="line"><span class="cl"><span class="n">my_car</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># AttributeError: &#34;can&#39;t set attribute&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get the pythonic style guide, the Zen of Python (PEP 20)</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">this</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">The Zen of Python, by Tim Peters
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">Beautiful is better than ugly.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Explicit is better than implicit.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Simple is better than complex.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Complex is better than complicated.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Flat is better than nested.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Sparse is better than dense.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Readability counts.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Special cases aren&#39;t special enough to break the rules.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Although practicality beats purity.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Errors should never pass silently.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Unless explicitly silenced.
+</span></span></span><span class="line"><span class="cl"><span class="s2">In the face of ambiguity, refuse the temptation to guess.
+</span></span></span><span class="line"><span class="cl"><span class="s2">There should be one-- and preferably only one --obvious way to do it.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Although that way may not be obvious at first unless you&#39;re Dutch.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Now is better than never.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Although never is often better than *right* now.
+</span></span></span><span class="line"><span class="cl"><span class="s2">If the implementation is hard to explain, it&#39;s a bad idea.
+</span></span></span><span class="line"><span class="cl"><span class="s2">If the implementation is easy to explain, it may be a good idea.
+</span></span></span><span class="line"><span class="cl"><span class="s2">Namespaces are one honking great idea -- let&#39;s do more of those!
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># How to pretty print dictionaries</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl"><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">my_mapping</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">{
+</span></span></span><span class="line"><span class="cl"><span class="s2">  &#34;a&#34;: 23,
+</span></span></span><span class="line"><span class="cl"><span class="s2">  &#34;b&#34;: 42,
+</span></span></span><span class="line"><span class="cl"><span class="s2">  &#34;c&#34;: 12648430
+</span></span></span><span class="line"><span class="cl"><span class="s2">}
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Function argument unpacking</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">tuple_vec</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dict_vec</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">myfunc</span><span class="p">(</span><span class="o">*</span><span class="n">tuple_vec</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1, 0, 1</span>
+</span></span><span class="line"><span class="cl"><span class="n">myfunc</span><span class="p">(</span><span class="o">**</span><span class="n">dict_vec</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1, 0, 1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># How to time execution of code snippets</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">timeit</span>
+</span></span><span class="line"><span class="cl"><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&#34;-&#34;.join(str(n) for n in range(100))&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0.3412662749997253</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&#34;-&#34;.join([str(n) for n in range(100)])&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0.2996307989997149</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="s1">&#39;&#34;-&#34;.join(map(str, range(100)))&#39;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 0.24581470699922647</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Shorthand for swapping variables (without a temp)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">23</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">42</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># classic way:</span>
+</span></span><span class="line"><span class="cl"><span class="n">tmp</span> <span class="o">=</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">tmp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># pythonic way:</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;is&#34; vs &#34;==&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;is&#34; expressions evaluate to True if two variables point to the same object</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;==&#34; evaluates to True if the objects referred to by the variables are equal</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">==</span> <span class="n">c</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="ow">is</span> <span class="n">c</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Functions are first-class citizens</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># They can be passed as arguments to other functions,</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># returned as values from other functions, and</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># assigned to variables and stored in data structures.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="n">funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">myfunc</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &lt;function myfunc at 0x107012230&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use functions to emulate a switch block</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dispatch_if</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">operator</span> <span class="o">==</span> <span class="s1">&#39;add&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">  <span class="k">elif</span> <span class="n">operator</span> <span class="o">==</span> <span class="s1">&#39;sub&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">  <span class="k">elif</span> <span class="n">operator</span> <span class="o">==</span> <span class="s1">&#39;mul&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">  <span class="k">elif</span> <span class="n">operator</span> <span class="o">==</span> <span class="s1">&#39;div&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dispatch_dict</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;add&#39;</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;sub&#39;</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;mul&#39;</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;div&#39;</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="kc">None</span><span class="p">)()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dispatch_if</span><span class="p">(</span><span class="s1">&#39;mul&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 16</span>
+</span></span><span class="line"><span class="cl"><span class="n">dispatch_dict</span><span class="p">(</span><span class="s1">&#39;mul&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 16</span>
+</span></span><span class="line"><span class="cl"><span class="n">dispatch_if</span><span class="p">(</span><span class="s1">&#39;unknown&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># None</span>
+</span></span><span class="line"><span class="cl"><span class="n">dispatch_dict</span><span class="p">(</span><span class="s1">&#39;unknown&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Run a simple HTTP server (3.x)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (This will serve the current directory at http://localhost:8000)</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># List comprehensions are awesome</span>
+</span></span><span class="line"><span class="cl"><span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">collection</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># is equivalent to:</span>
+</span></span><span class="line"><span class="cl"><span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Example:</span>
+</span></span><span class="line"><span class="cl"><span class="n">even_squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">even_squares</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [0, 4, 16, 36, 64]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use type annotations for hints (3.5+)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">my_add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Using list slice syntax makes list manipulation easy</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># You can clear all elements from a list:</span>
+</span></span><span class="line"><span class="cl"><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">del</span> <span class="n">lst</span><span class="p">[:]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># []</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># You can replace all elements of a list without creating a new list object:</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">lst</span>
+</span></span><span class="line"><span class="cl"><span class="n">lst</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [7, 8, 9]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [7, 8, 9]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="ow">is</span> <span class="n">lst</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># You can also create a (shallow) copy of a list:</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[:]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [7, 8, 9]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span> <span class="ow">is</span> <span class="n">lst</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fun little Python easter egg (2.7+)</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">antigravity</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Find most common elements in an iterable (list, dict, etc.)</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">collections</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="s1">&#39;helloworld&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Counter({&#39;l&#39;: 3, &#39;o&#39;: 2, &#39;e&#39;: 1, &#39;d&#39;: 1, &#39;h&#39;: 1, &#39;r&#39;: 1, &#39;w&#39;: 1})</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># [(&#39;l&#39;, 3), (&#39;o&#39;, 2), (&#39;e&#39;, 1)]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get all permutations from an iterable (list, dict, etc.)</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">itertools</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="s1">&#39;ABCD&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;A&#39;, &#39;B&#39;, &#39;D&#39;, &#39;C&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;A&#39;, &#39;C&#39;, &#39;B&#39;, &#39;D&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;A&#39;, &#39;C&#39;, &#39;D&#39;, &#39;B&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;A&#39;, &#39;D&#39;, &#39;B&#39;, &#39;C&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;A&#39;, &#39;D&#39;, &#39;C&#39;, &#39;B&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;B&#39;, &#39;A&#39;, &#39;C&#39;, &#39;D&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;B&#39;, &#39;A&#39;, &#39;D&#39;, &#39;C&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;B&#39;, &#39;C&#39;, &#39;A&#39;, &#39;D&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;A&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;B&#39;, &#39;D&#39;, &#39;A&#39;, &#39;C&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;B&#39;, &#39;D&#39;, &#39;C&#39;, &#39;A&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;C&#39;, &#39;A&#39;, &#39;B&#39;, &#39;D&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;C&#39;, &#39;A&#39;, &#39;D&#39;, &#39;B&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;C&#39;, &#39;B&#39;, &#39;A&#39;, &#39;D&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;C&#39;, &#39;B&#39;, &#39;D&#39;, &#39;A&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;C&#39;, &#39;D&#39;, &#39;A&#39;, &#39;B&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;C&#39;, &#39;D&#39;, &#39;B&#39;, &#39;A&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;D&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;D&#39;, &#39;A&#39;, &#39;C&#39;, &#39;B&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;D&#39;, &#39;B&#39;, &#39;A&#39;, &#39;C&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;D&#39;, &#39;B&#39;, &#39;C&#39;, &#39;A&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;D&#39;, &#39;C&#39;, &#39;A&#39;, &#39;B&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">(&#39;D&#39;, &#39;C&#39;, &#39;B&#39;, &#39;A&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># __repr__ vs. __str__</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Emulate what the std lib does:</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">datetime</span>
+</span></span><span class="line"><span class="cl"><span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Result of __str__ should be readable:</span>
+</span></span><span class="line"><span class="cl"><span class="nb">str</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;2017-02-02&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Result of __repr__ should be unambiguous:</span>
+</span></span><span class="line"><span class="cl"><span class="nb">repr</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;datetime.date(2017, 2, 2)&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Python interpreter sessions use __repr__ to inspect objects:</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">today</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># datetime.date(2017, 2, 2)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Disassemble functions into their Python VM bytcode</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">greet</span><span class="p">(</span><span class="s1">&#39;Dan&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;Hello, Dan!&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">dis</span>
+</span></span><span class="line"><span class="cl"><span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="n">greet</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">2   0 LOAD_CONST     1 (&#39;Hello, &#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    2 LOAD_FAST      0 (name)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    4 BINARY_ADD
+</span></span></span><span class="line"><span class="cl"><span class="s2">    6 LOAD_CONST     2 (&#39;!&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    8 BINARY_ADD
+</span></span></span><span class="line"><span class="cl"><span class="s2">   10 RETURN_VALUE
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># @classmethod vs @staticmethod vs &#34;plain&#34; methods</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Instance methods need a class instance and
+</span></span></span><span class="line"><span class="cl"><span class="s2">    can access the instance through `self`.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;instance method called&#39;</span><span class="p">,</span> <span class="bp">self</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@classmethod</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">classmethod</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Class methods don&#39;t need a class instance.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    They can&#39;t access the instance (self) but
+</span></span></span><span class="line"><span class="cl"><span class="s2">    they have access to the class itself via `cls`.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;class method called&#39;</span><span class="p">,</span> <span class="bp">cls</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nd">@staticmethod</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">staticmethod</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Static methods don&#39;t have access to `cls` or `self`.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    They work like regular functions but belong to
+</span></span></span><span class="line"><span class="cl"><span class="s2">    the class&#39;s namespace.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;static method called&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># All methods types can be called on a class instance:</span>
+</span></span><span class="line"><span class="cl"><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (&#39;instance method called&#39;, &lt;MyClass instance at 0x1019381b8&gt;)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">classmethod</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (&#39;class method called&#39;, &lt;class MyClass at 0x101a2f4c8&gt;)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">staticmethod</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;static method called&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Calling instance methods fails if we only have the class object:</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">classmethod</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (&#39;class method called&#39;, &lt;class MyClass at 0x101a2f4c8&gt;)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">staticmethod</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;static method called&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(MyClass.method())</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">TypeError:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;unbound method method() must be called with MyClass &#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;instance as first argument (got nothing instead)&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># How to use lambda functions</span>
+</span></span><span class="line"><span class="cl"><span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl"><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># You could declare the same add() function with the def keyword:</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl"><span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># So what&#39;s the big fuss about? Lambdas are *function expressions*:</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Lambda functions are single-expression</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># functions that are not necessarily bound</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># to a name (they can be anonymous).</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Lambda functions can&#39;t use regular</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Python statements and always include an</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># implicit `return` statement.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use IP addresses</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">ipaddress</span>
+</span></span><span class="line"><span class="cl"><span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_address</span><span class="p">(</span><span class="s1">&#39;192.168.1.2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># IPv4Address(&#39;192.168.1.2&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ipaddress</span><span class="o">.</span><span class="n">ip_address</span><span class="p">(</span><span class="s1">&#39;2001:af3::&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># IPv6Address(&#39;2001:af3::&#39;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get the name of object, class, or function at runtime</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">myfunc</span><span class="p">():</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">obj</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;MyClass&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">myfunc</span><span class="o">.</span><span class="vm">__name__</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;myfunc&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check for class inheritance relationships</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BaseClass</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SubClass</span><span class="p">(</span><span class="n">BaseClass</span><span class="p">):</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">issubclass</span><span class="p">(</span><span class="n">SubClass</span><span class="p">,</span> <span class="n">BaseClass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl"><span class="nb">issubclass</span><span class="p">(</span><span class="n">SubClass</span><span class="p">,</span> <span class="nb">object</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl"><span class="nb">issubclass</span><span class="p">(</span><span class="n">BaseClass</span><span class="p">,</span> <span class="n">SubClass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use unicode characters in variable names</span>
+</span></span><span class="line"><span class="cl"><span class="n">π</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Spin</span><span class="err">̈</span><span class="n">alTap</span><span class="p">:</span> <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="n">Spin</span><span class="err">̈</span><span class="n">alTap</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &lt;Spin̈alTap object at 0x10e58d908&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Only letter-like characters work, however:</span>
+</span></span><span class="line"><span class="cl"><span class="err">🍺</span> <span class="o">=</span> <span class="s2">&#34;beer&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">SyntaxError: &#34;invalid character in identifier&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get global and local variables</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;globals()&#34; returns a dict with all global variables in the current scope:</span>
+</span></span><span class="line"><span class="cl"><span class="nb">globals</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># {...}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;locals()&#34; does the same but for all local variables in the current scope:</span>
+</span></span><span class="line"><span class="cl"><span class="nb">locals</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># {...}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get traceback even when python fails (e.g. from a segmentation fault)</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">faulthandler</span>
+</span></span><span class="line"><span class="cl"><span class="n">faulthandler</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Can also be enabled with &#34;python -X faulthandler&#34; from the command line</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># # Virtual Environments (&#34;virtualenvs&#34;) keep</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># your project dependencies separated.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># They help you avoid version conflicts</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># between packages and different versions</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># of the Python runtime.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Before creating &amp; activating a virtualenv:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># `python` and `pip` map to the system</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># version of the Python interpreter</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (e.g. Python 2.7)</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">which</span> <span class="n">python</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Let&#39;s create a fresh virtualenv using</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># another version of Python (Python 3):</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="o">./</span><span class="n">venv</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># A virtualenv is just a &#34;Python</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># environment in a folder&#34;:</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">ls</span> <span class="o">./</span><span class="n">venv</span>
+</span></span><span class="line"><span class="cl"><span class="nb">bin</span>      <span class="n">include</span>    <span class="n">lib</span>      <span class="n">pyvenv</span><span class="o">.</span><span class="n">cfg</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Activating a virtualenv configures the</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># current shell session to use the python</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (and pip) commands from the virtualenv</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># folder instead of the global environment:</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">source</span> <span class="o">./</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Note how activating a virtualenv modifies</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># your shell prompt with a little note</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># showing the name of the virtualenv folder:</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">venv</span><span class="p">)</span> <span class="err">$</span> <span class="n">echo</span> <span class="s2">&#34;wee!&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># With an active virtualenv, the `python`</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># command maps to the interpreter binary</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *inside the active virtualenv*:</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">venv</span><span class="p">)</span> <span class="err">$</span> <span class="n">which</span> <span class="n">python</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">dan</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">project</span><span class="o">/</span><span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Installing new libraries and frameworks</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># with `pip` now installs them *into the</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># virtualenv sandbox*, leaving your global</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># environment (and any other virtualenvs)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># completely unmodified:</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">venv</span><span class="p">)</span> <span class="err">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># To get back to the global Python</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># environment, run the following command:</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">venv</span><span class="p">)</span> <span class="err">$</span> <span class="n">deactivate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># (See how the prompt changed back</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># to &#34;normal&#34; again?)</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">echo</span> <span class="s2">&#34;yay!&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Deactivating the virtualenv flipped the</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># `python` and `pip` commands back to</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the global environment:</span>
+</span></span><span class="line"><span class="cl"><span class="err">$</span> <span class="n">which</span> <span class="n">python</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># You can `else` statements with `for` and `while` blocks</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="n">haystack</span><span class="p">,</span> <span class="n">needle</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">haystack</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">needle</span> <span class="o">==</span> <span class="n">haystack</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># The `else` here is a &#34;completion clause&#34; that runs only if the loop ran to completion</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># without hitting a `break` statement.</span>
+</span></span><span class="line"><span class="cl">    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;needle not found&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Pythonic ways of checking if all items in a list are equal;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Ordered from &#34;most Pythonic&#34; to &#34;least Pythonic&#34; and &#34;least</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># efficient&#34; to &#34;most efficient&#34;. The len(set()) solution is</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># idiomatic, but constructing a set is less efficient memory</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># and speed-wise.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">lst</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># In Python 3.4+ you can use</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># contextlib.suppress() to selectively</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ignore specific exceptions:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">contextlib</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;somefile.tmp&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># This is equivalent to:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;somefile.tmp&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># contextlib.suppress docstring:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;Return a context manager that suppresses any</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  of the specified exceptions if they occur in the body</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  of a with statement and then resumes execution with</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  the first statement following the end of</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  the with statement.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># In Python 3 you can use a bare &#34;*&#34; asterisk</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># in function parameter lists to force the</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># caller to use keyword arguments for certain</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># parameters:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s1">&#39;Hello&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># To pass the value for c, d, and e you</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># will need to explicitly pass it as</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;key=value&#34; named arguments:</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># TypeError:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;f() takes 2 positional arguments but 5 were given&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="s1">&#39;q&#39;</span><span class="p">,</span><span class="n">e</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;Hello&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Python 3.5+ allows passing multiple sets</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># of keyword arguments (&#34;kwargs&#34;) to a</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># function within a single call, using</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># the &#34;**&#34; syntax:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">process_data</span><span class="p">(</span><span class="o">**</span><span class="n">x</span><span class="p">,</span> <span class="o">**</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1 2 3 4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">process_data</span><span class="p">(</span><span class="o">**</span><span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1 2 23 42</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ===================================== #</span>
+</span></span></code></pre></div>]]></content:encoded>
     </item>
     
   </channel>

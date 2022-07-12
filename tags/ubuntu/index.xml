@@ -12,8 +12,7 @@
       <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/github/k4yt3x/sysctl/</guid>
-      <description>This repository hosts my hardened version of sysctl.conf. This configuration file aims to provide better security for Linux systems and improves system performance whenever possible. For example, below are some of the features this configuration file provides.
-Prevents kernel pointers from being read Disables Ptrace for all programs Disallows core dumping by SUID/GUID programs Disables IPv4/IPv6 routing Enables BBR TCP congestion control Enables SYN cookies to mitigate SYN flooding attacks Enables IP reverse path filtering for source validation &amp;hellip; Please review the configuration file carefully before applying it.</description>
+      <description>K4YT3X&amp;#39;s Hardened sysctl Configuration</description>
       <content:encoded><![CDATA[<p>This repository hosts my hardened version of <code>sysctl.conf</code>. This configuration file aims to provide better security for Linux systems and improves system performance whenever possible. For example, below are some of the features this configuration file provides.</p>
 <ul>
 <li>Prevents kernel pointers from being read</li>

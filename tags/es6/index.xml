@@ -7883,29 +7883,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
       
       <guid>https://shenlong616.github.io/posts/github/catalinpit/js-tips-and-tricks/</guid>
       <description>A collection of JavaScript tips and tricks 🔥🚀⚡</description>
-      <content:encoded><![CDATA[<h1 id="javascript-tips--tricks-">JAVASCRIPT TIPS &amp; TRICKS 🔥🚀⚡</h1>
-<p>A collection of JavaScript tips and tricks.</p>
-<p>No particular order or path.</p>
-<p>I add things as I discover them.</p>
-<p><em>Check <a href="https://codinghub.tips/">Codinghub.tips</a>, too, for JavaScript tips. It&rsquo;s not my project but I like it.</em> 🔥</p>
-<h1 id="table-of-contents">TABLE OF CONTENTS</h1>
-<ul>
-<li><a href="#javascript-tips--tricks-%f0%9f%94%a5%f0%9f%9a%80%e2%9a%a1">JAVASCRIPT TIPS &amp; TRICKS 🔥🚀⚡</a></li>
-<li><a href="#table-of-contents">TABLE OF CONTENTS</a></li>
-<li><a href="#optional-chaining">OPTIONAL CHAINING</a></li>
-<li><a href="#nullish-coalescing-operator">NULLISH COALESCING OPERATOR</a></li>
-<li><a href="#merge-objects-together---spread-operator">MERGE OBJECTS TOGETHER - SPREAD OPERATOR</a></li>
-<li><a href="#two-ways-to-convert-a-string-to-a-character-array">TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY</a></li>
-<li><a href="#default-parameters">DEFAULT PARAMETERS</a></li>
-<li><a href="#filter-unique-values--remove-duplicate-values">FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES</a></li>
-<li><a href="#filter-out-falsy-values">FILTER OUT FALSY VALUES</a></li>
-<li><a href="#required-parameters">REQUIRED PARAMETERS</a></li>
-<li><a href="#pass-an-empty-parameter">PASS AN EMPTY PARAMETER</a></li>
-<li><a href="#accept-any-number-of-arguments-in-a-function">ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION</a></li>
-<li><a href="#check-if-every-item-from-an-array-passes-a-test-condition">CHECK IF EVERY ITEM FROM AN ARRAY PASSES A TEST CONDITION</a></li>
-<li><a href="#check-if-some-items-from-an-array-pass-a-test-condition">CHECK IF SOME ITEMS FROM AN ARRAY PASS A TEST CONDITION</a></li>
-</ul>
-<h1 id="optional-chaining">OPTIONAL CHAINING</h1>
+      <content:encoded><![CDATA[<h1 id="optional-chaining">OPTIONAL CHAINING</h1>
 <p>&ldquo;Shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing.&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Catalin Pit&#34;</span><span class="p">,</span>

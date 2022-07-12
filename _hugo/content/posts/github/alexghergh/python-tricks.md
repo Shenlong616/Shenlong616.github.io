@@ -1,8 +1,9 @@
 ---
 title: "Python 3 tricks"
+description: "Some cool Python tricks"
 date: 2020-07-14
 tags: ["python", "python3", "python tricks", "python tips"]
-categories: ["Python", ""]
+categories: ["Python"]
 author: "alexghergh"
 canonicalURL: "https://github.com/alexghergh/python-tricks"
 ShowCanonicalLink: true

@@ -10,8 +10,8 @@ canonicalURL: "https://github.com/Asabeneh/JavaScript-for-Everyone"
 ShowCanonicalLink: true
 cover:
   image: "assets/images/1/javascript_for_everyone.png"
-  alt: "JavaScript for Everyone by Asabeneh"
-  caption: "JavaScript for Everyone by Asabeneh"
+  alt: "JavaScript for Everyone"
+  caption: "JavaScript for Everyone"
   # hidden: false
 ---
 

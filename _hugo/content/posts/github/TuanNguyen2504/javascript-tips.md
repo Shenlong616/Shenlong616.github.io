@@ -9,8 +9,8 @@ canonicalURL: "https://github.com/TuanNguyen2504/javascript-tips"
 ShowCanonicalLink: true
 cover:
   image: "assets/images/0/javascript-tips-and-tricks-by-tuannguyen2504.jpg"
-  alt: "JavaScript tips & tricks by TuanNguyen2504"
-  caption: "JavaScript tips & tricks by TuanNguyen2504"
+  alt: "JavaScript tips & tricks"
+  caption: "JavaScript tips & tricks"
   # hidden: false
 ---
 
