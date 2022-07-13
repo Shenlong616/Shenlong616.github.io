@@ -75,8 +75,8 @@ params:
     sameAs: ["https://shenlong616.github.io/"]
 
   homeInfoParams:
-    Title: <span name="titleText" style="font-weight:500;color:var(--primary)"></span>
-    Content: <span name="contentText" style="color:var(--secondary)"></span>
+    Title: <span name="quoteAuthor" style="font-weight:500;color:var(--primary)"></span>
+    Content: <span name="quoteContent" style="color:var(--secondary)"></span>
 
   # socialIcons:
   #   - name: GitHub
