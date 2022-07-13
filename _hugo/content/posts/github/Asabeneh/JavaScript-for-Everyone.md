@@ -50,11 +50,11 @@ I believe you have the motivation and a strong desire to be a developer, compute
 
 You may not need it right now but you may need it for later. Install [node.js](https://nodejs.org/en/).
 
-![Node download](/../assets/images/1/download_node.png)
+![Node download](/assets/images/1/download_node.png)
 
 After downloading double click and install
 
-![Install node](/../assets/images/1/install_node.png)
+![Install node](/assets/images/1/install_node.png)
 
 We can check if node is installed in our local machine by opening our device terminal or command prompt.
 
@@ -73,13 +73,13 @@ There are many browsers out there. However, I strongly recommend Google Chrome.
 
 Install [google chrome](https://www.google.com/chrome/) if you do not have one yet. We can write small JavaScript code on the browser console, but we do not use the browser console to develop applications.
 
-![Google Chrome](/../assets/images/1/google_chrome.png)
+![Google Chrome](/assets/images/1/google_chrome.png)
 
 #### Opening Google Chrome Console
 
 You can open Google Chrome either by clicking three dots at the top right corner of the Chrome browser or using a shortcut. I prefer using shortcuts.
 
-![Opening chrome](/../assets/images/1/opening_developer_tool.png)
+![Opening chrome](/assets/images/1/opening_developer_tool.png)
 
 To open the Chrome console using a short cut.
 
@@ -91,12 +91,12 @@ Windows:
 Ctl+Shift+I
 ```
 
-![Opening console](/../assets/images/1/opening_chrome_console_shortcut.png)
+![Opening console](/assets/images/1/opening_chrome_console_shortcut.png)
 
 After you open the Google Chrome console, try to explore the marked buttons. We will spend most of the time on the Console part. The Console is the place where your JavaScript code goes. The Google Console V8 engine changes your JavaScript code to machine code.
 Let us write a JavaScript code on the Google Chrome console:
 
-![write code on console](/../assets/images/1/js_code_on_chrome_console.png)
+![write code on console](/assets/images/1/js_code_on_chrome_console.png)
 
 #### Writing Code on browser Console
 
@@ -122,7 +122,7 @@ console.log("Hello, World!");
 
 The console.log(param1, param2, param3), can take multiple arguments.
 
-![console log multiple arguments](/../assets/images/1/console_log_multipl_arguments.png)
+![console log multiple arguments](/assets/images/1/console_log_multipl_arguments.png)
 
 ```js
 console.log("Hello", "World", "!");
@@ -156,7 +156,7 @@ This is a multiline comment
 
 JavaScript is a programming language. As a result, it has its syntax like other programming languages. If we do not write a syntax that JavaScript understands, it will raise different types of errors. We will explore different kinds of JavaScript errors later. For now, let us see syntax errors.
 
-![Error](/../assets/images/1/raising_syntax_error.png)
+![Error](/assets/images/1/raising_syntax_error.png)
 
 I made a deliberate mistake. As a result, the console raises a syntax error. Actually, the syntax is very informative. It informs what type of mistake we made. By reading the error feedback guideline, we can correct the syntax and fix the problem. The process of identifying and removing errors from a program is called debugging. Let us fix the errors:
 
@@ -179,7 +179,7 @@ console.log(`Hello, World!`);
 Now, let us practice more writing JavaScript codes using _console.log()_ on google chrome console for number data types.
 In addition to the text, we can also do mathematical calculations using JavaScript. Let us do the following simple calculations.
 
-![Arithmetic](/../assets/images/1/arithmetic.png)
+![Arithmetic](/assets/images/1/arithmetic.png)
 
 ```js
 console.log(2 + 3); // Addition
@@ -198,7 +198,7 @@ We can write our codes on the browser console, but it won't be for bigger projec
 
 Visual studio code is a very popular open-source text editor. I would recommend to [download](https://code.visualstudio.com/) visual studio code, but if you are in favor of other editors, feel free to follow with what you have.
 
-![Vscode](/../assets/images/1/vscode.png)
+![Vscode](/assets/images/1/vscode.png)
 
 If you installed visual studio code, let us start using it.
 
@@ -206,17 +206,17 @@ If you installed visual studio code, let us start using it.
 
 Open the visual studio code by double-clicking the visual studio icon. When you open it, you will get this kind of interface. Try to interact with the labeled icons.
 
-![Vscode ui](/../assets/images/1/vscode_ui.png)
+![Vscode ui](/assets/images/1/vscode_ui.png)
 
-![Vscode add project](/../assets/images/1/adding_project_to_vscode.png)
+![Vscode add project](/assets/images/1/adding_project_to_vscode.png)
 
-![Vscode open project](/../assets/images/1/opening_project_on_vscode.png)
+![Vscode open project](/assets/images/1/opening_project_on_vscode.png)
 
-![script file](/../assets/images/1/scripts_on_vscode.png)
+![script file](/assets/images/1/scripts_on_vscode.png)
 
-![running script](/../assets/images/1/running_script.png)
+![running script](/assets/images/1/running_script.png)
 
-![coding running](/../assets/images/1/launched_on_new_tab.png)
+![coding running](/assets/images/1/launched_on_new_tab.png)
 
 ### Adding JavaScript to a web page
 
@@ -820,7 +820,7 @@ Everything in JavaScript is an object. A string is a primitive data type that me
 
 2. _Accessing characters in a string_: We can access each character in a string using its index. In programming, counting starts from 0. The first index of the string is zero, and the last index is one minus the length of the string.
 
-![Accessing sting by index](/../assets/images/1/string_indexes.png)
+![Accessing sting by index](/assets/images/1/string_indexes.png)
 
 Let us access different characters in 'JavaScript' string.
 
@@ -5266,7 +5266,7 @@ I am teacher and  I love teaching.There is nothing as more rewarding as educatin
   - r'apple|banana' mean either of an apple or a banana
 - (): Capture and group
 
-![Regular Expression cheat sheet](/../assets/images/1/regex.png)
+![Regular Expression cheat sheet](/assets/images/1/regex.png)
 
 Let's use example to clarify the above meta characters
 

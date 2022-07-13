@@ -3995,10 +3995,10 @@ Install either <a href="https://www.google.com/chrome/">Chrome</a> or <a href="h
 <p>I believe you have the motivation and a strong desire to be a developer, computer and Internet. If you have those, then you have everything.</p>
 <h3 id="install-nodejs">Install Node.js</h3>
 <p>You may not need it right now but you may need it for later. Install <a href="https://nodejs.org/en/">node.js</a>.</p>
-<p><img loading="lazy" src="/../assets/images/1/download_node.png" alt="Node download"  />
+<p><img loading="lazy" src="/assets/images/1/download_node.png" alt="Node download"  />
 </p>
 <p>After downloading double click and install</p>
-<p><img loading="lazy" src="/../assets/images/1/install_node.png" alt="Install node"  />
+<p><img loading="lazy" src="/assets/images/1/install_node.png" alt="Install node"  />
 </p>
 <p>We can check if node is installed in our local machine by opening our device terminal or command prompt.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">asabeneh $ node -v
@@ -4008,11 +4008,11 @@ Install either <a href="https://www.google.com/chrome/">Chrome</a> or <a href="h
 <p>There are many browsers out there. However, I strongly recommend Google Chrome.</p>
 <h4 id="installing-google-chrome">Installing Google Chrome</h4>
 <p>Install <a href="https://www.google.com/chrome/">google chrome</a> if you do not have one yet. We can write small JavaScript code on the browser console, but we do not use the browser console to develop applications.</p>
-<p><img loading="lazy" src="/../assets/images/1/google_chrome.png" alt="Google Chrome"  />
+<p><img loading="lazy" src="/assets/images/1/google_chrome.png" alt="Google Chrome"  />
 </p>
 <h4 id="opening-google-chrome-console">Opening Google Chrome Console</h4>
 <p>You can open Google Chrome either by clicking three dots at the top right corner of the Chrome browser or using a shortcut. I prefer using shortcuts.</p>
-<p><img loading="lazy" src="/../assets/images/1/opening_developer_tool.png" alt="Opening chrome"  />
+<p><img loading="lazy" src="/assets/images/1/opening_developer_tool.png" alt="Opening chrome"  />
 </p>
 <p>To open the Chrome console using a short cut.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Mac
@@ -4020,11 +4020,11 @@ Install either <a href="https://www.google.com/chrome/">Chrome</a> or <a href="h
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Windows:
 </span></span><span class="line"><span class="cl">Ctl+Shift+I
-</span></span></code></pre></div><p><img loading="lazy" src="/../assets/images/1/opening_chrome_console_shortcut.png" alt="Opening console"  />
+</span></span></code></pre></div><p><img loading="lazy" src="/assets/images/1/opening_chrome_console_shortcut.png" alt="Opening console"  />
 </p>
 <p>After you open the Google Chrome console, try to explore the marked buttons. We will spend most of the time on the Console part. The Console is the place where your JavaScript code goes. The Google Console V8 engine changes your JavaScript code to machine code.
 Let us write a JavaScript code on the Google Chrome console:</p>
-<p><img loading="lazy" src="/../assets/images/1/js_code_on_chrome_console.png" alt="write code on console"  />
+<p><img loading="lazy" src="/assets/images/1/js_code_on_chrome_console.png" alt="write code on console"  />
 </p>
 <h4 id="writing-code-on-browser-console">Writing Code on browser Console</h4>
 <p>We can write any JavaScript code on the Google console or any browser console. However, for this challenge, we only focus on Google Chrome console. Open the console using:</p>
@@ -4038,7 +4038,7 @@ Let us write a JavaScript code on the Google Chrome console:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">);</span>
 </span></span></code></pre></div><h5 id="consolelog-with-multiple-arguments">Console.log with multiple arguments</h5>
 <p>The console.log(param1, param2, param3), can take multiple arguments.</p>
-<p><img loading="lazy" src="/../assets/images/1/console_log_multipl_arguments.png" alt="console log multiple arguments"  />
+<p><img loading="lazy" src="/assets/images/1/console_log_multipl_arguments.png" alt="console log multiple arguments"  />
 </p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello&#34;</span><span class="p">,</span> <span class="s2">&#34;World&#34;</span><span class="p">,</span> <span class="s2">&#34;!&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;HAPPY&#34;</span><span class="p">,</span> <span class="s2">&#34;NEW&#34;</span><span class="p">,</span> <span class="s2">&#34;YEAR&#34;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">);</span>
@@ -4059,7 +4059,7 @@ JavaScript is the language of the web<br>
 _/</p>
 <h5 id="syntax">Syntax</h5>
 <p>JavaScript is a programming language. As a result, it has its syntax like other programming languages. If we do not write a syntax that JavaScript understands, it will raise different types of errors. We will explore different kinds of JavaScript errors later. For now, let us see syntax errors.</p>
-<p><img loading="lazy" src="/../assets/images/1/raising_syntax_error.png" alt="Error"  />
+<p><img loading="lazy" src="/assets/images/1/raising_syntax_error.png" alt="Error"  />
 </p>
 <p>I made a deliberate mistake. As a result, the console raises a syntax error. Actually, the syntax is very informative. It informs what type of mistake we made. By reading the error feedback guideline, we can correct the syntax and fix the problem. The process of identifying and removing errors from a program is called debugging. Let us fix the errors:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">);</span>
@@ -4072,7 +4072,7 @@ _/</p>
 </span></span></code></pre></div><h4 id="arithmetics">Arithmetics</h4>
 <p>Now, let us practice more writing JavaScript codes using <em>console.log()</em> on google chrome console for number data types.
 In addition to the text, we can also do mathematical calculations using JavaScript. Let us do the following simple calculations.</p>
-<p><img loading="lazy" src="/../assets/images/1/arithmetic.png" alt="Arithmetic"  />
+<p><img loading="lazy" src="/assets/images/1/arithmetic.png" alt="Arithmetic"  />
 </p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// Addition
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// Subtraction
@@ -4084,22 +4084,22 @@ In addition to the text, we can also do mathematical calculations using JavaScri
 <p>We can write our codes on the browser console, but it won&rsquo;t be for bigger projects. In a real working environment, developers use different code editors to write their codes. In this 30 days python JavaScript challenge, we will use visual studio code.</p>
 <h4 id="installing-visual-studio-code">Installing Visual Studio Code</h4>
 <p>Visual studio code is a very popular open-source text editor. I would recommend to <a href="https://code.visualstudio.com/">download</a> visual studio code, but if you are in favor of other editors, feel free to follow with what you have.</p>
-<p><img loading="lazy" src="/../assets/images/1/vscode.png" alt="Vscode"  />
+<p><img loading="lazy" src="/assets/images/1/vscode.png" alt="Vscode"  />
 </p>
 <p>If you installed visual studio code, let us start using it.</p>
 <h4 id="how-to-use-visual-studio-code">How to use visual studio code</h4>
 <p>Open the visual studio code by double-clicking the visual studio icon. When you open it, you will get this kind of interface. Try to interact with the labeled icons.</p>
-<p><img loading="lazy" src="/../assets/images/1/vscode_ui.png" alt="Vscode ui"  />
+<p><img loading="lazy" src="/assets/images/1/vscode_ui.png" alt="Vscode ui"  />
 </p>
-<p><img loading="lazy" src="/../assets/images/1/adding_project_to_vscode.png" alt="Vscode add project"  />
+<p><img loading="lazy" src="/assets/images/1/adding_project_to_vscode.png" alt="Vscode add project"  />
 </p>
-<p><img loading="lazy" src="/../assets/images/1/opening_project_on_vscode.png" alt="Vscode open project"  />
+<p><img loading="lazy" src="/assets/images/1/opening_project_on_vscode.png" alt="Vscode open project"  />
 </p>
-<p><img loading="lazy" src="/../assets/images/1/scripts_on_vscode.png" alt="script file"  />
+<p><img loading="lazy" src="/assets/images/1/scripts_on_vscode.png" alt="script file"  />
 </p>
-<p><img loading="lazy" src="/../assets/images/1/running_script.png" alt="running script"  />
+<p><img loading="lazy" src="/assets/images/1/running_script.png" alt="running script"  />
 </p>
-<p><img loading="lazy" src="/../assets/images/1/launched_on_new_tab.png" alt="coding running"  />
+<p><img loading="lazy" src="/assets/images/1/launched_on_new_tab.png" alt="coding running"  />
 </p>
 <h3 id="adding-javascript-to-a-web-page">Adding JavaScript to a web page</h3>
 <p>JavaScript can be added to a web page in three ways:</p>
@@ -4562,7 +4562,7 @@ Lets&rsquo; see some examples of string:</p>
 <p><em>Accessing characters in a string</em>: We can access each character in a string using its index. In programming, counting starts from 0. The first index of the string is zero, and the last index is one minus the length of the string.</p>
 </li>
 </ol>
-<p><img loading="lazy" src="/../assets/images/1/string_indexes.png" alt="Accessing sting by index"  />
+<p><img loading="lazy" src="/assets/images/1/string_indexes.png" alt="Accessing sting by index"  />
 </p>
 <p>Let us access different characters in &lsquo;JavaScript&rsquo; string.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">string</span> <span class="o">=</span> <span class="s2">&#34;JavaScript&#34;</span><span class="p">;</span>
@@ -8152,7 +8152,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </li>
 <li>(): Capture and group</li>
 </ul>
-<p><img loading="lazy" src="/../assets/images/1/regex.png" alt="Regular Expression cheat sheet"  />
+<p><img loading="lazy" src="/assets/images/1/regex.png" alt="Regular Expression cheat sheet"  />
 </p>
 <p>Let&rsquo;s use example to clarify the above meta characters</p>
 <h3 id="square-bracket">Square Bracket</h3>
