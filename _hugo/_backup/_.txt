@@ -4,3 +4,6 @@
 \themes\PaperMod\layouts\partials\extend_footer.html
 \themes\PaperMod\layouts\partials\extend_head.html
 \themes\PaperMod\assets\css\extended
+
+
+hugo gen chromastyles --style=dracula > themes\PaperMod\assets\css\extended\syntax.css

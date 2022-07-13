@@ -110,6 +110,7 @@ params:
     # safari_pinned_tab: "<link / abs url>"
     # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource--
     disableFingerprinting: true
+    disableHLJS: true
 
   cover:
     # hidden: true # hide everywhere but not in structured data
@@ -135,12 +136,12 @@ markup:
       unsafe: true
 
   highlight:
-    noClasses: false
     # anchorLineNos: true
     # codeFences: true
     # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    # lineNos: false
+    # noClasses: false
+    style: dracula
 
 privacy:
   vimeo:
