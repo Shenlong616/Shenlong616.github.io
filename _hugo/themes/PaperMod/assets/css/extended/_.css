@@ -126,8 +126,8 @@ code {
   cursor: text;
 }
 .post-content pre code {
-  color: #f8f8f2 !important;
-  background-color: #282a36 !important;
+  color: #e9e9f4 !important;
+  background: #282936 !important;
 }
 @media only screen and (max-width: 768px) {
   .terms-tags a,
