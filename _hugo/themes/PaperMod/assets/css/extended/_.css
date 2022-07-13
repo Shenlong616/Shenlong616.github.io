@@ -44,11 +44,11 @@ img {
   ) !important;
   padding: 3px;
   padding-inline-start: 6px;
-  padding-inline-end: calc(6px * 6.16);
+  padding-inline-end: calc(3px * 6.16);
 }
 .post-tags a {
   padding-inline-start: 6px;
-  padding-inline-end: calc(6px * 6.16);
+  padding-inline-end: calc(3px * 6.16);
   border: none;
   color: var(--primary);
   font-weight: 500;
@@ -127,7 +127,8 @@ code {
 }
 
 @media only screen and (max-width: 768px) {
-  .terms-tags a {
+  .terms-tags a,
+  .post-tags a {
     padding-inline-end: calc(6px * 1.16);
   }
 }
