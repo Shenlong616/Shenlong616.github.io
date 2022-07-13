@@ -1,5 +1,6 @@
 ---
 title: "Angular: Algolia instantsearch"
+author: "Jeff Delaney"
 date: 2019-08-25 13:07:30 -0700
 description: "Algolia Instantsearch with Angular 8"
 tags: ["angular", "algolia"]

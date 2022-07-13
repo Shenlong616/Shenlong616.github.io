@@ -1,51 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>algolia on Shenlong616</title>
-    <link>https://shenlong616.github.io/tags/algolia/</link>
-    <description>Recent content in algolia on Shenlong616</description>
+    <title>react on Shenlong616</title>
+    <link>https://shenlong616.github.io/tags/react/</link>
+    <description>Recent content in react on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 25 Aug 2019 13:07:30 -0700</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/algolia/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Angular: Algolia instantsearch</title>
-      <link>https://shenlong616.github.io/posts/snippets/angular-algolia-instantsearch/</link>
-      <pubDate>Sun, 25 Aug 2019 13:07:30 -0700</pubDate>
-      
-      <guid>https://shenlong616.github.io/posts/snippets/angular-algolia-instantsearch/</guid>
-      <description>Algolia Instantsearch with Angular 8</description>
-      <content:encoded><![CDATA[<h2 id="install-instantsearch">Install Instantsearch</h2>
-<p>Algolia provides official <a href="https://community.algolia.com/angular-instantsearch/">Angular support</a>. Follow the installation steps to make the prebuilt components available in your app.</p>
-<h2 id="angular-instantsearch-component">Angular Instantsearch Component</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">ais-instantsearch</span>
-</span></span><span class="line"><span class="cl">  <span class="err">[</span><span class="na">config</span><span class="err">]=&#34;{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">apiKey:</span> <span class="err">&#39;</span><span class="na">YOUR-SEARCH-ONLY-KEY</span><span class="err">&#39;,</span>
-</span></span><span class="line"><span class="cl">    <span class="na">appId:</span> <span class="err">&#39;</span><span class="na">YOUR-APP-ID</span><span class="err">&#39;,</span>
-</span></span><span class="line"><span class="cl">    <span class="na">indexName:</span> <span class="err">&#39;</span><span class="na">customers</span><span class="err">&#39;,</span>
-</span></span><span class="line"><span class="cl">    <span class="na">routing:</span> <span class="na">true</span>
-</span></span><span class="line"><span class="cl">  <span class="err">}&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ais-search-box</span><span class="p">&gt;&lt;/</span><span class="nt">ais-search-box</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ais-hits</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ng-template</span> <span class="na">let-hits</span><span class="o">=</span><span class="s">&#34;hits&#34;</span> <span class="na">let-results</span><span class="o">=</span><span class="s">&#34;results&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&#34;hits.length === 0&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        No results found matching <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>{{results.query}}<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&#34;results.query&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&#34;let hit of hits&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">img</span> <span class="err">[</span><span class="na">src</span><span class="err">]=&#34;</span><span class="na">hit</span><span class="err">.</span><span class="na">avatar</span><span class="err">&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>{{hit.username}} {{hit.objectID}}<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">ais-highlight</span> <span class="na">attribute</span><span class="o">=</span><span class="s">&#34;bio&#34;</span> <span class="err">[</span><span class="na">hit</span><span class="err">]=&#34;</span><span class="na">hit</span><span class="err">&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">ais-highlight</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ais-hits</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ais-instantsearch</span><span class="p">&gt;</span>
-</span></span></code></pre></div>]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Sun, 25 Aug 2019 13:07:30 -0700</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React: Algolia instantsearch</title>
       <link>https://shenlong616.github.io/posts/snippets/react-algolia-instantsearch/</link>
