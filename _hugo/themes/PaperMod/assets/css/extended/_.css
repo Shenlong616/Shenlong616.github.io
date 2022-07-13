@@ -137,6 +137,6 @@ code {
   }
 }
 
-* {
-  font-family: "Noto Sans", sans-serif !important;
+body {
+  font-family: "Noto Sans", sans-serif;
 }

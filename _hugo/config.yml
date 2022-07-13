@@ -85,7 +85,7 @@ params:
   #     url: "https://github.com/Shenlong616"
 
   editPost:
-    URL: "https://github.com/Shenlong616/Shenlong616.github.io/tree/main/_dev/content"
+    URL: "https://github.com/Shenlong616/Shenlong616.github.io/tree/main/_hugo/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -135,13 +135,13 @@ markup:
     renderer:
       unsafe: true
 
-  highlight:
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: false
-    # noClasses: false
-    style: dracula
+  # highlight:
+  # anchorLineNos: true
+  # codeFences: true
+  # guessSyntax: true
+  # lineNos: false
+  # noClasses: false
+  # style: dracula
 
 privacy:
   vimeo:
