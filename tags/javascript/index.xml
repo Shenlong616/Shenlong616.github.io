@@ -3443,7 +3443,7 @@ The code above might help you revise how the arrow function works in different c
       <description>This is a collection of JavaScript tips and tricks. you can refer to it and apply it to make your code more concise. But don’t overdo it, it can make your code difficult to read and maintain. Hope everyone contributes, thanks.</description>
       <content:encoded><![CDATA[<!-- logo -->
 <div align="center" width="100%" height="100%">
-  <img  src="/../assets/images/0/javascript-tips-and-tricks-by-tuannguyen2504.jpg" />
+  <img  src="/assets/images/0/javascript-tips-and-tricks-by-tuannguyen2504.jpg" />
 </div>
 <!-- Tips for array -->
 <h1 id="array">Array</h1>

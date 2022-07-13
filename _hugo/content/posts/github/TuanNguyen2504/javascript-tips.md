@@ -16,7 +16,7 @@ cover:
 
 <!-- logo -->
 <div align="center" width="100%" height="100%">
-  <img  src="/../assets/images/0/javascript-tips-and-tricks-by-tuannguyen2504.jpg" />
+  <img  src="/assets/images/0/javascript-tips-and-tricks-by-tuannguyen2504.jpg" />
 </div>
 
 <!-- Tips for array -->
