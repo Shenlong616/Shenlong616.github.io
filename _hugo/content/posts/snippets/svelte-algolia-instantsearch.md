@@ -4,7 +4,7 @@ author: "Jeff Delaney"
 date: 2019-08-25 13:07:30 -0700
 description: "Algolia InstantSearch with Svelte 3"
 tags: ["svelte", "algolia"]
-categories: ["Svelte"]
+categories: ["Svelte", "Algolia"]
 canonicalURL: "https://github.com/fireship-io/fireship.io/blob/master/hugo/content/snippets/algolia-instantsearch-svelte.md"
 ShowCanonicalLink: true
 ---

@@ -4,7 +4,7 @@ author: "Jeff Delaney"
 date: 2019-08-25 13:07:30 -0700
 description: "Algolia InstantSearch with React"
 tags: ["react", "algolia", "jsx"]
-categories: ["React"]
+categories: ["React", "Algolia"]
 canonicalURL: "https://github.com/fireship-io/fireship.io/blob/master/hugo/content/snippets/algolia-instantsearch-react.md"
 ShowCanonicalLink: true
 ---

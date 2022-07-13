@@ -127,7 +127,8 @@ code {
 }
 .post-content pre code {
   color: #e9e9f4 !important;
-  background: #282936 !important;
+  /* background: #282936 !important; */
+  background: #22272e !important;
 }
 @media only screen and (max-width: 768px) {
   .terms-tags a,

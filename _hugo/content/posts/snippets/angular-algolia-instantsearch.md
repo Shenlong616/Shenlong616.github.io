@@ -4,7 +4,7 @@ author: "Jeff Delaney"
 date: 2019-08-25 13:07:30 -0700
 description: "Algolia Instantsearch with Angular 8"
 tags: ["angular", "algolia"]
-categories: ["Angular"]
+categories: ["Angular", "Algolia"]
 canonicalURL: "https://github.com/fireship-io/fireship.io/blob/master/hugo/content/snippets/algolia-instantsearch-angular.md"
 ShowCanonicalLink: true
 ---
