@@ -40,7 +40,7 @@
       if (document.getElementsByName("titleText")[0] === undefined) {
         void this;
       } else {
-        document.getElementsByName("titleText")[0].innerText = `${
+        document.getElementsByName("titleText")[0].textContent = `${
           Object.values(
             randomArray([
               { Bengali: "নমস্কার!" },
@@ -95,7 +95,7 @@
       if (document.getElementsByName("contentText")[0] === undefined) {
         void this;
       } else {
-        document.getElementsByName("contentText")[0].innerText = randomArray([
+        document.getElementsByName("contentText")[0].textContent = randomArray([
           "2024",
           "All you have to be is yourself",
           "Believe in your flyness...conquer your shyness.",
