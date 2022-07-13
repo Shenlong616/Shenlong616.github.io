@@ -7,3 +7,7 @@
 
 
 hugo gen chromastyles --style=dracula > themes\PaperMod\assets\css\extended\syntax.css
+
+
+https://github.com/highlightjs/highlight.js/blob/main/src/styles/base16/dracula.css
+https://cdnjs.com/libraries/highlight.js
