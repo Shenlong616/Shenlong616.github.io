@@ -129,7 +129,7 @@ code {
 @media only screen and (max-width: 768px) {
   .terms-tags a,
   .post-tags a {
-    padding-inline-end: calc(6px * 1.16);
+    padding-inline-end: calc(6.16px * 1.5);
   }
 }
 
