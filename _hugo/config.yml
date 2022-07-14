@@ -52,6 +52,7 @@ outputs:
 params:
   # author: ["Me", "You"] # multiple authors
   author: "unnamed"
+  hideFooter: true
   # CanonicalLinkText: "Originally published at"
   # comments: false
   # disableSpecial1stPost: true

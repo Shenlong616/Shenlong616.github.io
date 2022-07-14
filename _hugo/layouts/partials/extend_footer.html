@@ -1,0 +1,175 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const initNProgress = (parameter) => {
+      NProgress.set(parameter);
+      NProgress.done(true);
+    };
+
+    initNProgress(0.1);
+
+    if (document.getElementsByTagName("input").length > 0) {
+      for (const item of document.getElementsByTagName("input")) {
+        item.addEventListener("input", () => {
+          initNProgress(0.1);
+        });
+      }
+    } else {
+      void this;
+    }
+
+    if (
+      document.querySelectorAll(".copy-code, .top-link, #theme-toggle").length >
+      0
+    ) {
+      for (const item of document.querySelectorAll(
+        ".copy-code, .top-link, #theme-toggle, .anchor, .toc a"
+      )) {
+        item.addEventListener("click", () => {
+          initNProgress(0.1);
+        });
+      }
+    } else {
+      void this;
+    }
+
+    const randomArray = (array) => {
+      return array[Math.floor(Math.random() * array.length)];
+    };
+
+    if (ScrollReveal().noop) {
+      void this;
+    } else {
+      const defaultConfig = {
+        desktop: true,
+        mobile: false,
+        delay: 0,
+        duration: 300,
+        easing: "ease-out",
+        reset: true,
+        distance: "6.16%",
+        origin: "bottom",
+        delay: 0,
+        beforeReveal: () => {},
+        afterReveal: () => {},
+      };
+
+      const createElement1 = () => {
+        const spanElement = document.createElement("span");
+        const textNode = document.createTextNode(
+          `${
+            Object.values(
+              randomArray([
+                { Bengali: "নমস্কার!" },
+                { boro: "खुलुम्बाइ!" },
+                { Bulgarian: "Здравей!" },
+                { Chinese: "你好!" },
+                { Croat: "Zdravo!" },
+                { Czech: "Ahoj!" },
+                { Danish: "Hej!" },
+                { Dutch: "Hallo!" },
+                { English: "Hello!" },
+                { Esperanto: "Saluton!" },
+                { Estnisch: "Tere!" },
+                { Farsi: "Salam!" },
+                { Fidschi: "Bula!" },
+                { Finnish: "Terve!" },
+                { Flemish: "Hallo!" },
+                { French: "Salut!" },
+                { Greek: "Γειά!" },
+                { Hawaiian: "Aloha!" },
+                { Hebrew: "!שלום" },
+                { Hindi: "नमस्ते!" },
+                { Italian: "Ciao!" },
+                { Japanese: "こんにちは!" },
+                { Khmer: "Tchum-reaup Suw!" },
+                { Korean: "안영하세요!" },
+                { Lettish: "Čau!" },
+                { Lithuanian: "Labas!" },
+                { Malaiisch: "Hai!" },
+                { Mongolian: "Сайн уу!" },
+                { Norwegian: "Hei!" },
+                { Polish: "Cześć!" },
+                { Portuguese: "Olá!" },
+                { Rumanian: "Salut!" },
+                { Russian: "Привет!" },
+                { Slovak: "Ahoj!" },
+                { Spanish: "Hola!" },
+                { Swedish: "Hej!" },
+                { Swiss_German: "Hoi!" },
+                { Tamil_Nadu: "வணக்கம்!" },
+                { Thai: "สวัสดีคะ!" },
+                { Turkish: "Merhaba!" },
+                { Vietnamese: "Xin Chào!" },
+              ])
+            )[0]
+          }`
+        );
+
+        spanElement.appendChild(textNode);
+
+        Object.assign(spanElement.style, {
+          color: "var(--secondary)",
+          fontSize: "0.789em",
+        });
+
+        document.querySelector(".logo").appendChild(spanElement);
+      };
+      createElement1();
+
+      ScrollReveal().reveal(
+        document.querySelectorAll(".logo")[0].childNodes[0],
+        {
+          ...defaultConfig,
+        }
+      );
+
+      ScrollReveal().reveal(
+        document.querySelectorAll(".logo")[0].childNodes[1],
+        {
+          ...defaultConfig,
+          delay: (defaultConfig.delay += 25),
+        }
+      );
+
+      ScrollReveal().reveal(
+        document.querySelectorAll(".logo")[0].childNodes[2],
+        {
+          ...defaultConfig,
+          delay: (defaultConfig.delay += 25),
+        }
+      );
+
+      for (const item of document.querySelectorAll("ul#menu")[0].childNodes) {
+        ScrollReveal().reveal(item, {
+          ...defaultConfig,
+          delay: (defaultConfig.delay += 25),
+          origin: "left",
+        });
+      }
+    }
+
+    async function randomQuote() {
+      // https://github.com/quotable-io/data/blob/master/data/quotes.json
+      const response = await fetch("/../../assets/js/json/quotes.json?v=0.3.2");
+      const data = await response.json();
+      if (response.ok) {
+        const randomJSONData = randomArray(data);
+        document.getElementsByName("quoteAuthor")[0].textContent =
+          randomJSONData.author;
+        document.getElementsByName("quoteContent")[0].textContent =
+          randomJSONData.content;
+      } else {
+        void this;
+      }
+    }
+
+    if (
+      document.getElementsByName("quoteAuthor")[0] === undefined &&
+      document.getElementsByName("quoteContent")[0] === undefined
+    ) {
+      void this;
+    } else {
+      randomQuote();
+    }
+  });
+</script>
