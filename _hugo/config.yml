@@ -5,7 +5,7 @@ buildFuture: false
 enableEmoji: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
-paginate: 6
+paginate: 9
 publishDir: ".."
 pygmentsUseClasses: true
 theme: PaperMod
@@ -90,10 +90,10 @@ params:
   #   - name: GitHub
   #     url: "https://github.com/Shenlong616"
 
-  editPost:
-    URL: "https://github.com/Shenlong616/Shenlong616.github.io/tree/main/_hugo/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+  # editPost:
+  #   URL: "https://github.com/Shenlong616/Shenlong616.github.io/tree/main/_hugo/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
 
   # label:
   #   text: "Home"
