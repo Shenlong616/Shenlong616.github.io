@@ -3368,10 +3368,10 @@ The code above might help you revise how the arrow function works in different c
     
     <item>
       <title>Syntax theme</title>
-      <link>https://shenlong616.github.io/posts/draft/syntax-theme/</link>
+      <link>https://shenlong616.github.io/posts/example/syntax-theme/</link>
       <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://shenlong616.github.io/posts/draft/syntax-theme/</guid>
+      <guid>https://shenlong616.github.io/posts/example/syntax-theme/</guid>
       <description>HTML, XML &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; body { width: 500px; } &amp;lt;/style&amp;gt; &amp;lt;script type=&amp;#34;application/javascript&amp;#34;&amp;gt; function $init() { return true; } &amp;lt;/script&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p checked class=&amp;#34;title&amp;#34; id=&amp;#34;title&amp;#34;&amp;gt;Title&amp;lt;/p&amp;gt; &amp;lt;!-- here goes the rest of the page --&amp;gt; &amp;lt;/body&amp;gt; Bash #!/bin/bash ###### CONFIG ACCEPTED_HOSTS=&amp;#34;/root/.hag_accepted.conf&amp;#34; BE_VERBOSE=false if [ &amp;#34;$UID&amp;#34; -ne 0 ] then echo &amp;#34;Superuser rights required&amp;#34; exit 2 fi genApacheConf(){ echo -e &amp;#34;# Host ${HOME_DIR}$1/$2 :&amp;#34; } echo &amp;#39;&amp;#34;quoted&amp;#34;&amp;#39; | tr -d \&amp;#34; &amp;gt; text.</description>
       <content:encoded><![CDATA[<h3 id="html-xml">HTML, XML</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -5785,6 +5785,40 @@ net.ipv4.ip_forward = 1
 <ol>
 <li><a href="/../assets/files/sysctl.conf">sysctl.conf</a></li>
 </ol>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Next t*reaФ_Ф</title>
+      <link>https://shenlong616.github.io/posts/undefined/next-t-rea/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/undefined/next-t-rea/</guid>
+      <description></description>
+      <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/15/ryoma_nishiki_5.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_6.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_10.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_15.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_18.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_19.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_21.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_26.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_34.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_35.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_36.jpg" alt="ryoma_nishiki"  />
+
+<img loading="lazy" src="/assets/images/15/ryoma_nishiki_41.jpg" alt="ryoma_nishiki"  />
+</p>
 ]]></content:encoded>
     </item>
     

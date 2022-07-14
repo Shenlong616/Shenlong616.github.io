@@ -82,7 +82,7 @@ params:
     sameAs: ["https://shenlong616.github.io/"]
 
   homeInfoParams:
-    Title: <span name="quoteAuthor" style="font-weight:500;color:var(--primary)"></span>
+    Title: <span name="quoteAuthor" style="font-weight:700;color:var(--primary)"></span>
     Content: <span name="quoteContent" style="color:var(--secondary)"></span>
 
   # socialIcons:
