@@ -6,7 +6,7 @@ tags: ["iptables", "iptables rules", "ddos"]
 categories: ["Linux"]
 ---
 
-### Firewall rules
+### Basic firewall rules
 
 ```bash
 # 1: Drop invalid packets
