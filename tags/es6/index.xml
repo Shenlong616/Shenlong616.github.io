@@ -7883,7 +7883,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
       
       <guid>https://shenlong616.github.io/posts/github/catalinpit/js-tips-and-tricks/</guid>
       <description>A collection of JavaScript tips and tricks 🔥🚀⚡</description>
-      <content:encoded><![CDATA[<h1 id="optional-chaining">OPTIONAL CHAINING</h1>
+      <content:encoded><![CDATA[<h1 id="optional-chaining">Optional chaining</h1>
 <p>&ldquo;Shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing.&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Catalin Pit&#34;</span><span class="p">,</span>
@@ -7907,7 +7907,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// or
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="o">?</span><span class="p">.</span><span class="nx">socialMedia</span><span class="o">?</span><span class="p">.</span><span class="nx">twitter</span><span class="p">);</span>
-</span></span></code></pre></div><h1 id="nullish-coalescing-operator">NULLISH COALESCING OPERATOR</h1>
+</span></span></code></pre></div><h1 id="nullish-coalescing-operator">Nullish coalescing operator</h1>
 <p>&ldquo;The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Catalin Pit&#34;</span><span class="p">,</span>
@@ -7931,7 +7931,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Catalin Pit&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">??</span> <span class="s2">&#34;No name assigned&#34;</span><span class="p">);</span> <span class="c1">// Outputs &#39;Catalin Pit&#39;
-</span></span></span></code></pre></div><h1 id="merge-objects-together---spread-operator">MERGE OBJECTS TOGETHER - SPREAD OPERATOR</h1>
+</span></span></span></code></pre></div><h1 id="merge-objects-together---spread-operator">Merge objects together - Spread operator</h1>
 <p>&ldquo;Shallow-cloning (excluding prototype) or merging of objects is now possible using a shorter syntax than Object.assign().&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Catalin Pit&#34;</span><span class="p">,</span>
@@ -7960,7 +7960,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl">  <span class="nx">language</span><span class="o">:</span> <span class="s2">&#34;JavaScript&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">phone</span><span class="o">:</span> <span class="s2">&#34;Samsung Note 10&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><h1 id="two-ways-to-convert-a-string-to-a-character-array">TWO WAYS TO CONVERT A STRING TO A CHARACTER ARRAY</h1>
+</span></span></code></pre></div><h1 id="two-ways-to-convert-a-string-to-a-character-array">Two ways to convert a string to a character array</h1>
 <p>These are two quick ways to convert your string to an array of characters.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="s2">&#34;Catalin&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -7969,7 +7969,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">firstNameArr2</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">firstName</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstNameArr2</span><span class="p">);</span>
-</span></span></code></pre></div><h1 id="default-parameters">DEFAULT PARAMETERS</h1>
+</span></span></code></pre></div><h1 id="default-parameters">Default parameters</h1>
 <p>&ldquo;Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed.&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
@@ -7978,7 +7978,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl"><span class="nx">add</span><span class="p">();</span> <span class="c1">// Returns 3
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">add</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// Returns 12
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">// Returns 10
-</span></span></span></code></pre></div><h1 id="filter-unique-values--remove-duplicate-values">FILTER UNIQUE VALUES / REMOVE DUPLICATE VALUES</h1>
+</span></span></span></code></pre></div><h1 id="filter-unique-values--remove-duplicate-values">Filter unique values / Remove duplicate values</h1>
 <p>&ldquo;Set objects are collections of values. You can iterate through the elements of a set in insertion order. A value in the Set may only occur once; it is unique in the Set&rsquo;s collection.&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Strings
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span>
@@ -8002,7 +8002,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">uniqueExamScores</span> <span class="o">=</span> <span class="p">[...</span><span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">examScores</span><span class="p">)];</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">uniqueExamScores</span><span class="p">);</span> <span class="c1">// Outputs [50, 75, 100, 99, 95, 67, 43];
-</span></span></span></code></pre></div><h1 id="filter-out-falsy-values">FILTER OUT FALSY VALUES</h1>
+</span></span></span></code></pre></div><h1 id="filter-out-falsy-values">Filter out falsy values</h1>
 <p>Remove falsy values such as <code>null, undefined, 0, boolean</code> and so on, from an array.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myArray</span> <span class="o">=</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;Catalin&#34;</span><span class="p">,</span>
@@ -8019,7 +8019,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">filteredArray</span> <span class="o">=</span> <span class="nx">myArray</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filteredArray</span><span class="p">);</span> <span class="c1">// Returns [&#34;Catalin&#34;, 1, &#34;Macbook&#34;, true, &#34;Car&#34;, &#34;Peace&#34;, 191]
-</span></span></span></code></pre></div><h1 id="required-parameters">REQUIRED PARAMETERS</h1>
+</span></span></span></code></pre></div><h1 id="required-parameters">Required parameters</h1>
 <p>Default parameters allows us to require an argument to be passed to the function.</p>
 <p>We can create a function which throws an error and assign it as default value for required parameters.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">required</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -8030,7 +8030,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">greet</span><span class="p">();</span> <span class="c1">// Returns &#34;Uncaught TypeError: You did not pass the required argument!&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">greet</span><span class="p">(</span><span class="s2">&#34;Catalin Pit&#34;</span><span class="p">);</span> <span class="c1">// Returns &#34;Hello Catalin Pit!&#34;
-</span></span></span></code></pre></div><h1 id="pass-an-empty-parameter">PASS AN EMPTY PARAMETER</h1>
+</span></span></span></code></pre></div><h1 id="pass-an-empty-parameter">Pass an empty parameter</h1>
 <p>With the help of the spread syntax, we can now pass an empty parameter to a function.</p>
 <p>&ldquo;Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">fullName</span><span class="p">,</span> <span class="nx">instagramHandle</span><span class="p">,</span> <span class="nx">twitterHandle</span><span class="p">)</span> <span class="p">{</span>
@@ -8058,7 +8058,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Returns &#34;Hello, my name is Catalin Pit. My Instagram handle is @catapit.&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">greet</span><span class="p">(...[</span><span class="s2">&#34;Catalin Pit&#34;</span><span class="p">,</span> <span class="s2">&#34;@catapit&#34;</span><span class="p">]);</span>
-</span></span></code></pre></div><h1 id="accept-any-number-of-arguments-in-a-function">ACCEPT ANY NUMBER OF ARGUMENTS IN A FUNCTION</h1>
+</span></span></code></pre></div><h1 id="accept-any-number-of-arguments-in-a-function">Accept any number of arguments in a function</h1>
 <p>We are making use of the spread operator again to accept any number of arguments in a function.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">accumulator</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">acc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -8076,7 +8076,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">accumulator</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// Outputs 17
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">accumulator</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span> <span class="c1">// Outputs 20
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">accumulator</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// Outputs 1020
-</span></span></span></code></pre></div><h1 id="check-if-every-item-from-an-array-passes-a-test-condition">CHECK IF EVERY ITEM FROM AN ARRAY PASSES A TEST CONDITION</h1>
+</span></span></span></code></pre></div><h1 id="check-if-every-item-from-an-array-passes-a-test-condition">Check if every item from an array passes a test condition</h1>
 <p>&ldquo;The <code>every()</code> method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">closeOffice</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;false&#34;</span><span class="p">,</span> <span class="s2">&#34;true&#34;</span><span class="p">,</span> <span class="s2">&#34;false&#34;</span><span class="p">,</span> <span class="s2">&#34;true&#34;</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">closeOffice2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;true&#34;</span><span class="p">,</span> <span class="s2">&#34;true&#34;</span><span class="p">,</span> <span class="s2">&#34;true&#34;</span><span class="p">,</span> <span class="s2">&#34;true&#34;</span><span class="p">];</span>
@@ -8089,7 +8089,7 @@ If we do not use a global flag, match() returns an array containing the pattern,
 </span></span><span class="line"><span class="cl"><span class="nx">closeOffice</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">doYouWorkFromHome</span><span class="p">);</span> <span class="c1">// Returns false - We don&#39;t close the office
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">closeOffice2</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">doYouWorkFromHome</span><span class="p">);</span> <span class="c1">// Returns true - We close the office
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">closeOffice3</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">doYouWorkFromHome</span><span class="p">);</span> <span class="c1">// Returns false - We don&#39;t close the office
-</span></span></span></code></pre></div><h1 id="check-if-some-items-from-an-array-pass-a-test-condition">CHECK IF SOME ITEMS FROM AN ARRAY PASS A TEST CONDITION</h1>
+</span></span></span></code></pre></div><h1 id="check-if-some-items-from-an-array-pass-a-test-condition">Check if some items from an array pass a test condition</h1>
 <p>&ldquo;The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.&rdquo; (Source: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some">MDN</a>)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">devTeam</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;junior&#34;</span><span class="p">,</span> <span class="s2">&#34;middle&#34;</span><span class="p">,</span> <span class="s2">&#34;middle&#34;</span><span class="p">,</span> <span class="s2">&#34;junior&#34;</span><span class="p">,</span> <span class="s2">&#34;senior&#34;</span><span class="p">,</span> <span class="s2">&#34;senior&#34;</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">devTeam1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;junior&#34;</span><span class="p">,</span> <span class="s2">&#34;middle&#34;</span><span class="p">,</span> <span class="s2">&#34;middle&#34;</span><span class="p">,</span> <span class="s2">&#34;junior&#34;</span><span class="p">,</span> <span class="s2">&#34;junior&#34;</span><span class="p">,</span> <span class="s2">&#34;middle&#34;</span><span class="p">];</span>
