@@ -137,3 +137,116 @@ you can write text [with links](http://example.com) inline or [link references][
 1. one thing (yeah!)
 2. two thing `i can write code`, and `more` wipee!
 ```
+
+### Diff
+
+```diff
+Index: languages/ini.js
+===================================================================
+--- languages/ini.js    (revision 199)
++++ languages/ini.js    (revision 200)
+@@ -1,8 +1,7 @@
+ hljs.LANGUAGES.ini =
+ {
+   case_insensitive: true,
+-  defaultMode:
+-  {
++  defaultMode: {
+     contains: ['comment', 'title', 'setting'],
+     illegal: '[^\\s]'
+   },
+
+*** /path/to/original timestamp
+--- /path/to/new      timestamp
+***************
+*** 1,3 ****
+--- 1,9 ----
++ This is an important
++ notice! It should
++ therefore be located at
++ the beginning of this
++ document!
+
+! compress the size of the
+! changes.
+
+  It is important to spell
+```
+
+### Ruby
+
+```ruby
+# The Greeter class
+class Greeter
+  def initialize(name)
+    @name = name.capitalize
+  end
+
+  def salute
+    puts "Hello #{@name}!"
+  end
+end
+
+g = Greeter.new("world")
+g.salute
+```
+
+### Go
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    ch := make(chan float64)
+    ch <- 1.0e10    // magic number
+    x, ok := <- ch
+    defer fmt.Println(`exitting now\`)
+    go println(len("hello world!"))
+    return
+}
+```
+
+### GraphQL
+
+```
+# Graphql detection template
+
+mutation Hero($episode: Episode, $withFriends: Boolean!) {
+  hero(episode: $episode) {
+    name
+    friends @include(if: $withFriends) {
+      name
+      ... on Droid {
+        primaryFunction
+      }
+      ... on Human {
+        height
+      }
+    }
+  }
+}
+
+query HeroNameAndFriends {
+  hero {
+    name
+    friends {
+      name
+    }
+  }
+}
+
+fragment comparisonFields on Character {
+  name
+  appearsIn
+  friends {
+    name
+  }
+}
+
+input StoryLikeSubscribeInput {
+  storyId: string
+  clientSubscriptionId: string
+}
+```
