@@ -21,7 +21,7 @@ ShowCanonicalLink: true
 
 ### Check falsy value is `false`
 
-- `Boolean()`
+- Boolean() method:
 
 ```javascript
 for (const item of [false, 0, -0, 0n, "", ``, null, undefined, document.all]) {
@@ -29,7 +29,7 @@ for (const item of [false, 0, -0, 0n, "", ``, null, undefined, document.all]) {
 }
 ```
 
-- NOT (`!`) operator
+- NOT (`!`) operator method:
 
 ```javascript
 for (const item of [false, 0, -0, 0n, "", ``, null, undefined, document.all]) {

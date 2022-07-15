@@ -7,13 +7,15 @@ canonicalURL: "https://viblo.asia/p/javascript-unique-array-bai-toan-quoc-dan-92
 # ShowCanonicalLink: true
 ---
 
-```javascript
-const array = [1, 2, 2, 3, 3, 3];
+### Set() method
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
-const uniqueArray = [...new Set(array)];
-console.log(uniqueArray); // [1, 2, 3]
+- Case 1:
+
+```javascript
+console.log([...new Set([1, 2, 2, 3, 3, 3])]); // [1, 2, 3]
 ```
+
+- Case 2:
 
 ```javascript
 const Champions = [
@@ -39,7 +41,6 @@ const Champions = [
   },
 ];
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 const uniqueChampionsName = [
   ...new Set(Champions.map((element) => element.name)),
 ];
@@ -47,5 +48,5 @@ const uniqueChampionsAge = [
   ...new Set(Champions.map((element) => element.age)),
 ];
 
-console.log(uniqueChampionsName); // ['Yasuo', 'Zed', 'Darius', "Kha'Zix"]
+console.log(uniqueChampionsName); // ['Yasuo', 'Zed', 'Darius', "Kha'Zix"]
 ```
