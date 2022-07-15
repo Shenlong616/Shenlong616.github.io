@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/falsy-value/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>JavaScript: a falsy value</title>
+      <title>JavaScript: falsy values</title>
       <link>https://shenlong616.github.io/posts/javascript/falsy/</link>
       <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/javascript/falsy/</guid>
-      <description>List of falsy values false 0 -0 0n &amp;quot;&amp;quot;, &#39;&#39;, `` — Empty string value. null undefined NaN — not a number. document.all Check falsy value is false Boolean() method: for (const item of [false, 0, -0, 0n, &amp;#34;&amp;#34;, ``, null, undefined, document.all]) { console.log(`${item} is ${Boolean(item)}`); } NOT (!) operator method: for (const item of [false, 0, -0, 0n, &amp;#34;&amp;#34;, ``, null, undefined, document.all]) { if (!item) { console.log(`${item} is ${!</description>
+      <description>List of falsy values false 0 -0 0n &amp;quot;&amp;quot;, &#39;&#39;, `` — Empty string value. null undefined NaN — not a number. document.all Check a falsy value is false Boolean() method: for (const item of [false, 0, -0, 0n, &amp;#34;&amp;#34;, null, undefined, document.all]) { console.log(`${item} is ${Boolean(item)}`); } NOT (!) operator method: for (const item of [false, 0, -0, 0n, &amp;#34;&amp;#34;, null, undefined, document.all]) { if (!item) { console.log(`${item} is ${!</description>
       <content:encoded><![CDATA[<h3 id="list-of-falsy-values">List of falsy values</h3>
 <ul>
 <li><code>false</code></li>
@@ -25,17 +25,17 @@
 <li><code>NaN</code> — not a number.</li>
 <li><code>document.all</code></li>
 </ul>
-<h3 id="check-falsy-value-is-false">Check falsy value is <code>false</code></h3>
+<h3 id="check-a-falsy-value-is-false">Check a falsy value is <code>false</code></h3>
 <ul>
 <li>Boolean() method:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">item</span> <span class="k">of</span> <span class="p">[</span><span class="kc">false</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="nx">n</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="sb">``</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">all</span><span class="p">])</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">item</span> <span class="k">of</span> <span class="p">[</span><span class="kc">false</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="nx">n</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">all</span><span class="p">])</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">item</span><span class="si">}</span><span class="sb"> is </span><span class="si">${</span><span class="nb">Boolean</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><ul>
 <li>NOT (<code>!</code>) operator method:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">item</span> <span class="k">of</span> <span class="p">[</span><span class="kc">false</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="nx">n</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="sb">``</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">all</span><span class="p">])</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">item</span> <span class="k">of</span> <span class="p">[</span><span class="kc">false</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="nx">n</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">all</span><span class="p">])</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">item</span><span class="si">}</span><span class="sb"> is </span><span class="si">${</span><span class="o">!!</span><span class="nx">item</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>

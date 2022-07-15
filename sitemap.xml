@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shenlong616.github.io/tags/callback/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shenlong616.github.io/categories/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,6 +14,9 @@
     <loc>https://shenlong616.github.io/tags/falsy-value/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://shenlong616.github.io/tags/function/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shenlong616.github.io/tags/javascript/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -18,6 +24,9 @@
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/javascript/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/javascript/callback/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/javascript/falsy/</loc>
@@ -100,6 +109,12 @@
   </url><url>
     <loc>https://shenlong616.github.io/posts/undefined/%E8%A8%98%E6%86%B6%E3%81%AE%E8%A8%98%E9%8C%B2/</loc>
     <lastmod>2021-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/film/</loc>
+    <lastmod>2015-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/film/the-witch-2015/</loc>
+    <lastmod>2015-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/archives/</loc>
   </url><url>

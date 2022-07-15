@@ -6,7 +6,7 @@
   margin-bottom: 20px;
 }
 header.header {
-  border-bottom: 1px solid;
+  border-bottom: 1.23px solid;
   border-image: linear-gradient(to right, var(--secondary), transparent);
   border-image-slice: 1;
 }
@@ -14,7 +14,7 @@ header.header {
   border: none;
 }
 .archive-year:not(:last-of-type) {
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
   border-image: linear-gradient(to right, var(--tertiary), transparent);
   border-image-slice: 1;
 }
@@ -64,6 +64,9 @@ img {
   padding-inline-start: 6px;
   padding-inline-end: calc(3px * 6.16);
   border-radius: 2px;
+  line-height: normal;
+}
+.post-tags a {
   color: var(--primary);
 }
 .post-meta {
