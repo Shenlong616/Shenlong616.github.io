@@ -36,27 +36,21 @@ img {
   border: none;
   background: linear-gradient(to right, var(--entry), transparent);
 }
-.terms-tags a {
+.terms-tags a,
+.post-tags a,
+.post-content code {
+  border: none !important;
   background: linear-gradient(
     to right,
     var(--tertiary),
     transparent
   ) !important;
-  padding: 3px;
+  padding: 1px;
   padding-inline-start: 6px;
   padding-inline-end: calc(3px * 6.16);
-}
-.post-tags a {
-  padding-inline-start: 6px;
-  padding-inline-end: calc(3px * 6.16);
-  border: none;
-  color: var(--primary);
+  border-radius: 2px;
   font-weight: 500;
-  background: linear-gradient(
-    to right,
-    var(--tertiary),
-    transparent
-  ) !important;
+  color: var(--primary);
 }
 .post-meta {
   margin-top: 5px;

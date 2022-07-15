@@ -27,15 +27,15 @@
 </tr>
 <tr>
 <td><code>0</code></td>
-<td>The Number zero (so, also <code>0.0</code>, etc., and <code>0x0</code>).</td>
+<td>The <code>Number</code> zero (so, also <code>0.0</code>, etc., and <code>0x0</code>).</td>
 </tr>
 <tr>
 <td><code>-0</code></td>
-<td>The Number negative zero (so, also <code>-0.0</code>, etc., and <code>-0x0</code>).</td>
+<td>The <code>Number</code> negative zero (so, also <code>-0.0</code>, etc., and <code>-0x0</code>).</td>
 </tr>
 <tr>
 <td><code>0n</code></td>
-<td>The <code>BigInt</code> zero (so, also <code>0x0n</code>). Note that there is no BigInt negative zero — the negation of <code>0n</code> is <code>0n</code>.</td>
+<td>The <code>BigInt</code> zero (so, also <code>0x0n</code>). Note that there is no <code>BigInt</code> negative zero — the negation of <code>0n</code> is <code>0n</code>.</td>
 </tr>
 <tr>
 <td><code>&quot;&quot;</code>, <code>''</code>, <code>``</code></td>
@@ -54,7 +54,7 @@
 <td>Not a number.</td>
 </tr>
 <tr>
-<td>document.all</td>
+<td><code>document.all</code></td>
 <td>Objects are falsy if and only if they have the <code>IsHTMLDDA</code> internal slot. That slot only exists in <code>document.all</code> and cannot be set using JavaScript.</td>
 </tr>
 </tbody>
