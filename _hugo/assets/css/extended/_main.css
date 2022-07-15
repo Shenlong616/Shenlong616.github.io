@@ -18,6 +18,12 @@ header.header {
   border-image: linear-gradient(to right, var(--tertiary), transparent);
   border-image-slice: 1;
 }
+.post-footer {
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, var(--tertiary), transparent);
+  border-image-slice: 1;
+  padding-top: 5px;
+}
 .toc summary {
   margin-inline-start: 0;
   text-align: center;
