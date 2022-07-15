@@ -49,7 +49,6 @@ img {
   padding-inline-start: 6px;
   padding-inline-end: calc(3px * 6.16);
   border-radius: 2px;
-  font-weight: 500;
   color: var(--primary);
 }
 .post-meta {
@@ -115,10 +114,6 @@ img {
 .main {
   max-width: calc(var(--main-width) + var(--gap) * 6.16);
 }
-/* dell hieu kieu lol gi? */
-code {
-  cursor: text;
-}
 .post-content pre code {
   color: #e9e9f4 !important;
   /* background: #282936 !important; */
@@ -130,7 +125,14 @@ code {
     padding-inline-end: calc(6.16px * 1.5);
   }
 }
-
 * {
   font-family: "Noto Sans", sans-serif !important;
+}
+.chroma span {
+  font-family: "Noto Sans Mono", monospace !important;
+}
+
+/* dell hieu kieu lol gi? */
+code {
+  cursor: text;
 }
