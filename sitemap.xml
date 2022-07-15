@@ -2,46 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shenlong616.github.io/posts/github/codediodeio/code-this-not-that-js/</loc>
-    <lastmod>2018-10-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/yeungon/in-javascript-we-trust/</loc>
-    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/ddos/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/iptables/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/iptables/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/iptables-rules/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/linux/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/</loc>
-    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/example/</loc>
-    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/example/syntax-theme/</loc>
-    <lastmod>2022-07-13T00:00:00+00:00</lastmod>
+    <loc>https://shenlong616.github.io/posts/false/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/array/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/categories/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/duplicate-free/</loc>
@@ -56,16 +23,22 @@
     <loc>https://shenlong616.github.io/tags/javascript-snippets/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/snippets/javascript-creates-a-duplicate-free-version-of-an-array/</loc>
+    <loc>https://shenlong616.github.io/posts/false/javascript-creates-a-duplicate-free-version-of-an-array/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/snippets/javascript-get-a-random-item-from-an-array/</loc>
+    <loc>https://shenlong616.github.io/posts/false/javascript-get-a-random-item-from-an-array/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/snippets/</loc>
+    <loc>https://shenlong616.github.io/posts/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/random/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/</loc>
+    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/unique/</loc>
@@ -92,77 +65,14 @@
     <loc>https://shenlong616.github.io/posts/undefined/%E3%81%BE%E3%81%9F%E3%82%AC%E3%83%BC%E3%83%AB-21/</loc>
     <lastmod>2022-03-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/tags/answers/</loc>
-    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/code-thi%E1%BA%BFu-nhi/</loc>
-    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/es6/</loc>
-    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/</loc>
-    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/javascript-tips/</loc>
-    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/javascript-tricks/</loc>
-    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/questions/</loc>
-    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://shenlong616.github.io/posts/undefined/days/</loc>
     <lastmod>2022-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/undefined/fight-or-run/</loc>
     <lastmod>2022-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/tags/awesome/</loc>
-    <lastmod>2021-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/vinta/awesome-python/</loc>
-    <lastmod>2021-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/python/</loc>
-    <lastmod>2021-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/python/</loc>
-    <lastmod>2021-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/scriptzteam/anti-ddos-iptables/</loc>
-    <lastmod>2021-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/firewall/</loc>
-    <lastmod>2021-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/linux/</loc>
-    <lastmod>2021-11-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://shenlong616.github.io/posts/undefined/hometown/</loc>
     <lastmod>2021-11-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/centos/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/k4yt3x/sysctl/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/kernel/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/performance/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/security/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/sysctl/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/ubuntu/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/undefined/next-t-rea/</loc>
     <lastmod>2021-09-04T00:00:00+00:00</lastmod>
@@ -176,89 +86,11 @@
     <loc>https://shenlong616.github.io/posts/undefined/%E8%8A%B1%E7%93%B6/</loc>
     <lastmod>2021-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/tags/git/</loc>
-    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/git/</loc>
-    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/git-tips/</loc>
-    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/git-tips/tips/</loc>
-    <lastmod>2021-08-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://shenlong616.github.io/posts/undefined/daydream/</loc>
     <lastmod>2021-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/github/tuannguyen2504/javascript-tips/</loc>
-    <lastmod>2021-07-14T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://shenlong616.github.io/posts/undefined/%E8%A8%98%E6%86%B6%E3%81%AE%E8%A8%98%E9%8C%B2/</loc>
     <lastmod>2021-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/es5/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/es7/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/asabeneh/javascript-for-everyone/</loc>
-    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/alexghergh/python-tricks/</loc>
-    <lastmod>2020-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/python-tips/</loc>
-    <lastmod>2020-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/python-tricks/</loc>
-    <lastmod>2020-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/python3/</loc>
-    <lastmod>2020-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/catalinpit/js-tips-and-tricks/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/github/wcarhart/pytricks-py/</loc>
-    <lastmod>2020-01-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/algolia/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/algolia/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/angular/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/angular/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/snippets/angular-algolia-instantsearch/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/jsx/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/react/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/react/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/snippets/react-algolia-instantsearch/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/svelte/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/svelte/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/snippets/svelte-algolia-instantsearch/</loc>
-    <lastmod>2019-08-25T13:07:30-07:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/archives/</loc>
   </url><url>
