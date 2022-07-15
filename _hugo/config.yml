@@ -76,6 +76,7 @@ params:
   TocOpen: true
   ShowAllPagesInArchive: true
   # disableAnchoredHeadings: true
+  disableScrollToTop: true
 
   schema:
     publisherType: "Person"

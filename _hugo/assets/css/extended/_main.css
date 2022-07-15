@@ -1,7 +1,22 @@
 .breadcrumbs {
-  border-bottom: 1px solid var(--tertiary);
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--tertiary), transparent);
+  border-image-slice: 1;
   padding-bottom: 5px;
   margin-bottom: 20px;
+}
+header.header {
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, var(--secondary), transparent);
+  border-image-slice: 1;
+}
+.archive-month:not(:last-of-type) {
+  border: none;
+}
+.archive-year:not(:last-of-type) {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, var(--tertiary), transparent);
+  border-image-slice: 1;
 }
 .toc summary {
   margin-inline-start: 0;

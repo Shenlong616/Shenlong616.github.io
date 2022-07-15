@@ -2,7 +2,7 @@
   pointer-events: none;
 }
 #nprogress .bar {
-  background: var(--primary);
+  background: linear-gradient(to right, var(--primary), transparent) !important;
   height: 2px;
   left: 0;
   position: fixed;
@@ -11,8 +11,6 @@
   z-index: 1031;
 }
 #nprogress .peg {
-  /* -webkit-box-shadow: 0 0 10px var(--primary), 0 0 5px var(--primary);
-  box-shadow: 0 0 10px var(--primary), 0 0 5px var(--primary); */
   display: block;
   height: 100%;
   opacity: 1;
