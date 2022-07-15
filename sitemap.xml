@@ -2,43 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shenlong616.github.io/posts/false/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
+    <loc>https://shenlong616.github.io/categories/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/falsey-value/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/falsy-value/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/javascript/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/categories/javascript/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/javascript/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/javascript/falsy/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/array/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/duplicate-free/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/tags/javascript/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/javascript/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://shenlong616.github.io/tags/javascript-snippets/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/false/javascript-creates-a-duplicate-free-version-of-an-array/</loc>
+    <loc>https://shenlong616.github.io/posts/javascript/creates-a-duplicate-free-version-of-an-array/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/false/javascript-get-a-random-item-from-an-array/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/</loc>
+    <loc>https://shenlong616.github.io/posts/javascript/get-a-random-item-from-an-array/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/random/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/unique/</loc>

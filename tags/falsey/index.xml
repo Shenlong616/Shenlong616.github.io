@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>falsey on Shenlong616</title>
+    <link>https://shenlong616.github.io/tags/falsey/</link>
+    <description>Recent content in falsey on Shenlong616</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/falsey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript: a falsy value</title>
+      <link>https://shenlong616.github.io/posts/javascript/falsy/</link>
+      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/javascript/falsy/</guid>
+      <description>Value Description false The keyword false. 0 The Number zero (so, also 0.0, etc., and 0x0). -0 The Number negative zero (so, also -0.0, etc., and -0x0). 0n The BigInt zero (so, also 0x0n). Note that there is no BigInt negative zero — the negation of 0n is 0n. &amp;quot;&amp;quot;, &#39;&#39;, `` Empty string value. null null — the absence of any value. undefined undefined — the primitive value. NaN NaN — not a number.</description>
+      <content:encoded><![CDATA[<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>false</code></td>
+<td>The keyword <code>false</code>.</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>The Number zero (so, also <code>0.0</code>, etc., and <code>0x0</code>).</td>
+</tr>
+<tr>
+<td><code>-0</code></td>
+<td>The Number negative zero (so, also <code>-0.0</code>, etc., and <code>-0x0</code>).</td>
+</tr>
+<tr>
+<td><code>0n</code></td>
+<td>The BigInt zero (so, also <code>0x0n</code>). Note that there is no BigInt negative zero — the negation of <code>0n</code> is <code>0n</code>.</td>
+</tr>
+<tr>
+<td><code>&quot;&quot;</code>, <code>''</code>, <code>``</code></td>
+<td>Empty string value.</td>
+</tr>
+<tr>
+<td>null</td>
+<td>null — the absence of any value.</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>undefined — the primitive value.</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>NaN — not a number.</td>
+</tr>
+<tr>
+<td>document.all</td>
+<td>Objects are falsy if and only if they have the IsHTMLDDA internal slot. That slot only exists indocument.all and cannot be set using JavaScript.</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

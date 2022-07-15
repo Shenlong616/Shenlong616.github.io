@@ -5,10 +5,7 @@ tags: ["javascript", "javascript snippets", "duplicate-free", "unique", "array"]
 categories: ["JavaScript"]
 canonicalURL: "https://viblo.asia/p/javascript-unique-array-bai-toan-quoc-dan-924lJGdW5PM"
 # ShowCanonicalLink: true
-showToc: false
 ---
-
-### Case 1
 
 ```javascript
 const array = [1, 2, 2, 3, 3, 3];
@@ -17,8 +14,6 @@ const array = [1, 2, 2, 3, 3, 3];
 const uniqueArray = [...new Set(array)];
 console.log(uniqueArray); // [1, 2, 3]
 ```
-
-### Case 2
 
 ```javascript
 const Champions = [
