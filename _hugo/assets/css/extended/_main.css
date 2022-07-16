@@ -18,6 +18,11 @@ header.header {
   border-image: linear-gradient(to right, var(--tertiary), transparent);
   border-image-slice: 1;
 }
+.logo a {
+  background: linear-gradient(to right, var(--primary) 89%, transparent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .toc summary {
   margin-inline-start: 0;
   text-align: center;
