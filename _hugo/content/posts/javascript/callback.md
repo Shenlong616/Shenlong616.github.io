@@ -18,10 +18,10 @@ const myArray3 = [
   },
 ];
 
-[...myArray1[0].helloText, ...myArray2, "1998"].map((value) => {
+[...myArray1[0].helloText, ...myArray2, " "].map((value) => {
   myArray3[0].function(value);
 });
 
-console.log(`${fullText.trim()}!`); // hello world 1998!
-console.log(fullText.length); // 17
+console.log(`${fullText.trim()}!`); // hello world!
+console.log(fullText.length); // 14
 ```

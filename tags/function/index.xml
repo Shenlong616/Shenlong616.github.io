@@ -5,14 +5,37 @@
     <link>https://shenlong616.github.io/tags/function/</link>
     <description>Recent content in function on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/function/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/function/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript: default parameter values</title>
+      <link>https://shenlong616.github.io/posts/javascript/default-parameters/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/javascript/default-parameters/</guid>
+      <description>const functionName = ( defaultParameter1 = &amp;#34;hello&amp;#34;, defaultParameter2 = () =&amp;gt; &amp;#34;world&amp;#34;, defaultParameter3 = [{ otherText: &amp;#34;!&amp;#34; }] ) =&amp;gt; { console.log( `${defaultParameter1} ${defaultParameter2()}${ defaultParameter3[0].otherText }` ); }; functionName(); // hello world! </description>
+      <content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">functionName</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">defaultParameter1</span> <span class="o">=</span> <span class="s2">&#34;hello&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">defaultParameter2</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s2">&#34;world&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">defaultParameter3</span> <span class="o">=</span> <span class="p">[{</span> <span class="nx">otherText</span><span class="o">:</span> <span class="s2">&#34;!&#34;</span> <span class="p">}]</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="sb">`</span><span class="si">${</span><span class="nx">defaultParameter1</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">defaultParameter2</span><span class="p">()</span><span class="si">}${</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">defaultParameter3</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">otherText</span>
+</span></span><span class="line"><span class="cl">    <span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">functionName</span><span class="p">();</span> <span class="c1">// hello world!
+</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>JavaScript: callback Function</title>
       <link>https://shenlong616.github.io/posts/javascript/callback/</link>
       <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/javascript/callback/</guid>
-      <description>let fullText = &amp;#34;&amp;#34;; const myArray1 = [{ helloText: [&amp;#34;hello&amp;#34;] }]; const myArray2 = [&amp;#34;world&amp;#34;]; const myArray3 = [ { function(parameter) { fullText += `${parameter} `; }, }, ]; [...myArray1[0].helloText, ...myArray2, &amp;#34;1998&amp;#34;].map((value) =&amp;gt; { myArray3[0].function(value); }); console.log(`${fullText.trim()}!`); // hello world 1998! console.log(fullText.length); // 17 </description>
+      <description>let fullText = &amp;#34;&amp;#34;; const myArray1 = [{ helloText: [&amp;#34;hello&amp;#34;] }]; const myArray2 = [&amp;#34;world&amp;#34;]; const myArray3 = [ { function(parameter) { fullText += `${parameter} `; }, }, ]; [...myArray1[0].helloText, ...myArray2, &amp;#34; &amp;#34;].map((value) =&amp;gt; { myArray3[0].function(value); }); console.log(`${fullText.trim()}!`); // hello world! console.log(fullText.length); // 14 </description>
       <content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">fullText</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myArray1</span> <span class="o">=</span> <span class="p">[{</span> <span class="nx">helloText</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;hello&#34;</span><span class="p">]</span> <span class="p">}];</span>
@@ -25,12 +48,12 @@
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl"><span class="p">];</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[...</span><span class="nx">myArray1</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">helloText</span><span class="p">,</span> <span class="p">...</span><span class="nx">myArray2</span><span class="p">,</span> <span class="s2">&#34;1998&#34;</span><span class="p">].</span><span class="nx">map</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="p">[...</span><span class="nx">myArray1</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">helloText</span><span class="p">,</span> <span class="p">...</span><span class="nx">myArray2</span><span class="p">,</span> <span class="s2">&#34; &#34;</span><span class="p">].</span><span class="nx">map</span><span class="p">((</span><span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">myArray3</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">fullText</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span> <span class="c1">// hello world 1998!
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fullText</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="c1">// 17
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">fullText</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span> <span class="c1">// hello world!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fullText</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="c1">// 14
 </span></span></span></code></pre></div>]]></content:encoded>
     </item>
     

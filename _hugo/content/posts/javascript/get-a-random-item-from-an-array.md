@@ -13,6 +13,6 @@ const randomArray = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)];
 };
 
-console.log(randomArray(array)); // random 1 to 3
-console.log(randomArray([...array, ...array2])); // random 1 to 6
+console.log(randomArray(array)); // 1, 2 or 3
+console.log(randomArray([...array, ...array2])); // 1, 2, 3, 4, 5 or 6
 ```

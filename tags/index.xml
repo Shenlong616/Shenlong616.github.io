@@ -5,7 +5,67 @@
     <link>https://shenlong616.github.io/tags/</link>
     <description>Recent content in Tags on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>default</title>
+      <link>https://shenlong616.github.io/tags/default/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/tags/default/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>function</title>
+      <link>https://shenlong616.github.io/tags/function/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/tags/function/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://shenlong616.github.io/tags/javascript/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/tags/javascript/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>number</title>
+      <link>https://shenlong616.github.io/tags/number/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/tags/number/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>parameter</title>
+      <link>https://shenlong616.github.io/tags/parameter/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/tags/parameter/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>random</title>
+      <link>https://shenlong616.github.io/tags/random/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/tags/random/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>callback</title>
       <link>https://shenlong616.github.io/tags/callback/</link>
@@ -37,26 +97,6 @@
     </item>
     
     <item>
-      <title>function</title>
-      <link>https://shenlong616.github.io/tags/function/</link>
-      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://shenlong616.github.io/tags/function/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://shenlong616.github.io/tags/javascript/</link>
-      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://shenlong616.github.io/tags/javascript/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
       <title>array</title>
       <link>https://shenlong616.github.io/tags/array/</link>
       <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
@@ -82,16 +122,6 @@
       <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/tags/javascript-snippets/</guid>
-      <description></description>
-      <content:encoded><![CDATA[]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>random</title>
-      <link>https://shenlong616.github.io/tags/random/</link>
-      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://shenlong616.github.io/tags/random/</guid>
       <description></description>
       <content:encoded><![CDATA[]]></content:encoded>
     </item>

@@ -13,9 +13,9 @@ ShowCanonicalLink: true
 - `0`
 - `-0`
 - `0n`
-- `""`, `''`, ` `` ` — Empty string value.
-- `null`
-- `undefined`
+- `""`, `''`, ` `` ` — empty string value.
+- `null` — the absence of any value.
+- `undefined` — the primitive value.
 - `NaN` — not a number.
 - `document.all`
 
@@ -24,7 +24,7 @@ ShowCanonicalLink: true
 - Boolean() method:
 
 ```javascript
-for (const item of [false, 0, -0, 0n, "", null, undefined, document.all]) {
+for (const item of [false, 0, "", null, undefined, document.all]) {
   console.log(`${item} is ${Boolean(item)}`);
 }
 ```
@@ -32,7 +32,7 @@ for (const item of [false, 0, -0, 0n, "", null, undefined, document.all]) {
 - NOT (`!`) operator method:
 
 ```javascript
-for (const item of [false, 0, -0, 0n, "", null, undefined, document.all]) {
+for (const item of [false, 0, "", null, undefined, document.all]) {
   if (!item) {
     console.log(`${item} is ${!!item}`);
   }
