@@ -154,3 +154,21 @@ img {
 code {
   cursor: text;
 }
+
+/* restyle */
+
+:root {
+  --header: #fff;
+  --test: rgb(245, 245, 245);
+}
+.dark {
+  --header: #000;
+  --test: rgb(29, 30, 32);
+}
+header.header {
+  background-color: var(--header);
+  background: linear-gradient(to right, var(--header) 79%, transparent 100%);
+}
+body {
+  background-color: var(--test);
+}
