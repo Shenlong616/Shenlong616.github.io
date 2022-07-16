@@ -3,8 +3,6 @@ title: "JavaScript: falsy values"
 date: 2022-07-15
 tags: ["javascript", "falsy value", "falsey value"]
 categories: ["JavaScript"]
-canonicalURL: "https://developer.mozilla.org/en-US/docs/Glossary/Falsy"
-ShowCanonicalLink: true
 ---
 
 ### List of falsy values

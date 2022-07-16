@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shenlong616.github.io/tags/616/</loc>
+    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shenlong616.github.io/categories/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -24,6 +27,12 @@
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/javascript/get-a-random-number/</loc>
+    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/javascript/logical-not/</loc>
+    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/logical-not/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/number/</loc>
