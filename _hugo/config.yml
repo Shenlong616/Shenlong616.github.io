@@ -57,7 +57,7 @@ params:
   # comments: false
   # disableSpecial1stPost: true
   # images: ["papermod-cover.png"] # Link or path of image for opengraph, twitter-cards
-  defaultTheme: dark # auto, light, dark
+  defaultTheme: auto # auto, light, dark
   description: "Shenlong's blog!"
   disableThemeToggle: false
   displayFullLangName: true

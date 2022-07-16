@@ -159,16 +159,16 @@ code {
 
 :root {
   --header: #fff;
-  --test: rgb(245, 245, 245);
+  --body: #f5f5f5;
 }
 .dark {
   --header: #000;
-  --test: rgb(29, 30, 32);
+  --body: #1d1e20;
 }
 header.header {
   background-color: var(--header);
   background: linear-gradient(to right, var(--header) 79%, transparent 100%);
 }
 body {
-  background-color: var(--test);
+  background-color: var(--body);
 }
