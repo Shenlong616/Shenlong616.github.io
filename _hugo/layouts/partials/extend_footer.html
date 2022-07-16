@@ -36,6 +36,23 @@
       return array[Math.floor(Math.random() * array.length)];
     };
 
+    const createElement1 = () => {
+      const spanElement = document.createElement("span");
+      const textNode = document.createTextNode(
+        `${randomArray(multilanguageHelloText).hello}`
+      );
+
+      spanElement.appendChild(textNode);
+
+      Object.assign(spanElement.style, {
+        color: "var(--secondary)",
+        fontSize: "0.616em",
+      });
+
+      document.querySelector(".logo").appendChild(spanElement);
+    };
+    createElement1();
+
     if (ScrollReveal().noop) {
       void this;
     } else {
@@ -52,69 +69,6 @@
         beforeReveal: () => {},
         afterReveal: () => {},
       };
-
-      const createElement1 = () => {
-        const spanElement = document.createElement("span");
-        const textNode = document.createTextNode(
-          `${
-            Object.values(
-              randomArray([
-                { Bengali: "নমস্কার!" },
-                { boro: "खुलुम्बाइ!" },
-                { Bulgarian: "Здравей!" },
-                { Chinese: "你好!" },
-                { Croat: "Zdravo!" },
-                { Czech: "Ahoj!" },
-                { Danish: "Hej!" },
-                { Dutch: "Hallo!" },
-                { English: "Hello!" },
-                { Esperanto: "Saluton!" },
-                { Estnisch: "Tere!" },
-                { Farsi: "Salam!" },
-                { Fidschi: "Bula!" },
-                { Finnish: "Terve!" },
-                { Flemish: "Hallo!" },
-                { French: "Salut!" },
-                { Greek: "Γειά!" },
-                { Hawaiian: "Aloha!" },
-                { Hebrew: "!שלום" },
-                { Hindi: "नमस्ते!" },
-                { Italian: "Ciao!" },
-                { Japanese: "こんにちは!" },
-                { Khmer: "Tchum-reaup Suw!" },
-                { Korean: "안영하세요!" },
-                { Lettish: "Čau!" },
-                { Lithuanian: "Labas!" },
-                { Malaiisch: "Hai!" },
-                { Mongolian: "Сайн уу!" },
-                { Norwegian: "Hei!" },
-                { Polish: "Cześć!" },
-                { Portuguese: "Olá!" },
-                { Rumanian: "Salut!" },
-                { Russian: "Привет!" },
-                { Slovak: "Ahoj!" },
-                { Spanish: "Hola!" },
-                { Swedish: "Hej!" },
-                { Swiss_German: "Hoi!" },
-                { Tamil_Nadu: "வணக்கம்!" },
-                { Thai: "สวัสดีคะ!" },
-                { Turkish: "Merhaba!" },
-                { Vietnamese: "Xin Chào!" },
-              ])
-            )[0]
-          }`
-        );
-
-        spanElement.appendChild(textNode);
-
-        Object.assign(spanElement.style, {
-          color: "var(--secondary)",
-          fontSize: "0.616em",
-        });
-
-        document.querySelector(".logo").appendChild(spanElement);
-      };
-      createElement1();
 
       ScrollReveal().reveal(
         document.querySelectorAll(".logo")[0].childNodes[0],
