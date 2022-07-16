@@ -60,6 +60,7 @@
         desktop: true,
         mobile: false,
         delay: 0,
+        interval: 0,
         duration: 300,
         easing: "ease-out",
         reset: true,
@@ -92,13 +93,12 @@
         }
       );
 
-      for (const item of document.querySelectorAll("ul#menu")[0].childNodes) {
-        ScrollReveal().reveal(item, {
-          ...defaultConfig,
-          delay: (defaultConfig.delay += 25),
-          origin: "left",
-        });
-      }
+      ScrollReveal().reveal("#menu li", {
+        ...defaultConfig,
+        delay: (defaultConfig.delay += 150),
+        interval: 75,
+        origin: "left",
+      });
     }
 
     async function randomQuote() {
