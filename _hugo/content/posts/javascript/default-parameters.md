@@ -10,13 +10,10 @@ const functionName = (
   defaultParameter1 = "hello",
   defaultParameter2 = () => "world",
   defaultParameter3 = [{ otherText: "!" }]
-) => {
-  console.log(
-    `${defaultParameter1} ${defaultParameter2()}${
-      defaultParameter3[0].otherText
-    }`
-  );
-};
+) =>
+  `${defaultParameter1} ${defaultParameter2()}${
+    defaultParameter3[0].otherText
+  }`;
 
-functionName(); // hello world!
+console.log(functionName()); // hello world!
 ```

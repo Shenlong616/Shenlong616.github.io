@@ -23,5 +23,4 @@ const myArray3 = [
 });
 
 console.log(`${fullText.trim()}!`); // hello world!
-console.log(fullText.length); // 14
 ```
