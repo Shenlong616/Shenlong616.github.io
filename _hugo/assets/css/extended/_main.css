@@ -6,8 +6,12 @@
   margin-bottom: 20px;
 }
 header.header {
-  border-bottom: 1.23px solid;
-  border-image: linear-gradient(to right, var(--secondary), transparent);
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+    to right,
+    var(--secondary) 79%,
+    transparent 100%
+  );
   border-image-slice: 1;
 }
 .archive-month:not(:last-of-type) {
