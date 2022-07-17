@@ -5,11 +5,11 @@ date: 1998-01-10
 # categories: [""]
 # author: ""
 cover:
-  image: "assets/images/11/2.png"
+  image: "assets/images/11/2.jpg"
 #   hidden: false
 draft: true
 ---
 
-![](/../assets/images/11/2.png)
-![](/../assets/images/11/3.png)
-![](/../assets/images/11/4.png)
+![](/../assets/images/11/3.jpg)
+![](/../assets/images/11/4.jpg)
+![](/../assets/images/11/5.jpg)
