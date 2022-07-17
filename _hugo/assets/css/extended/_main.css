@@ -52,11 +52,6 @@ img {
   /* box-shadow: 0 10px 15px var(--theme) !important;
   border: 1px solid var(--border) !important; */
 }
-.post-entry {
-  padding: calc(var(--gap) - 5px);
-  border: none;
-  background: linear-gradient(to right, var(--entry), transparent);
-}
 .terms-tags a {
   border: none !important;
   background: none !important;
@@ -103,22 +98,6 @@ img {
   background: linear-gradient(to right, var(--border), transparent);
 }
 
-.pagination .next {
-  color: var(--content);
-  background: linear-gradient(to left, var(--entry), transparent);
-}
-.pagination .next:hover {
-  background: linear-gradient(to left, var(--tertiary), transparent);
-}
-
-.pagination .prev {
-  color: var(--content);
-  background: linear-gradient(to right, var(--entry), transparent);
-}
-.pagination .prev:hover {
-  background: linear-gradient(to right, var(--tertiary), transparent);
-}
-
 .post-tags a:active,
 .copy-code:active,
 .pagination .next:active,
@@ -161,19 +140,19 @@ code {
 /* reColour */
 
 :root {
-  --color_1: white;
-  --color_2: whitesmoke;
-  --color_3: white;
+  --color_1: whitesmoke;
+  --color_2: white;
+  --color_3: whitesmoke;
   --color_4a: black;
   --color_4b: white;
   --color_5: blue;
   --color_6: crimson;
 }
 .dark {
-  --color_1: black;
-  --color_2: #121212;
+  --color_1: #121212;
+  --color_2: black;
   --color_3: #1f1b24;
-  --color_4a: antiquewhite;
+  --color_4a: ghostwhite;
   --color_4b: black;
   --color_5: cyan;
   --color_6: lime;
@@ -182,6 +161,21 @@ code {
 header.header {
   background-color: var(--color_1);
 }
+.post-entry {
+  padding: calc(var(--gap) - 5px);
+  border: none;
+  background: linear-gradient(to right, var(--color_1), transparent);
+}
+
+.pagination .next {
+  color: var(--content);
+  background: linear-gradient(to left, var(--color_1), transparent) !important;
+}
+.pagination .prev {
+  color: var(--content);
+  background: linear-gradient(to right, var(--color_1), transparent) !important;
+}
+
 body,
 .list {
   background-color: var(--color_2) !important;
