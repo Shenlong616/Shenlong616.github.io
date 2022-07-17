@@ -2,8 +2,8 @@
   pointer-events: none;
 }
 #nprogress .bar {
-  background: linear-gradient(to right, var(--primary), transparent) !important;
-  height: 2px;
+  background: var(--primary);
+  height: 1px;
   left: 0;
   position: fixed;
   top: 0;

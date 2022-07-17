@@ -14,7 +14,7 @@
       <guid>https://shenlong616.github.io/posts/block-ads-on-spotify/</guid>
       <description>SpotX System requirements OS: Windows 7-11 Spotify: Recommended official version 1.1.89.862 For Windows Desktop only (Microsoft store version is not suitable). PowerShell: 3 or higher Features Blocks all banner, video and audio ads in the client Unlocks the skip function of any track Full screen mode activated Hidden podcasts and episodes from the homepage (optional) Blocks automatic updates (optional) Automatic cache clearing (optional) Enabled enhance playlist Enabled enhance liked songs UI Enabled new lyrics Enabled new search with chips experience Enabled a condensed discography shelf on artist pages Enabled Ignore In Recommendations Activated &amp;ldquo;Made For You&amp;rdquo; in the left sidebar Disabled Sentry (Prevented Sentry from sending console log/error/warning to Spotify developers) Disabled logging (Stopped various elements to log user interaction) Removed RTL rules (Removed all right-to-left CSS rules to simplify CSS files) Code minification Installation Just download and run Install.</description>
       <content:encoded><![CDATA[<h1 id="spotx">SpotX</h1>
-<p><img loading="lazy" src="/assets/images/0/logo.png" alt=""  />
+<p><img loading="lazy" src="/assets/images/0/logo.png#center" alt=""  />
 </p>
 <h3 id="system-requirements">System requirements</h3>
 <ul>
@@ -217,7 +217,7 @@
       <pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/judas-kiss/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/2/misato_fukagawa_vol27_1.jpg" alt="misato_fukagawa_vol27"  />
 
 <img loading="lazy" src="/assets/images/2/misato_fukagawa_vol27_2.jpg" alt="misato_fukagawa_vol27"  />
@@ -305,7 +305,7 @@
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/x-starring/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/5/morishima_ruieikoshi_003.jpg" alt="morishima_ruieikoshi"  />
 
 <img loading="lazy" src="/assets/images/5/morishima_ruieikoshi_015.jpg" alt="morishima_ruieikoshi"  />
@@ -321,7 +321,7 @@
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/%E3%81%B5%E3%81%9F%E3%82%8A/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/3/motohiko_hasui_001.jpg" alt="motohiko_hasui_vol26"  />
 
 <img loading="lazy" src="/assets/images/3/motohiko_hasui_003.jpg" alt="motohiko_hasui_vol26"  />
@@ -367,7 +367,7 @@
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/%E6%84%9B%E6%83%85%E8%A6%B3%E5%AF%9Fneo/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/4/aizawa_yoshikazu_vol26_003.jpg" alt="aizawa_yoshikazu_vol26"  />
 
 <img loading="lazy" src="/assets/images/4/aizawa_yoshikazu_vol26_004-2.jpg" alt="aizawa_yoshikazu_vol26"  />
@@ -399,7 +399,7 @@
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/%E5%A4%8F%E3%81%AE%E8%A8%98%E6%86%B6/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/7/nina_r_02.jpg" alt="nina_r"  />
 
 <img loading="lazy" src="/assets/images/7/nina_r_03.jpg" alt="nina_r"  />
@@ -475,7 +475,7 @@
       <pubDate>Fri, 04 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/%E3%81%BE%E3%81%9F%E3%82%AC%E3%83%BC%E3%83%AB-21/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/6/takayuki_kozuka_01.jpg" alt="takayuki_kozuka_vol25"  />
 
 <img loading="lazy" src="/assets/images/6/takayuki_kozuka_02.jpg" alt="takayuki_kozuka_vol25"  />
@@ -513,7 +513,7 @@
       <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/days/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/10/turky1.jpg" alt="turkey_vol24"  />
 
 <img loading="lazy" src="/assets/images/10/turky3.jpg" alt="turkey_vol24"  />
@@ -561,7 +561,7 @@
       <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/fight-or-run/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/9/misato_fukagawa_1.jpg" alt="misato_fukagawa_vol24"  />
 
 <img loading="lazy" src="/assets/images/9/misato_fukagawa_2.jpg" alt="misato_fukagawa_vol24"  />
@@ -593,7 +593,7 @@
       <pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/hometown/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/8/tsuji_01.jpg" alt="yutaro_tsuji"  />
 
 <img loading="lazy" src="/assets/images/8/tsuji_03.jpg" alt="yutaro_tsuji"  />
@@ -643,7 +643,7 @@
       <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/next-t-rea/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/15/ryoma_nishiki_5.jpg" alt="ryoma_nishiki"  />
 
 <img loading="lazy" src="/assets/images/15/ryoma_nishiki_6.jpg" alt="ryoma_nishiki"  />
@@ -677,7 +677,7 @@
       <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/%E3%82%BB%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AA%E3%82%93%E3%81%A6%E8%AA%B0%E3%81%A8%E3%82%84%E3%81%A3%E3%81%A6%E3%82%82%E5%90%8C%E3%81%98%E3%81%A7%E3%81%99/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/14/sayuri_1.jpg" alt="sayuri"  />
 
 <img loading="lazy" src="/assets/images/14/sayuri_4.jpg" alt="sayuri"  />
@@ -727,7 +727,7 @@
       <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/%E7%94%9F%E3%81%AC%E3%82%8B%E3%81%84%E7%86%B1/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/12/rio_vol22_10.jpg" alt="rio_vol22"  />
 
 <img loading="lazy" src="/assets/images/12/rio_vol22_15.jpg" alt="rio_vol22"  />
@@ -743,7 +743,7 @@
       <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/%E8%8A%B1%E7%93%B6/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/13/turkey_vol22_9.jpg" alt="turkey_vol22"  />
 
 <img loading="lazy" src="/assets/images/13/turkey_vol22_11.jpg" alt="turkey_vol22"  />
@@ -773,7 +773,7 @@
       <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/daydream/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/17/rio_001.jpg" alt="rio_vol21"  />
 
 <img loading="lazy" src="/assets/images/17/rio_002.jpg" alt="rio_vol21"  />
@@ -817,7 +817,7 @@
       <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/undefined/%E8%A8%98%E6%86%B6%E3%81%AE%E8%A8%98%E9%8C%B2/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/16/AMN0001.jpg" alt="isao_amano_vol21"  />
 
 <img loading="lazy" src="/assets/images/16/AMN0003.jpg" alt="isao_amano_vol21"  />
@@ -853,7 +853,7 @@
       <pubDate>Fri, 23 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/film/the-witch-2015/</guid>
-      <description></description>
+      <description> </description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="/assets/images/18/the-witch-2015-1.jpg" alt="the-witch-2015"  />
 
 <img loading="lazy" src="/assets/images/18/the-witch-2015-2.jpg" alt="the-witch-2015"  />

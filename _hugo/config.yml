@@ -60,7 +60,7 @@ params:
   defaultTheme: auto # auto, light, dark
   description: "Shenlong's blog!"
   disableThemeToggle: false
-  displayFullLangName: true
+  displayFullLangName: false
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   keywords: [blog, javascript tips, javascript tricks, dev]
   math: false #

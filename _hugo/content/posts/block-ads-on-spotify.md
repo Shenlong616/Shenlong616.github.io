@@ -7,7 +7,7 @@ categories: ["Ad blocking", "Windows"]
 
 # SpotX
 
-![](/assets/images/0/logo.png)
+![](/assets/images/0/logo.png#center)
 
 ### System requirements
 
