@@ -1,42 +1,10 @@
 <script defer>
   document.addEventListener("DOMContentLoaded", () => {
-    const initNProgress = (parameter) => {
-      NProgress.set(parameter);
-      NProgress.done(true);
-    };
-
-    initNProgress(0.1);
-
-    if (document.getElementsByTagName("input").length > 0) {
-      for (const item of document.getElementsByTagName("input")) {
-        item.addEventListener("input", () => {
-          initNProgress(0.1);
-        });
-      }
-    } else {
-      void this;
-    }
-
-    if (
-      document.querySelectorAll(".copy-code, .top-link, #theme-toggle").length >
-      0
-    ) {
-      for (const item of document.querySelectorAll(
-        ".copy-code, .top-link, #theme-toggle, .anchor, .toc a"
-      )) {
-        item.addEventListener("click", () => {
-          initNProgress(0.1);
-        });
-      }
-    } else {
-      void this;
-    }
-
     const randomArray = (array) => {
       return array[Math.floor(Math.random() * array.length)];
     };
 
-    const createElement1 = () => {
+    const createElementHelloText = () => {
       const spanElement = document.createElement("span");
       const textNode = document.createTextNode(
         `${randomArray(multilanguageHelloText).hello}`
@@ -51,55 +19,7 @@
 
       document.querySelector(".logo").appendChild(spanElement);
     };
-    createElement1();
-
-    if (ScrollReveal().noop) {
-      void this;
-    } else {
-      const defaultConfig = {
-        desktop: true,
-        mobile: false,
-        delay: 0,
-        interval: 0,
-        duration: 300,
-        easing: "ease-out",
-        reset: true,
-        distance: "6.16%",
-        origin: "bottom",
-        beforeReveal: () => {},
-        afterReveal: () => {},
-      };
-
-      ScrollReveal().reveal(
-        document.querySelectorAll(".logo")[0].childNodes[0],
-        {
-          ...defaultConfig,
-        }
-      );
-
-      ScrollReveal().reveal(
-        document.querySelectorAll(".logo")[0].childNodes[1],
-        {
-          ...defaultConfig,
-          delay: (defaultConfig.delay += 25),
-        }
-      );
-
-      ScrollReveal().reveal(
-        document.querySelectorAll(".logo")[0].childNodes[2],
-        {
-          ...defaultConfig,
-          delay: (defaultConfig.delay += 25),
-        }
-      );
-
-      ScrollReveal().reveal("#menu li", {
-        ...defaultConfig,
-        delay: (defaultConfig.delay += 25),
-        interval: 25,
-        origin: "left",
-      });
-    }
+    createElementHelloText();
 
     async function randomQuote() {
       // https://github.com/quotable-io/data/blob/master/data/quotes.json
@@ -125,12 +45,13 @@
       randomQuote();
     }
 
-    Object.assign(
-      [...document.querySelectorAll(".breadcrumbs a")].at(-1).style,
-      {
-        color: "var(--color_6)",
-        // borderBottom: "2px solid",
-      }
-    );
+    if (document.getElementsByClassName("breadcrumbs").length > 0) {
+      Object.assign(
+        [...document.querySelectorAll(".breadcrumbs a")].at(-1).style,
+        {
+          color: "var(--color_6)",
+        }
+      );
+    }
   });
 </script>
