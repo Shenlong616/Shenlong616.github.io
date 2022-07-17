@@ -1,11 +1,3 @@
-.breadcrumbs {
-  border-bottom: 1px solid;
-  border-image: linear-gradient(to right, var(--tertiary), transparent);
-  border-image-slice: 1;
-  font-weight: 500;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-}
 header.header {
   border-bottom: 1px solid var(--border);
   /* border-bottom: 1px solid;
@@ -201,4 +193,12 @@ body,
 }
 #menu .active {
   color: var(--color_6);
+}
+.breadcrumbs {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, var(--color_6), transparent);
+  border-image-slice: 1;
+  font-weight: 500;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
