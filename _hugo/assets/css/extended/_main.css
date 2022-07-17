@@ -196,3 +196,6 @@ body,
 #menu .active {
   color: var(--color_6);
 }
+.logo a {
+  color: var(--color_6);
+}
