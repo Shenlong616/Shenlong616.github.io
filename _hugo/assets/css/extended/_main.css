@@ -6,13 +6,14 @@
   margin-bottom: 20px;
 }
 header.header {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid;
   border-image: linear-gradient(
     to right,
     var(--secondary) 79%,
     transparent 100%
   );
-  border-image-slice: 1;
+  border-image-slice: 1; */
 }
 .archive-month:not(:last-of-type) {
   border: none;
@@ -57,16 +58,9 @@ img {
 }
 .terms-tags a {
   border: none !important;
-  background: linear-gradient(
-    to right,
-    var(--tertiary),
-    transparent
-  ) !important;
-  padding: 1px;
-  padding-inline-start: 6px;
-  padding-inline-end: calc(3px * 6.16);
-  border-radius: 2px;
-  line-height: normal;
+  background: none !important;
+  padding: 0;
+  border-radius: 0;
 }
 .post-tags a {
   background: none !important;
@@ -124,23 +118,19 @@ img {
   background: linear-gradient(to right, var(--tertiary), transparent);
 }
 
-#menu .active {
-  border-bottom: 0;
-  text-decoration: 2px line-through var(--primary);
-}
 .post-tags a:active,
 .copy-code:active,
 .pagination .next:active,
 .pagination .prev:active {
   transform: scale(0.96);
 }
-.archive-entry-title,
+/* .archive-entry-title,
 #menu a,
 .breadcrumbs a {
   font-weight: 500;
-}
+} */
 .main {
-  max-width: calc(var(--main-width) + var(--gap) * 6.16);
+  max-width: calc(var(--main-width) + var(--gap) * 4.56);
 }
 .post-content pre code {
   color: #e9e9f4 !important;
@@ -167,34 +157,47 @@ code {
   cursor: text;
 }
 
-/* restyle */
+/* reColour */
 
 :root {
-  --header: white;
-  --body: #f5f5f5;
-  --toc: white;
-  --code: navy;
-  --textCode: antiquewhite;
+  --color_1: white;
+  --color_2: whitesmoke;
+  --color_3: white;
+  --color_4a: black;
+  --color_4b: white;
+  --color_5: blue;
+  --color_6: crimson;
 }
 .dark {
-  --header: black;
-  --body: #1d1e20;
-  --toc: #2e2e33;
-  --code: antiquewhite;
-  --textCode: navy;
+  --color_1: black;
+  --color_2: #121212;
+  --color_3: #1f1b24;
+  --color_4a: antiquewhite;
+  --color_4b: black;
+  --color_5: cyan;
+  --color_6: lawngreen;
 }
+
 header.header {
-  background-color: var(--header);
-  /* background: linear-gradient(to right, var(--header) 79%, transparent 100%); */
+  background-color: var(--color_1);
 }
-body {
-  background-color: var(--body);
+body,
+.list {
+  background-color: var(--color_2) !important;
 }
 .toc {
-  background-color: var(--toc);
+  background-color: var(--color_3) !important;
 }
 .post-content code {
-  background-color: var(--code);
-  color: var(--textCode);
+  background-color: var(--color_4a);
+  color: var(--color_4b);
   font-weight: bold;
+}
+
+.terms-tags sup,
+.archive-count {
+  color: var(--color_5);
+}
+#menu .active {
+  color: var(--color_6);
 }
