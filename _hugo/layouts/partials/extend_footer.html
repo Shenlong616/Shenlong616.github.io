@@ -126,9 +126,7 @@
     }
 
     Object.assign(
-      document.querySelectorAll(".breadcrumbs a")[
-        document.querySelectorAll(".breadcrumbs a").length - 1
-      ].style,
+      [...document.querySelectorAll(".breadcrumbs a")].at(-1).style,
       {
         color: "var(--color_6)",
         // borderBottom: "2px solid",
