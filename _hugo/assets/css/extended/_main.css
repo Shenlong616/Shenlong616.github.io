@@ -142,14 +142,16 @@ code {
 
 :root {
   --color_1: whitesmoke;
-  --color_2: white;
+  --color_2a: white;
+  --color_2b: black;
   --color_3: whitesmoke;
   --color_4: blue;
   --color_5: crimson;
 }
 .dark {
   --color_1: #121212;
-  --color_2: black;
+  --color_2a: black;
+  --color_2b: white;
   --color_3: #1f1b24;
   --color_4: cyan;
   --color_5: lime;
@@ -175,17 +177,18 @@ header.header {
 
 body,
 .list {
-  background-color: var(--color_2) !important;
+  background-color: var(--color_2a) !important;
 }
 .toc {
   background-color: var(--color_3) !important;
 }
 .post-content code {
+  color: var(--color_2b);
   background-color: var(--color_3);
   font-weight: bold;
 }
 
-.terms-tags sup,
+.terms-tags strong sup,
 .archive-count {
   color: var(--color_4);
 }

@@ -5,7 +5,55 @@
     <link>https://shenlong616.github.io/tags/method/</link>
     <description>Recent content in method on Shenlong616</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 17 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/method/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://shenlong616.github.io/tags/method/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript: empty an Array?</title>
+      <link>https://shenlong616.github.io/posts/javascript/empty-an-array/</link>
+      <pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/javascript/empty-an-array/</guid>
+      <description>Declare A = []; Set splice() method B = [1, 2, 3]; // [1, 2, 3] B.splice(0, B.length); console.log(B); // [] </description>
+      <content:encoded><![CDATA[<h3 id="declare">Declare</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">A</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span></code></pre></div><h3 id="set">Set</h3>
+<ul>
+<li><code>splice()</code> method</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span> <span class="c1">// [1, 2, 3]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">B</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">B</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">B</span><span class="p">);</span> <span class="c1">// []
+</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>JavaScript: get the largest number of an Array</title>
+      <link>https://shenlong616.github.io/posts/javascript/get-the-largest-number-of-an-array/</link>
+      <pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/javascript/get-the-largest-number-of-an-array/</guid>
+      <description> Math.max() method console.log(Math.max(...[1, 2, 3, 4, 5, 6, 7, 8, 9])); // 9 </description>
+      <content:encoded><![CDATA[<ul>
+<li><code>Math.max()</code> method</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]));</span> <span class="c1">// 9
+</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>JavaScript: get the smallest number of an Array</title>
+      <link>https://shenlong616.github.io/posts/javascript/get-the-smallest-number-of-an-array/</link>
+      <pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://shenlong616.github.io/posts/javascript/get-the-smallest-number-of-an-array/</guid>
+      <description> Math.min() method console.log(Math.min(...[9, 8, 7, 6, 5, 4, 3, 2, 1])); // 1 </description>
+      <content:encoded><![CDATA[<ul>
+<li><code>Math.min()</code> method</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(...[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]));</span> <span class="c1">// 1
+</span></span></span></code></pre></div>]]></content:encoded>
+    </item>
+    
     <item>
       <title>JavaScript: get the first element of an Array</title>
       <link>https://shenlong616.github.io/posts/javascript/get-the-first-element-of-an-array/</link>

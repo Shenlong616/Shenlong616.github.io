@@ -5,6 +5,7 @@ tags:
   [
     "javascript",
     "javascript snippets",
+    "duplicate",
     "duplicate-free",
     "unique",
     "array",

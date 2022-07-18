@@ -50,5 +50,12 @@
         -1
       ).style.cssText = `color: var(--color_5) !important;`;
     }
+
+    var ggggg = [];
+    for (const item of document.querySelectorAll(".terms-tags strong sup")) {
+      ggggg.push(item.childNodes[0].data);
+    }
+
+    console.log(Math.max(...[...new Set(ggggg)]));
   });
 </script>
