@@ -5,13 +5,11 @@ tags: ["javascript", "empty", "array", "javascript snippets", "method"]
 categories: ["JavaScript"]
 ---
 
-### Declare
+- `[]`
 
 ```javascript
 A = []; // []
 ```
-
-### Set
 
 - `splice()` method
 
