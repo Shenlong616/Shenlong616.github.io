@@ -2,84 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://shenlong616.github.io/tags/array/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/css/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/empty/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/javascript/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/javascript/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/javascript-snippets/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/custom-css-styles/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/empty-an-array/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/get-the-largest-number-of-an-array/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/get-the-smallest-number-of-an-array/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/largest-number/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/method/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/number/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/property/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/smallest-number/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/</loc>
-    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/element/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/first-element/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/get-the-first-element-of-an-array/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/get-the-last-element-of-an-array/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/last-element/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/616/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://shenlong616.github.io/categories/ad-blocking/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -89,34 +11,13 @@
     <loc>https://shenlong616.github.io/posts/block-ads-on-spotify/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/tags/default/</loc>
+    <loc>https://shenlong616.github.io/categories/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/tags/function/</loc>
+    <loc>https://shenlong616.github.io/posts/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/tags/integer/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/default-parameters/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/get-a-random-number/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/logical-not/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/logical-not/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/operator/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/parameter/</loc>
-    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/random/</loc>
+    <loc>https://shenlong616.github.io/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/spotify/</loc>
@@ -125,41 +26,14 @@
     <loc>https://shenlong616.github.io/tags/spotx/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://shenlong616.github.io/tags/</loc>
+    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://shenlong616.github.io/tags/windows/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/categories/windows/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/callback/</loc>
-    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/falsey-value/</loc>
-    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/falsy-value/</loc>
-    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/callback/</loc>
-    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/falsy/</loc>
-    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/duplicate/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/duplicate-free/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/creates-a-duplicate-free-version-of-an-array/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/get-a-random-element-from-an-array/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/unique/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/undefined/judas-kiss/</loc>
     <lastmod>2022-07-04T00:00:00+00:00</lastmod>
