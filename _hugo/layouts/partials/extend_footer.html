@@ -11,14 +11,12 @@
       );
 
       spanElement.appendChild(textNode);
-
-      Object.assign(spanElement.style, {
-        color: "var(--secondary)",
-        fontSize: "0.616em",
-      });
+      spanElement.style.cssText = `color: var(--secondary);
+                                   font-size: 0.616em;`;
 
       document.querySelector(".logo").appendChild(spanElement);
     };
+
     createElementHelloText();
 
     async function randomQuote() {
@@ -31,17 +29,13 @@
           randomJSONData.author;
         document.getElementsByName("quoteContent")[0].textContent =
           randomJSONData.content;
-      } else {
-        void this;
       }
     }
 
     if (
-      document.getElementsByName("quoteAuthor")[0] === undefined &&
-      document.getElementsByName("quoteContent")[0] === undefined
+      document.getElementsByName("quoteAuthor")[0] !== undefined &&
+      document.getElementsByName("quoteContent")[0] !== undefined
     ) {
-      void this;
-    } else {
       randomQuote();
     }
 
@@ -51,14 +45,24 @@
       ).style.cssText = `color: var(--color_5) !important;`;
     }
 
-    var ggggg = [];
-    for (const item of document.querySelectorAll(".terms-tags strong sup")) {
-      ggggg.push(item.childNodes[0].data);
-    }
-    for (const item of document.querySelectorAll(".terms-tags strong sup")) {
-      if (item.childNodes[0].data == Math.max(...[...new Set(ggggg)])) {
-        item.style.cssText = `color:var(--color_6)`;
+    const highlightHighestNumberOfTermsTags = () => {
+      var numberOfTermsTagsList = [];
+      for (const item of document.querySelectorAll(".terms-tags strong sup")) {
+        numberOfTermsTagsList.push(item.childNodes[0].data);
       }
+
+      for (const item of document.querySelectorAll(".terms-tags strong sup")) {
+        if (
+          item.childNodes[0].data ==
+          Math.max(...[...new Set(numberOfTermsTagsList)])
+        ) {
+          item.style.cssText = `color:var(--color_4)`;
+        }
+      }
+    };
+
+    if (document.querySelectorAll(".terms-tags strong sup").length > 0) {
+      highlightHighestNumberOfTermsTags();
     }
   });
 </script>

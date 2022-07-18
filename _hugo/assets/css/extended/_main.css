@@ -167,7 +167,6 @@ header.header {
   border: none;
   background: linear-gradient(to right, var(--color_1), transparent);
 }
-
 .pagination .next {
   color: var(--content);
   background: linear-gradient(to left, var(--color_1), transparent) !important;
@@ -181,6 +180,7 @@ body,
 .list {
   background-color: var(--color_2a) !important;
 }
+
 .toc {
   background-color: var(--color_3) !important;
 }
@@ -190,8 +190,8 @@ body,
   font-weight: bold;
 }
 
-.terms-tags strong sup,
-.archive-count {
+/* .terms-tags strong sup, */
+.archive-year .archive-year-header sup {
   color: var(--color_4);
 }
 a:hover {
@@ -200,9 +200,7 @@ a:hover {
 .logo a {
   color: var(--primary) !important;
 }
+
 #menu .active {
   color: var(--color_5) !important;
-}
-button#theme-toggle {
-  color: var(--color_5);
 }
