@@ -19,7 +19,7 @@ categories: ["JavaScript"]
 
 ### Check a falsy value is false
 
-- Boolean() method:
+- `Boolean()` method:
 
 ```javascript
 for (const item of [false, 0, "", null, undefined, document.all]) {
@@ -27,7 +27,7 @@ for (const item of [false, 0, "", null, undefined, document.all]) {
 }
 ```
 
-- NOT (!) operator method:
+- NOT (`!`) operator method:
 
 ```javascript
 for (const item of [false, 0, "", null, undefined, document.all]) {

@@ -40,8 +40,8 @@
       <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://shenlong616.github.io/posts/javascript/get-a-random-number/</guid>
-      <description>Returns a random integer 0 to 2 console.log(Math.floor(Math.random() * 3)); // 0, 1 or 2 1 to 3 console.log(Math.floor(Math.random() * 3) + 1); // 1, 2 or 3 </description>
-      <content:encoded><![CDATA[<h3 id="returns-a-random-integer">Returns a random integer</h3>
+      <description>Positive integer 0 to 2 console.log(Math.floor(Math.random() * 3)); // 0, 1 or 2 1 to 3 console.log(Math.floor(Math.random() * 3) + 1); // 1, 2 or 3 etc. Negative integer -3 to -1 console.log(Math.floor(Math.random() * -3)); // -3, -2 or -1 -4 to -2 console.log(Math.floor(Math.random() * -3) - 1); // -4, -3 or -2 etc. </description>
+      <content:encoded><![CDATA[<h3 id="positive-integer">Positive integer</h3>
 <ul>
 <li>0 to 2</li>
 </ul>
@@ -50,7 +50,22 @@
 <li>1 to 3</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// 1, 2 or 3
-</span></span></span></code></pre></div>]]></content:encoded>
+</span></span></span></code></pre></div><ul>
+<li>etc.</li>
+</ul>
+<h3 id="negative-integer">Negative integer</h3>
+<ul>
+<li>-3 to -1</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="o">-</span><span class="mi">3</span><span class="p">));</span> <span class="c1">// -3, -2 or -1
+</span></span></span></code></pre></div><ul>
+<li>-4 to -2</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// -4, -3 or -2
+</span></span></span></code></pre></div><ul>
+<li>etc.</li>
+</ul>
+]]></content:encoded>
     </item>
     
   </channel>
