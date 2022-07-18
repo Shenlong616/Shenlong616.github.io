@@ -35,8 +35,9 @@ header.header {
   margin-top: 15px;
   margin-bottom: 0;
 }
-.first-entry.home-info {
-  margin: var(--gap) 0 calc(var(--gap));
+.home-info {
+  text-align: center;
+  /* margin: var(--gap) 0 calc(var(--gap)); */
 }
 ::selection {
   color: var(--theme);
