@@ -8,7 +8,7 @@ categories: ["JavaScript"]
 ### Declare
 
 ```javascript
-A = [];
+A = []; // []
 ```
 
 ### Set
@@ -16,8 +16,8 @@ A = [];
 - `splice()` method
 
 ```javascript
-B = [1, 2, 3]; // [1, 2, 3]
+A = [1, 2, 3]; // [1, 2, 3]
 
-B.splice(0, B.length);
-console.log(B); // []
+A.splice(0, A.length);
+console.log(A); // []
 ```
