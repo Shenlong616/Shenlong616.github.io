@@ -55,7 +55,10 @@
     for (const item of document.querySelectorAll(".terms-tags strong sup")) {
       ggggg.push(item.childNodes[0].data);
     }
-
-    console.log(Math.max(...[...new Set(ggggg)]));
+    for (const item of document.querySelectorAll(".terms-tags strong sup")) {
+      if (item.childNodes[0].data == Math.max(...[...new Set(ggggg)])) {
+        item.style.cssText = `color:var(--color_6)`;
+      }
+    }
   });
 </script>
