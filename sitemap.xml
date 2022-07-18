@@ -3,21 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://shenlong616.github.io/categories/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/css/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/javascript/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/categories/javascript/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/javascript/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/javascript-snippets/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/javascript/custom-css-styles/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/posts/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/property/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/</loc>
+    <lastmod>2022-07-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/element/</loc>
     <lastmod>2022-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/first-element/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/javascript/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/categories/javascript/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/posts/javascript/</loc>
     <lastmod>2022-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/javascript/get-the-first-element-of-an-array/</loc>
@@ -29,13 +50,7 @@
     <loc>https://shenlong616.github.io/tags/last-element/</loc>
     <lastmod>2022-07-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://shenlong616.github.io/posts/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/</loc>
-    <lastmod>2022-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/</loc>
+    <loc>https://shenlong616.github.io/tags/method/</loc>
     <lastmod>2022-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/616/</loc>
@@ -69,6 +84,9 @@
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/number/</loc>
+    <lastmod>2022-07-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://shenlong616.github.io/tags/operator/</loc>
     <lastmod>2022-07-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/parameter/</loc>
@@ -108,9 +126,6 @@
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/tags/duplicate-free/</loc>
-    <lastmod>2022-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://shenlong616.github.io/tags/javascript-snippets/</loc>
     <lastmod>2022-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://shenlong616.github.io/posts/javascript/creates-a-duplicate-free-version-of-an-array/</loc>

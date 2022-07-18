@@ -1,7 +1,7 @@
 ---
 title: "JavaScript: get a random Number"
 date: 2022-07-16
-tags: ["javascript", "random", "number"]
+tags: ["javascript", "random", "number", "javascript snippets"]
 categories: ["JavaScript"]
 showToc: false
 ---

@@ -17,7 +17,7 @@ categories: ["JavaScript"]
 - `NaN` — not a number.
 - `document.all`
 
-### Check a falsy value is `false`
+### Check a falsy value is false
 
 - Boolean() method:
 
@@ -27,7 +27,7 @@ for (const item of [false, 0, "", null, undefined, document.all]) {
 }
 ```
 
-- NOT (`!`) operator method:
+- NOT (!) operator method:
 
 ```javascript
 for (const item of [false, 0, "", null, undefined, document.all]) {

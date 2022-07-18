@@ -1,9 +1,11 @@
 ---
 title: "JavaScript: logical NOT (!)"
 date: 2022-07-16
-tags: ["javascript", "logical NOT", "616"]
+tags: ["javascript", "logical NOT", "operator", "616"]
 categories: ["JavaScript"]
 ---
+
+- `!` operator
 
 ```javascript
 logicalNot = () => true;

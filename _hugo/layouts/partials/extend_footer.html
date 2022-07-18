@@ -46,12 +46,9 @@
     }
 
     if (document.getElementsByClassName("breadcrumbs").length > 0) {
-      Object.assign(
-        [...document.querySelectorAll(".breadcrumbs a")].at(-1).style,
-        {
-          color: "var(--color_6)",
-        }
-      );
+      [...document.querySelectorAll(".breadcrumbs a")].at(
+        -1
+      ).style.cssText = `color: var(--color_5) !important;`;
     }
   });
 </script>

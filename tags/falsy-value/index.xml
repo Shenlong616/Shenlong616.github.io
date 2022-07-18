@@ -25,7 +25,7 @@
 <li><code>NaN</code> — not a number.</li>
 <li><code>document.all</code></li>
 </ul>
-<h3 id="check-a-falsy-value-is-false">Check a falsy value is <code>false</code></h3>
+<h3 id="check-a-falsy-value-is-false">Check a falsy value is false</h3>
 <ul>
 <li>Boolean() method:</li>
 </ul>
@@ -33,7 +33,7 @@
 </span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">item</span><span class="si">}</span><span class="sb"> is </span><span class="si">${</span><span class="nb">Boolean</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><ul>
-<li>NOT (<code>!</code>) operator method:</li>
+<li>NOT (!) operator method:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">item</span> <span class="k">of</span> <span class="p">[</span><span class="kc">false</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">all</span><span class="p">])</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
