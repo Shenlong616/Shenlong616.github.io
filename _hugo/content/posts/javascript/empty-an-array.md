@@ -1,5 +1,5 @@
 ---
-title: "JavaScript: empty an Array?"
+title: "JavaScript: empty an Array"
 date: 2022-07-18
 tags: ["javascript", "empty", "array", "javascript snippets", "method"]
 categories: ["JavaScript"]
