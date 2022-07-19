@@ -75,8 +75,9 @@
     )) {
       item.childNodes[0].textContent = dayjs(
         item.childNodes[0].attributes.title.nodeValue,
-        // 2022-07-19 11:59:59
-        "YYYY-MM-DD H:mm:ss"
+        "YYYY-MM-DD"
+        // strict parsing
+        // ,true
       ).fromNow();
     }
   });
