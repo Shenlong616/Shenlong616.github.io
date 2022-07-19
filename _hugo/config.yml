@@ -28,15 +28,15 @@ menu:
       url: /archives/
       weight: 2
 
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 3
+    # - identifier: tags
+    #   name: tags
+    #   url: /tags/
+    #   weight: 3
 
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 4
+    # - identifier: categories
+    #   name: categories
+    #   url: /categories/
+    #   weight: 4
 
     - identifier: search
       name: search

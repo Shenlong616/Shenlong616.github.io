@@ -4,6 +4,7 @@
   border-image-slice: 1;
   padding-bottom: 5px;
   margin-bottom: 20px;
+  text-transform: lowercase;
 }
 header.header {
   border-bottom: 1px solid var(--border);

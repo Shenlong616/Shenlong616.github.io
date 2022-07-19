@@ -4,39 +4,41 @@
       return array[Math.floor(Math.random() * array.length)];
     };
 
-    const createElementHelloText = () => {
-      const spanElement = document.createElement("span");
-      const textNode = document.createTextNode(
-        `${randomArray(multilanguageHelloText).hello}`
-      );
-
-      spanElement.appendChild(textNode);
-      spanElement.style.cssText = `color: var(--secondary);
-                                   font-size: 0.616em;`;
-
-      document.querySelector(".logo").appendChild(spanElement);
+    randomHelloText = () => {
+      // https://github.com/novellac/multilanguage-hello-json/blob/master/hello.json
+      fetch("/../../assets/js/json/hello.min.json?commitID=9bbdc38")
+        .then((response) => response.json())
+        .then((data) => {
+          const spanElement = document.createElement("span");
+          spanElement.style.cssText = `color: var(--secondary);
+                                       font-size: 0.616em;`;
+          const textNode = document.createTextNode(
+            `${randomArray(data).hello}`
+          );
+          spanElement.appendChild(textNode);
+          document.querySelector(".logo").appendChild(spanElement);
+        });
     };
+    randomHelloText();
 
-    createElementHelloText();
-
-    async function randomQuote() {
+    randomQuoteText = () => {
       // https://github.com/quotable-io/data/blob/master/data/quotes.json
-      const response = await fetch("/../../assets/js/json/quotes.json?v=0.3.2");
-      const data = await response.json();
-      if (response.ok) {
-        const randomJSONData = randomArray(data);
-        document.getElementsByName("quoteAuthor")[0].textContent =
-          randomJSONData.author;
-        document.getElementsByName("quoteContent")[0].textContent =
-          randomJSONData.content;
-      }
-    }
+      fetch("/../../assets/js/json/quotes.min.json?v=0.3.2")
+        .then((response) => response.json())
+        .then((data) => {
+          const randomJSONData = randomArray(data);
+          document.getElementsByName("quoteAuthor")[0].textContent =
+            randomJSONData.author;
+          document.getElementsByName("quoteContent")[0].textContent =
+            randomJSONData.content;
+        });
+    };
 
     if (
       document.getElementsByName("quoteAuthor")[0] !== undefined &&
       document.getElementsByName("quoteContent")[0] !== undefined
     ) {
-      randomQuote();
+      randomQuoteText();
     }
 
     if (document.getElementsByClassName("breadcrumbs").length > 0) {
