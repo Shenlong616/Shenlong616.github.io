@@ -5,7 +5,7 @@ buildFuture: false
 enableEmoji: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
-paginate: 9
+paginate: 7
 publishDir: ".."
 pygmentsUseClasses: true
 theme: PaperMod
@@ -41,7 +41,7 @@ menu:
     - identifier: search
       name: search
       url: /search/
-      weight: 5
+      weight: 3
 
 outputs:
   home:
@@ -52,7 +52,7 @@ outputs:
 params:
   # author: ["Me", "You"] # multiple authors
   author: "unnamed"
-  hideFooter: true
+  hideFooter: false
   # CanonicalLinkText: "Originally published at"
   # comments: false
   # disableSpecial1stPost: true

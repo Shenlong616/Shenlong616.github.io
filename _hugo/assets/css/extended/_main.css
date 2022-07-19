@@ -163,6 +163,12 @@ code {
 header.header {
   background-color: var(--color_1);
 }
+.footer {
+  max-width: none;
+  background-color: var(--color_1);
+  border-top: 1px solid var(--border);
+  font-weight: 500;
+}
 .post-entry {
   padding: calc(var(--gap) - 5px);
   border: none;
