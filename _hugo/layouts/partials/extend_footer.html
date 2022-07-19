@@ -68,12 +68,15 @@
     }
 
     dayjs.extend(dayjs_plugin_relativeTime);
+    dayjs.extend(dayjs_plugin_customParseFormat);
 
     for (const item of document.querySelectorAll(
       ".post-meta, .post-entry .entry-footer, .archive-entry .archive-meta"
     )) {
       item.childNodes[0].textContent = dayjs(
-        item.childNodes[0].attributes.title.nodeValue
+        item.childNodes[0].attributes.title.nodeValue,
+        // 2022-07-19 11:59:59
+        "YYYY-MM-DD H:mm:ss"
       ).fromNow();
     }
   });
