@@ -4,25 +4,47 @@
       return array[Math.floor(Math.random() * array.length)];
     };
 
-    randomHelloText = () => {
-      // https://github.com/novellac/multilanguage-hello-json/blob/master/hello.json
-      fetch("/../../assets/js/json/hello.min.json?commitID=9bbdc38")
-        .then((response) => response.json())
-        .then((data) => {
-          const spanElement = document.createElement("span");
-          spanElement.style.cssText = `color: var(--secondary);
-                                       font-size: 0.616em;`;
-          const textNode = document.createTextNode(
-            `${randomArray(data).hello}`
-          );
-          spanElement.appendChild(textNode);
-          document.querySelector(".logo").appendChild(spanElement);
-        });
-    };
-    randomHelloText();
+    // CSS
+    if (document.getElementsByClassName("breadcrumbs").length > 0) {
+      [...document.querySelectorAll(".breadcrumbs a")].at(
+        -1
+      ).style.cssText = `color: var(--color_5) !important;`;
+    }
 
-    randomQuoteText = () => {
-      // https://github.com/quotable-io/data/blob/master/data/quotes.json
+    if (document.querySelectorAll(".terms-tags strong sup").length > 0) {
+      var termsTagsList = [];
+      for (const item of document.querySelectorAll(".terms-tags strong sup")) {
+        termsTagsList.push(item.childNodes[0].data);
+      }
+
+      for (const item of document.querySelectorAll(".terms-tags strong sup")) {
+        if (
+          item.childNodes[0].data == Math.max(...[...new Set(termsTagsList)])
+        ) {
+          item.style.cssText = `color:var(--color_4)`;
+        }
+      }
+    }
+
+    // random Hello text
+    // https://github.com/novellac/multilanguage-hello-json/blob/master/hello.json
+    fetch("/../../assets/js/json/hello.min.json?commitID=9bbdc38")
+      .then((response) => response.json())
+      .then((data) => {
+        const spanElement = document.createElement("span");
+        spanElement.style.cssText = `color: var(--secondary);
+                                     font-size: 0.616em;`;
+        const textNode = document.createTextNode(`${randomArray(data).hello}`);
+        spanElement.appendChild(textNode);
+        document.querySelector(".logo").appendChild(spanElement);
+      });
+
+    // random Quote text
+    // https://github.com/quotable-io/data/blob/master/data/quotes.json
+    if (
+      document.getElementsByName("quoteAuthor")[0] !== undefined &&
+      document.getElementsByName("quoteContent")[0] !== undefined
+    ) {
       fetch("/../../assets/js/json/quotes.min.json?v=0.3.2")
         .then((response) => response.json())
         .then((data) => {
@@ -32,53 +54,25 @@
           document.getElementsByName("quoteContent")[0].textContent =
             randomJSONData.content;
         });
-    };
+    }
 
+    // day.js
     if (
-      document.getElementsByName("quoteAuthor")[0] !== undefined &&
-      document.getElementsByName("quoteContent")[0] !== undefined
+      document.querySelectorAll(
+        ".post-single .post-meta, .post-entry .entry-footer, .archive-entry .archive-meta"
+      ).length > 0
     ) {
-      randomQuoteText();
-    }
+      dayjs.extend(dayjs_plugin_relativeTime);
+      dayjs.extend(dayjs_plugin_customParseFormat);
 
-    if (document.getElementsByClassName("breadcrumbs").length > 0) {
-      [...document.querySelectorAll(".breadcrumbs a")].at(
-        -1
-      ).style.cssText = `color: var(--color_5) !important;`;
-    }
-
-    const highlightHighestNumberOfTermsTags = () => {
-      var numberOfTermsTagsList = [];
-      for (const item of document.querySelectorAll(".terms-tags strong sup")) {
-        numberOfTermsTagsList.push(item.childNodes[0].data);
+      for (const item of document.querySelectorAll(
+        ".post-single .post-meta, .post-entry .entry-footer, .archive-entry .archive-meta"
+      )) {
+        item.childNodes[0].textContent = dayjs(
+          item.childNodes[0].attributes.title.nodeValue,
+          "YYYY-MM-DD"
+        ).fromNow();
       }
-
-      for (const item of document.querySelectorAll(".terms-tags strong sup")) {
-        if (
-          item.childNodes[0].data ==
-          Math.max(...[...new Set(numberOfTermsTagsList)])
-        ) {
-          item.style.cssText = `color:var(--color_4)`;
-        }
-      }
-    };
-
-    if (document.querySelectorAll(".terms-tags strong sup").length > 0) {
-      highlightHighestNumberOfTermsTags();
-    }
-
-    dayjs.extend(dayjs_plugin_relativeTime);
-    dayjs.extend(dayjs_plugin_customParseFormat);
-
-    for (const item of document.querySelectorAll(
-      ".post-meta, .post-entry .entry-footer, .archive-entry .archive-meta"
-    )) {
-      item.childNodes[0].textContent = dayjs(
-        item.childNodes[0].attributes.title.nodeValue,
-        "YYYY-MM-DD"
-        // strict parsing
-        // ,true
-      ).fromNow();
     }
   });
 </script>

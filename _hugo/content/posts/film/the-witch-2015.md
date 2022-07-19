@@ -1,7 +1,7 @@
 ---
 title: "The Witch (2015)"
 date: 2015-01-23
-# tags: ["", ""]
+# tags: []
 # categories: ["Film"]
 cover:
   image: "/assets/images/18/the-witch-2015-19.jpg"
