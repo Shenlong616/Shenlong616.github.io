@@ -138,13 +138,13 @@ code {
 }
 
 /* reColour */
-
+/* https://material.io/design/color/dark-theme.html#properties */
 :root {
   --color_1: whitesmoke;
   --color_2a: white;
   --color_2b: black;
   --color_3: whitesmoke;
-  --color_4: blue;
+  --color_4: mediumblue;
   --color_5: crimson;
   --color_6: crimson;
 }

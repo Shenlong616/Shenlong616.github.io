@@ -75,7 +75,7 @@ params:
   ShowWordCount: fase
   TocOpen: true
   ShowAllPagesInArchive: true
-  # disableAnchoredHeadings: true
+  disableAnchoredHeadings: true
   disableScrollToTop: true
 
   schema:

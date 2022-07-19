@@ -66,5 +66,15 @@
     if (document.querySelectorAll(".terms-tags strong sup").length > 0) {
       highlightHighestNumberOfTermsTags();
     }
+
+    dayjs.extend(window.dayjs_plugin_relativeTime);
+
+    for (const item of document.querySelectorAll(
+      ".post-meta, .post-entry .entry-footer, .archive-entry .archive-meta"
+    )) {
+      item.childNodes[0].textContent = dayjs(
+        item.childNodes[0].attributes.title.nodeValue
+      ).fromNow();
+    }
   });
 </script>
