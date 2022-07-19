@@ -83,7 +83,6 @@ img {
   padding: 6px 9px 6px 0;
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
-  background: linear-gradient(to left, var(--theme), transparent);
 }
 .paginav .next:hover {
   background: linear-gradient(to left, var(--border), transparent);
@@ -93,7 +92,6 @@ img {
   padding: 6px 0 6px 9px;
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
-  background: linear-gradient(to right, var(--theme), transparent);
 }
 .paginav .prev:hover {
   background: linear-gradient(to right, var(--border), transparent);
@@ -181,6 +179,9 @@ header.header {
 .pagination .prev {
   color: var(--content);
   background: linear-gradient(to right, var(--color_1), transparent) !important;
+}
+.paginav {
+  background: var(--color_1);
 }
 
 body,
