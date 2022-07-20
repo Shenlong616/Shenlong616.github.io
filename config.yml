@@ -1,0 +1,167 @@
+baseURL: "https://shenlong616.github.io/"
+buildDrafts: false
+buildExpired: false
+buildFuture: false
+enableEmoji: false
+enableInlineShortcodes: true
+enableRobotsTXT: true
+paginate: 7
+# publishDir: ".."
+pygmentsUseClasses: true
+theme: PaperMod
+title: Shenlong616
+# googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - identifier: posts
+      name: posts
+      url: /posts/
+      weight: 1
+
+    - identifier: archives
+      name: archives
+      url: /archives/
+      weight: 2
+
+    # - identifier: tags
+    #   name: tags
+    #   url: /tags/
+    #   weight: 3
+
+    # - identifier: categories
+    #   name: categories
+    #   url: /categories/
+    #   weight: 4
+
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 3
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+params:
+  # author: ["Me", "You"] # multiple authors
+  author: "unnamed"
+  hideFooter: true
+  # CanonicalLinkText: "Originally published at"
+  # comments: false
+  # disableSpecial1stPost: true
+  # images: ["papermod-cover.png"] # Link or path of image for opengraph, twitter-cards
+  defaultTheme: auto # auto, light, dark
+  description: "Shenlong's blog!"
+  disableThemeToggle: false
+  displayFullLangName: false
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  keywords: [blog, javascript tips, javascript tricks, dev]
+  math: false #
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowFullTextinRSS: true
+  ShowPostNavLinks: true
+  ShowReadingTime: false
+  ShowRssButtonInSectionTermList: true
+  ShowShareButtons: false
+  ShowToc: true
+  ShowWordCount: fase
+  TocOpen: true
+  ShowAllPagesInArchive: true
+  disableAnchoredHeadings: true
+  disableScrollToTop: true
+
+  schema:
+    publisherType: "Person"
+    sameAs: ["https://shenlong616.github.io/"]
+
+  homeInfoParams:
+    Title: <span name="quoteAuthor"></span>
+    Content: <span name="quoteContent" style="color:var(--secondary)"></span>
+
+  # socialIcons:
+  #   - name: GitHub
+  #     url: "https://github.com/Shenlong616"
+
+  # editPost:
+  #   URL: "https://github.com/Shenlong616/Shenlong616.github.io/tree/main/_hugo/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
+
+  # label:
+  #   text: "Home"
+  #   icon: icon.png
+  #   iconHeight: 35
+
+  analytics:
+    google:
+      SiteVerificationTag: "AzXCkO0tq4MO96bDYSrwJRKKCYqk92c1N2Yere6jdxc"
+    bing:
+      SiteVerificationTag: "24E5C745EF8D6815F97FBCACA22956C9"
+  #   yandex:
+  #     SiteVerificationTag: "XYZabc"
+
+  assets:
+    favicon: "favicon/favicon.ico"
+    favicon16x16: "favicon/favicon-16x16.png"
+    favicon32x32: "favicon/favicon-32x32.png"
+    apple_touch_icon: "favicon/apple-touch-icon.png"
+    # safari_pinned_tab: "<link / abs url>"
+    # https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/#failed-to-find-a-valid-digest-in-the-integrity-attribute-for-resource--
+    disableFingerprinting: true
+    # disableHLJS: true
+
+  cover:
+    # hidden: true # hide everywhere but not in structured data
+    # hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+    # To reduce generation time and size of the site, you can disable this feature using
+    responsiveImages: false
+    # To enable hyperlinks to the full image size on post pages, use
+    linkFullImages: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.8
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+
+  instagram:
+    disabled: false
+    simple: true
+
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+
+  twitter:
+    disableInlineCSS: true
