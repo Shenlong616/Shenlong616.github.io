@@ -68,6 +68,7 @@ img {
 }
 .post-tags a:before {
   content: "#";
+  color: var(--secondary);
 }
 
 .post-meta {
@@ -191,6 +192,10 @@ body,
 
 .toc {
   background-color: var(--color_3) !important;
+}
+
+.post-tags a {
+  color: var(--color_2b);
 }
 .post-content code {
   color: var(--color_2b);
