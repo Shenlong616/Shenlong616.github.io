@@ -64,5 +64,19 @@
         ).fromNow();
       }
     }
+
+    // hr tag
+    // https://stackoverflow.com/a/59360710
+    if (
+      document.querySelectorAll(
+        ".breadcrumbs, .archive-year:not(:last-of-type)"
+      ).length > 0
+    ) {
+      for (const item of document.querySelectorAll(
+        ".breadcrumbs, .archive-year:not(:last-of-type)"
+      )) {
+        item.after(document.createElement("hr"));
+      }
+    }
   });
 </script>

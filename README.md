@@ -26,7 +26,7 @@
  ┃ ┗ 404.html
  ┣ 📂static
  ┃ ┗ 📂favicon
- ┗ 📜config.yml
+ ┗ config.yml
 ```
 
 ```
