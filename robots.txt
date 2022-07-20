@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://shenlong616.github.io/sitemap.xml
