@@ -34,17 +34,23 @@
     spanElement.appendChild(textNode);
     document.querySelector(".logo").appendChild(spanElement);
 
-    // random Quote text
-    if (
-      document.getElementsByName("quoteAuthor")[0] !== undefined &&
-      document.getElementsByName("quoteContent")[0] !== undefined
-    ) {
-      const randomQuoteData = randomArray(quotes);
-      document.getElementsByName("quoteAuthor")[0].textContent =
-        randomQuoteData.author;
-      document.getElementsByName("quoteContent")[0].textContent =
-        randomQuoteData.content;
-    }
+    const randomQuoteText = () => {
+      if (
+        document.getElementsByName("quoteAuthor")[0] !== undefined &&
+        document.getElementsByName("quoteContent")[0] !== undefined
+      ) {
+        const randomQuoteData = randomArray(quotes);
+        document.getElementsByName("quoteAuthor")[0].textContent =
+          randomQuoteData.author;
+        document.getElementsByName("quoteContent")[0].textContent =
+          randomQuoteData.content;
+      }
+    };
+    randomQuoteText();
+
+    document.getElementById("quote").addEventListener("click", () => {
+      randomQuoteText();
+    });
 
     // day.js
     if (
