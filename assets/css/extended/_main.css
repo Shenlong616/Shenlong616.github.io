@@ -1,6 +1,5 @@
 hr {
-  border-image: linear-gradient(to right, var(--border), transparent);
-  border-image-slice: 1;
+  border-color: var(--border);
 }
 .breadcrumbs {
   text-transform: lowercase;
