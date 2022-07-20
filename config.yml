@@ -5,7 +5,7 @@ buildFuture: false
 enableEmoji: false
 enableInlineShortcodes: true
 enableRobotsTXT: true
-paginate: 7
+paginate: 9
 # publishDir: ".."
 pygmentsUseClasses: true
 theme: PaperMod
